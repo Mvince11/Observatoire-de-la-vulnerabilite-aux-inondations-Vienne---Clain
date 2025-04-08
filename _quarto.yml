@@ -1,0 +1,37 @@
+project:
+  type: website
+  title: "Observatoire de la vulnérabilité aux inondations Vienne - Clain"
+
+website:
+  back-to-top-navigation: true
+  title: Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain
+      
+  navbar:
+    logo: images/logo_porteurs_projet_transparent.png
+    left:
+       - href: index.qmd
+         text: Accueil
+         icon: house
+       - href: mieux_comprendre.qmd
+         text: Pour mieux comprendre les inondations
+       - text: Â propos
+         menu:
+         - text: EPTB
+  # sidebar:
+  #   style: floating  # ou "docked" pour qu’elle reste fixée
+  #   contents:
+  #     - section: "Menu principal"
+  #       contents:
+  #         - index.qmd
+  #         - about.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-title: Sur cette page
+    toc-location: right
+    toc-depth: 2
+
+editor: visual
+
