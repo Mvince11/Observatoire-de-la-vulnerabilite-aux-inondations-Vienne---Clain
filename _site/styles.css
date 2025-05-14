@@ -16,6 +16,11 @@ h2{
   color: #F58220;
 }
 
-#toc-title{
-  text:
+.navbar-brand {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
 }
+
+
+

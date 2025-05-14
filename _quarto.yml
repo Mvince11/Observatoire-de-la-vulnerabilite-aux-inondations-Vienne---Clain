@@ -4,26 +4,52 @@ project:
 
 website:
   back-to-top-navigation: true
-  title: Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain
-      
+  title: "Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain"
   navbar:
-    logo: images/logo_porteurs_projet_transparent.png
-    left:
-       - href: index.qmd
-         text: Accueil
-         icon: house
-       - href: mieux_comprendre.qmd
-         text: Pour mieux comprendre les inondations
-       - text: Â propos
-         menu:
-         - text: EPTB
+     #logo: '<div> images/logo_porteurs_projet_transparent.png</div>'
+     left:
+        - href: index.qmd
+          text: Accueil
+  #        icon: house
+        - href: mieux_comprendre.qmd
+          text: Comprendre les inondations
+        - text: Â propos
+          menu:
+          - text: EPTB-vienne.fr
+            href: https://www.eptb-vienne.fr
+            target: _blank
+        - sidebar:Objectif1
+          
+           
+  sidebar:
+     - id: Objectif1
+       title: "Objectif n°1: Augmenter la sécurité des populations"
+       style: "docked"
+       background: light
+       collapse-level: 2
+       contents: 
+         - text: Bâtiments de plain-pied
+           href: objectif1.qmd
+           
+  
+  #      - text: Objectif n°1:Augmenter la sécurité des populations
+  #        href: objectif1.qmd
+  #      - text: ▼
+  #        menu:
+  #        - text: Bâtiments de plain-pied
   # sidebar:
-  #   style: floating  # ou "docked" pour qu’elle reste fixée
+  #   style: "docked"  # ou "docked" pour qu’elle reste fixée
   #   contents:
-  #     - section: "Menu principal"
-  #       contents:
-  #         - index.qmd
-  #         - about.qmd
+  #       - text: "Accueil"
+  #         href: index.qmd
+  #       - href: mieux_comprendre.qmd
+  #         text: "Comprendre les inondations"
+  #       - text: "Â propos"
+  #        menu:
+  #        - text: EPTB-vienne.fr
+  #          href: https://www.eptb-vienne.fr
+  #          target: _blank
+        
 format:
   html:
     theme: cosmo
@@ -32,6 +58,10 @@ format:
     toc-title: Sur cette page
     toc-location: right
     toc-depth: 2
+    link-external-newwindow: true
+    include-in-header: assets/inject-script.html
+    #include-after-body: assets/logo.html
+    
 
 editor: visual
 
