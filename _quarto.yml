@@ -29,8 +29,11 @@ website:
        background: light
        collapse-level: 2
        contents: 
-         - text: Bâtiments de plain-pied
+         - section: "Objectifs 1"
            href: objectif1.qmd
+           contents:         
+             - text: Bâtiments de plain-pied
+               href: objectif1.qmd
            
   
   #      - text: Objectif n°1:Augmenter la sécurité des populations
