@@ -1,12 +1,13 @@
 project:
   type: website
-  title: "Observatoire de la vulnérabilité aux inondations Vienne - Clain"
+  #title: "Observatoire de la vulnérabilité aux inondations Vienne - Clain"
 
 website:
   back-to-top-navigation: true
-  title: "Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain"
+  #title: "Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain"
   navbar:
-     #logo: '<div> images/logo_porteurs_projet_transparent.png</div>'
+     search: false
+     logo: images/logo_porteurs_projet_transparent.png
      left:
         - href: index.qmd
           text: Accueil
@@ -18,12 +19,12 @@ website:
           - text: EPTB-vienne.fr
             href: https://www.eptb-vienne.fr
             target: _blank
-        - sidebar:Objectif1
+        - sidebar:Objectifs
           
            
   sidebar:
-     - id: Objectif1
-       title: "Objectif n°1: Augmenter la sécurité des populations"
+     - id: Objectifs
+       title: "Objectifs"
        style: "docked"
        background: light
        collapse-level: 2
@@ -52,8 +53,8 @@ website:
         
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [flatly, custom.scss]
+    #css: custom.scss
     toc: true
     toc-title: Sur cette page
     toc-location: right
