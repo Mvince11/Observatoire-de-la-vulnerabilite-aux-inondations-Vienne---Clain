@@ -1,6 +1,7 @@
 ---
 title: "Objectif n°1 : Augmenter la sécurité des populations"
 sidebar: objectifs
+toc: false
 ---
 
 <img src="images/Objectif1.png" height="150px" width="148px" align="center" style="float:center; margin-right:1000px;"/>

@@ -22,8 +22,6 @@ website:
         #- sidebar:Objectifs
         - text: Objectifs n°1
           menu:
-           - href: objectif1.qmd
-             text: Description Objectif n°1
            - href: batiments_plain_pied.qmd
              text: Bâtiments plain-pied
         

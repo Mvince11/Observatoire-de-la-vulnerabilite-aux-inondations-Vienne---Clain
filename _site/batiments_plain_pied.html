@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-b663525e4b92bb903b2199e2d401bf36.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99072bf3b4e5e2e3c91dc602ce57b1e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-12fb35667fcb1c2845f582b20de49e22.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
 <script src="site_libs/quarto-dashboard/stickythead.js"></script>
 <script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
@@ -163,10 +163,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-objectifs-n°1">    
         <li>
-    <a class="dropdown-item" href="./objectif1.html">
- <span class="dropdown-text">Description Objectif n°1</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="./batiments_plain_pied.html">
  <span class="dropdown-text">Bâtiments plain-pied</span></a>
   </li>  
@@ -206,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-carte" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#carte" data-scrolling="false" href="#carte" aria-controls="carte" aria-selected="true"><span class="nav-link-text">Carte</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-cartographie" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#cartographie" data-scrolling="false" href="#cartographie" aria-controls="cartographie" aria-selected="true"><span class="nav-link-text">Cartographie</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -215,41 +211,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
 <!-- main -->
 
+<div id="nav-menu-objectifs-n°1" class="bslib-grid-item html-fill-item"></div>
 <div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
 <div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div id="carte" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-carte">
+<div id="cartographie" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-cartographie">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-fill="true" data-bslib-card-init="" data-require-bs-caller="card()">
 <div class="card-body html-fill-item html-fill-container" style="padding: 0px;">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="27" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>map <span class="op">=</span> {</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="map-container" id="map" style="height: 720px; width: 100%;"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> container<span class="op">;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourcePlanIGN <span class="op">=</span> {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/png'</span><span class="op">,</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2'</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourceOrtho <span class="op">=</span> {</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/jpeg'</span><span class="op">,</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'HR.ORTHOIMAGERY.ORTHOPHOTOS'</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> map <span class="op">=</span> <span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">Map</span>({</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="dt">container</span><span class="op">:</span> container<span class="op">,</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'</span><span class="op">,</span>  <span class="co">// Utiliser ce style initialement</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="dt">center</span><span class="op">:</span> [<span class="op">-</span><span class="fl">0.58979</span><span class="op">,</span> <span class="fl">44.83449</span>]<span class="op">,</span>  <span class="co">// Nouvelle-Aquitaine</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoom</span><span class="op">:</span> <span class="dv">11</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">FullscreenControl</span>()<span class="op">,</span> <span class="st">'top-right'</span>)<span class="op">;</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">NavigationControl</span>({ <span class="dt">visualizePitch</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">,</span> <span class="st">'top-left'</span>)<span class="op">;</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">ScaleControl</span>({ <span class="dt">maxWidth</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span> <span class="dt">unit</span><span class="op">:</span> <span class="st">'metric'</span> }))<span class="op">;</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="47" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 46;"><span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>map <span class="op">=</span> {</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="map-container" id="map" style="height: 720px; width: 100%;"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> container<span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourcePlanIGN <span class="op">=</span> {</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/png'</span><span class="op">,</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2'</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourceOrtho <span class="op">=</span> {</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/jpeg'</span><span class="op">,</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'HR.ORTHOIMAGERY.ORTHOPHOTOS'</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> map <span class="op">=</span> <span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">Map</span>({</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">container</span><span class="op">:</span> container<span class="op">,</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'</span><span class="op">,</span>  <span class="co">// Utiliser ce style initialement</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">center</span><span class="op">:</span> [<span class="op">-</span><span class="fl">0.58979</span><span class="op">,</span> <span class="fl">44.83449</span>]<span class="op">,</span>  <span class="co">// Nouvelle-Aquitaine</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoom</span><span class="op">:</span> <span class="dv">11</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">FullscreenControl</span>()<span class="op">,</span> <span class="st">'top-right'</span>)<span class="op">;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">NavigationControl</span>({ <span class="dt">visualizePitch</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">,</span> <span class="st">'top-left'</span>)<span class="op">;</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">ScaleControl</span>({ <span class="dt">maxWidth</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span> <span class="dt">unit</span><span class="op">:</span> <span class="st">'metric'</span> }))<span class="op">;</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
 
@@ -259,14 +256,14 @@ grid-auto-rows: minmax(0, 1fr);">
 <script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header bslib-navs-card-title"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
 
-</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-2"><li class="nav-item" role="presentation"><a href="#card-tabset-2-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Logements" aria-selected="true" class="nav-link active">Logements</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-2-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Tableaux" aria-selected="false" class="nav-link">Tableaux</a></li></ul></div>
+</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-2"><li class="nav-item" role="presentation"><a href="#card-tabset-2-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Graphiques" aria-selected="true" class="nav-link active">Graphiques</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-2-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Tableau de données" aria-selected="false" class="nav-link">Tableau de données</a></li></ul></div>
 
 
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-2"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-1"><div class="card-body html-fill-item html-fill-container" data-title="Logements">
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-2"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-1"><div class="card-body html-fill-item html-fill-container" data-title="Graphiques">
 <div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
 
 </div>
-</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-2"><div class="card-body html-fill-item html-fill-container" data-title="Tableaux">
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-2"><div class="card-body html-fill-item html-fill-container" data-title="Tableau de données">
 <div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: ;
 grid-auto-rows: minmax(0, 1fr);">
@@ -285,7 +282,15 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 </div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
-
+<p><font size="3" color="#dc7633"><b> Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) </b></font> <br><br> <font size="4.5px" face="calibri"> Le niveau des eaux peut monter relativement vite pour piéger des personnes dans des locaux ne disposant pas d’un accès vers un étage refuge. Dans les locaux où la hauteur d’eau peut être importante (supérieure à 1,5m), cela représente un danger. </font> <br><br></p>
+<p><a href="https://fiches.eptb-vienne.fr/ind_12a.pdf" target="_blank"><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> <br><br></p>
+<p><font size="4.5px" face="calibri"></font></p><font size="4.5px" face="calibri">
+<p>
+</p><div style="width: 350px;  padding-top:10px; padding-bottom:10px;border: 1px solid #A0A0A0; text-align: center;background: #F2F2F2;">
+<p>La zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.</p>
+</div>
+<p></p>
+</font><p><font size="4.5px" face="calibri"></font></p>
 </div></aside>
 <button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">

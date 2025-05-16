@@ -1,1 +1,1 @@
-Sitemap: https://4efa28c3-960c-4762-8380-c3d5955b7d7f.netlify.app/sitemap.xml
+Sitemap: https://website.quarto.pub/eptb_vienne/sitemap.xml
