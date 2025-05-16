@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 4efa28c3-960c-4762-8380-c3d5955b7d7f
+      url: https://website.quarto.pub/eptb_vienne

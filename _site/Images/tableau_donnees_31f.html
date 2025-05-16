@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tableau_donnees_31f – &lt;a href='https://cc-hautpoitou.fr/' target='_blank'&gt;&lt;img class='navbar-logo' src='images/logo_porteurs_projet_transparent.png' height='150px'&gt;&lt;/a&gt;</title>
+<title>tableau_donnees_31f</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-b663525e4b92bb903b2199e2d401bf36.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-274c3d255ff4b40ad85bc0e900837b3c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-99072bf3b4e5e2e3c91dc602ce57b1e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,9 +66,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="assets/inject-logos.js"></script>
+
+<script src="assets/sidebar-toggle.js"></script>
 
 
-<link rel="stylesheet" href="../styles.css">
+
 </head>
 
 <body class="nav-fixed">
@@ -78,24 +81,60 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title"><a href="https://cc-hautpoitou.fr/" target="_blank"><img class="navbar-logo" src="images/logo_porteurs_projet_transparent.png" height="150px"></a></span>
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo_porteurs_projet_transparent.png" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house" role="img">
-</i> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../mieux_comprendre.html"> 
+<span class="menu-text">Comprendre les inondations</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-propos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Â propos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-propos">    
+        <li>
+    <a class="dropdown-item" href="https://www.eptb-vienne.fr" target="_blank">
+ <span class="dropdown-text">EPTB-vienne.fr</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-objectifs-n°1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Objectifs n°1</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-objectifs-n°1">    
+        <li>
+    <a class="dropdown-item" href="../objectif1.html">
+ <span class="dropdown-text">Description Objectif n°1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../batiments_plain_pied.html">
+ <span class="dropdown-text">Bâtiments plain-pied</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://fr.linkedin.com/company/eptb-vienne"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text">LinkedIn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://eptb-vienne.fr/contact"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Nous contacter</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -212,7 +251,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/4efa28c3-960c-4762-8380-c3d5955b7d7f\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -226,6 +265,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
