@@ -390,6 +390,47 @@ img{
   padding-top: 150px;
 }
 
+#quarto-sidebar{
+  margin-top: 150px;
+  background-color: #464749;
+}
+
+.navbar .dropdown-header{
+  background-color: khaki;
+  text-transform: inherit;
+}
+
+.text-start{
+  font-size: 1.3em;
+  color: white;
+}
+
+.sidebar-item-container{
+  font-size: 0.9em;
+}
+
+div.sidebar-item-container{
+  color: white;
+  padding: 5px;
+  border: 1px solid;
+  border-color: darkgray;
+  background-color: gray;
+  border-radius: 4px;
+}
+
+.sidebar #quarto-search{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 15px;
+  width: 15% !important;
+}
+
+.quarto-dashboard #quarto-header #quarto-dashboard-header > nav{
+  margin-top: 125px;
+  position: inherit;
+}
+
+
 @media (max-width: 768px) {
   #photos_crues img {
     width: 100%;

@@ -1,0 +1,67 @@
+---
+title: "Carte Intercative"
+lang: fr
+back-to-top-navigation: false
+format:
+  dashboard:
+    orientation: columns
+    #page-layout: full
+    
+include-in-header:
+  text: |
+    <script src="js/maplibre.js"></script>
+    <link href="js/maplibre.css" rel="stylesheet">
+    <script src="js/jquery_3.5.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="js/photon-geocoder-autocomplete.min.css" type="text/css">
+    <script src="js/photon-geocoder-autocomplete.min.js" type="text/javascript"></script>
+---
+
+## {.sidebar}
+# Carte
+```{ojs}
+//| echo: false
+//| padding: 0px
+//| expandable: false
+//| fill: true
+
+
+map = {
+  const container = html`<div class="map-container" id="map" style="height: 720px; width: 100%;"></div>`;
+  yield container;
+
+  const sourcePlanIGN = {
+    style: 'normal',
+    format: 'image/png',
+    layer: 'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2'
+  };
+
+  const sourceOrtho = {
+    style: 'normal',
+    format: 'image/jpeg',
+    layer: 'HR.ORTHOIMAGERY.ORTHOPHOTOS'
+  };
+
+  const map = new maplibregl.Map({
+    container: container,
+    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',  // Utiliser ce style initialement
+    center: [-0.58979, 44.83449],  // Nouvelle-Aquitaine
+    zoom: 11
+  });
+
+  map.addControl(new maplibregl.FullscreenControl(), 'top-right');
+  map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-left');
+  map.addControl(new maplibregl.ScaleControl({ maxWidth: 80, unit: 'metric' }));
+}
+```
+
+## Column {.tabset width="30%"}
+
+### Logements {.flow}
+
+#### Row
+
+### Tableaux {.flow}
+
+#### Row

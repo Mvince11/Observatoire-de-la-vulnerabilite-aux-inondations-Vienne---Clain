@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.38">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mieux_comprendre</title>
+<title>Carte Intercative</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -39,6 +73,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-99072bf3b4e5e2e3c91dc602ce57b1e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+<script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+<link href="site_libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -53,28 +95,34 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
-<script src="assets/inject-logos.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="js/maplibre.js"></script>
+<link href="js/maplibre.css" rel="stylesheet">
+<script src="js/jquery_3.5.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-<script src="assets/sidebar-toggle.js"></script>
-
+<link rel="stylesheet" href="js/photon-geocoder-autocomplete.min.css" type="text/css">
+<script src="js/photon-geocoder-autocomplete.min.js" type="text/javascript"></script>
 
 
 </head>
 
-<body class="nav-fixed">
+<body class="quarto-dashboard nav-fixed dashboard-fill dashboard-sidebar fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -85,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./images/logo_porteurs_projet_transparent.png" alt="" class="navbar-logo">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -95,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./mieux_comprendre.html" aria-current="page"> 
+    <a class="nav-link" href="./mieux_comprendre.html"> 
 <span class="menu-text">Comprendre les inondations</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -142,68 +190,125 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-</header>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Carte Intercative</a></div>
+        
+        
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-carte" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#carte" data-scrolling="false" href="#carte" aria-controls="carte" aria-selected="true"><span class="nav-link-text">Carte</span></a></li></ul></div></div>
+</nav>
+</header></header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages dashboard-sidebar-container">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sur cette page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#pour-mieux-comprendre-les-inondations" id="toc-pour-mieux-comprendre-les-inondations" class="nav-link active" data-scroll-target="#pour-mieux-comprendre-les-inondations">Pour mieux comprendre les inondations</a></li>
-  <li><a href="#quest-ce-que-le-risque-inondation" id="toc-quest-ce-que-le-risque-inondation" class="nav-link" data-scroll-target="#quest-ce-que-le-risque-inondation">Qu’est-ce que le risque inondation ?</a></li>
-  <li><a href="#doù-viennent-les-inondations" id="toc-doù-viennent-les-inondations" class="nav-link" data-scroll-target="#doù-viennent-les-inondations">D’où viennent les inondations ?</a></li>
-  <li><a href="#quelle-stratégie-pour-réduire-le-risque-quelles-actions" id="toc-quelle-stratégie-pour-réduire-le-risque-quelles-actions" class="nav-link" data-scroll-target="#quelle-stratégie-pour-réduire-le-risque-quelles-actions">Quelle stratégie pour réduire le risque ? Quelles actions ?</a></li>
-  <li><a href="#lobservatoire-un-outil-dynamique" id="toc-lobservatoire-un-outil-dynamique" class="nav-link" data-scroll-target="#lobservatoire-un-outil-dynamique">L’observatoire, un outil dynamique</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
+<div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div id="carte" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-carte">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-fill="true" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container" style="padding: 0px;">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="27" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>map <span class="op">=</span> {</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="map-container" id="map" style="height: 720px; width: 100%;"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> container<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourcePlanIGN <span class="op">=</span> {</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/png'</span><span class="op">,</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2'</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sourceOrtho <span class="op">=</span> {</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'normal'</span><span class="op">,</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/jpeg'</span><span class="op">,</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">layer</span><span class="op">:</span> <span class="st">'HR.ORTHOIMAGERY.ORTHOPHOTOS'</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> map <span class="op">=</span> <span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">Map</span>({</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="dt">container</span><span class="op">:</span> container<span class="op">,</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="st">'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'</span><span class="op">,</span>  <span class="co">// Utiliser ce style initialement</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="dt">center</span><span class="op">:</span> [<span class="op">-</span><span class="fl">0.58979</span><span class="op">,</span> <span class="fl">44.83449</span>]<span class="op">,</span>  <span class="co">// Nouvelle-Aquitaine</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoom</span><span class="op">:</span> <span class="dv">11</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">FullscreenControl</span>()<span class="op">,</span> <span class="st">'top-right'</span>)<span class="op">;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">NavigationControl</span>({ <span class="dt">visualizePitch</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">,</span> <span class="st">'top-left'</span>)<span class="op">;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  map<span class="op">.</span><span class="fu">addControl</span>(<span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">ScaleControl</span>({ <span class="dt">maxWidth</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span> <span class="dt">unit</span><span class="op">:</span> <span class="st">'metric'</span> }))<span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header bslib-navs-card-title"><div class="card-title html-fill-item html-fill-container"><span style="display: inline">
+
+</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-2"><li class="nav-item" role="presentation"><a href="#card-tabset-2-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Logements" aria-selected="true" class="nav-link active">Logements</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-2-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Tableaux" aria-selected="false" class="nav-link">Tableaux</a></li></ul></div>
 
 
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-2"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-1"><div class="card-body html-fill-item html-fill-container" data-title="Logements">
+<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
+
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-2"><div class="card-body html-fill-item html-fill-container" data-title="Tableaux">
+<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: ;
+grid-auto-rows: minmax(0, 1fr);">
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
+
+</div></aside>
+<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+    </svg>
+</button>
+<script data-bslib-sidebar-init="">
+bslib.Sidebar.initCollapsibleAll()
+</script>
+</div>
 
 
-<section id="pour-mieux-comprendre-les-inondations" class="level2">
-<h2 class="anchored" data-anchor-id="pour-mieux-comprendre-les-inondations">Pour mieux comprendre les inondations</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Le <i><b>bassin versant*</b></i> de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents. <img src="images/carte_bv_01.jpg" height="226px" width="400px" align="left" style="float:left; margin-right:10000px; margin-bottom:45px"> </font></p>
-<p></p>
-<p><br><br></p>
-</section>
-<section id="quest-ce-que-le-risque-inondation" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-le-risque-inondation">Qu’est-ce que le risque inondation ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages). <img src="images/schema_risque_inondation.jpg" height="194px" width="404px" align="right" style="float:left; margin-right:10000px; margin-bottom:45px"> </font></p>
-<p></p>
-<p><br><br></p>
-</section>
-<section id="doù-viennent-les-inondations" class="level2">
-<h2 class="anchored" data-anchor-id="doù-viennent-les-inondations">D’où viennent les inondations ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes…<br> L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau.<br></font></p>
-<p></p>
-<p><br></p>
-</section>
-<section id="quelle-stratégie-pour-réduire-le-risque-quelles-actions" class="level2">
-<h2 class="anchored" data-anchor-id="quelle-stratégie-pour-réduire-le-risque-quelles-actions">Quelle stratégie pour réduire le risque ? Quelles actions ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> <img src="images/carte_slgri_vienne_clain_v2_03_02_01.jpg" height="549px" width="400px" align="left" style="float:left; margin-right:10px;"> En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de <i><b>17 communes**</b></i>.<br> Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain.<br> La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :<br> &nbsp;&nbsp;- Amélioration de la connaissance et de la conscience du risque,<br> &nbsp;&nbsp;- Surveillance, prévision des crues et des inondations,<br> &nbsp;&nbsp;- Alerte et gestion de crise,<br> &nbsp;&nbsp;- Prise en compte du risque d’inondation dans l’urbanisme,<br> &nbsp;&nbsp;- Réduction de la vulnérabilité des personnes et des biens,<br> &nbsp;&nbsp;- Gestion des écoulements,<br> &nbsp;&nbsp;- Gestion des ouvrages de protection hydrauliques.<br> <br> Pour en savoir plus sur les actions menées : <a href="http://www.eptb-vienne.fr/-Inondations-.html" target="_blank">http://www.eptb-vienne.fr/-Inondations-.html</a><br> </font></p>
-<p></p>
-<p><br></p>
-</section>
-<section id="lobservatoire-un-outil-dynamique" class="level2">
-<h2 class="anchored" data-anchor-id="lobservatoire-un-outil-dynamique">L’observatoire, un outil dynamique</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain.<br><br> <i><b>*</b> Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU).<br><br> <b>**</b> Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne.</i> </font></p>
-<p></p>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5cclxubWFwID0ge1xyXG4gIGNvbnN0IGNvbnRhaW5lciA9IGh0bWxgPGRpdiBjbGFzcz1cIm1hcC1jb250YWluZXJcIiBpZD1cIm1hcFwiIHN0eWxlPVwiaGVpZ2h0OiA3MjBweDsgd2lkdGg6IDEwMCU7XCI+PC9kaXY+YDtcclxuICB5aWVsZCBjb250YWluZXI7XHJcblxyXG4gIGNvbnN0IHNvdXJjZVBsYW5JR04gPSB7XHJcbiAgICBzdHlsZTogJ25vcm1hbCcsXHJcbiAgICBmb3JtYXQ6ICdpbWFnZS9wbmcnLFxyXG4gICAgbGF5ZXI6ICdHRU9HUkFQSElDQUxHUklEU1lTVEVNUy5QTEFOSUdOVjInXHJcbiAgfTtcclxuXHJcbiAgY29uc3Qgc291cmNlT3J0aG8gPSB7XHJcbiAgICBzdHlsZTogJ25vcm1hbCcsXHJcbiAgICBmb3JtYXQ6ICdpbWFnZS9qcGVnJyxcclxuICAgIGxheWVyOiAnSFIuT1JUSE9JTUFHRVJZLk9SVEhPUEhPVE9TJ1xyXG4gIH07XHJcblxyXG4gIGNvbnN0IG1hcCA9IG5ldyBtYXBsaWJyZWdsLk1hcCh7XHJcbiAgICBjb250YWluZXI6IGNvbnRhaW5lcixcclxuICAgIHN0eWxlOiAnaHR0cHM6Ly9iYXNlbWFwcy5jYXJ0b2Nkbi5jb20vZ2wvdm95YWdlci1nbC1zdHlsZS9zdHlsZS5qc29uJywgIC8vIFV0aWxpc2VyIGNlIHN0eWxlIGluaXRpYWxlbWVudFxyXG4gICAgY2VudGVyOiBbLTAuNTg5NzksIDQ0LjgzNDQ5XSwgIC8vIE5vdXZlbGxlLUFxdWl0YWluZVxyXG4gICAgem9vbTogMTFcclxuICB9KTtcclxuXHJcbiAgbWFwLmFkZENvbnRyb2wobmV3IG1hcGxpYnJlZ2wuRnVsbHNjcmVlbkNvbnRyb2woKSwgJ3RvcC1yaWdodCcpO1xyXG4gIG1hcC5hZGRDb250cm9sKG5ldyBtYXBsaWJyZWdsLk5hdmlnYXRpb25Db250cm9sKHsgdmlzdWFsaXplUGl0Y2g6IHRydWUgfSksICd0b3AtbGVmdCcpO1xyXG4gIG1hcC5hZGRDb250cm9sKG5ldyBtYXBsaWJyZWdsLlNjYWxlQ29udHJvbCh7IG1heFdpZHRoOiA4MCwgdW5pdDogJ21ldHJpYycgfSkpO1xyXG59XHJcbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -247,12 +352,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -308,11 +413,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -628,6 +728,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 

@@ -19,21 +19,38 @@ website:
           - text: EPTB-vienne.fr
             href: https://www.eptb-vienne.fr
             target: _blank
-        - sidebar:Objectifs
+        #- sidebar:Objectifs
+        - text: Objectifs n°1
+          menu:
+           - href: objectif1.qmd
+             text: Description Objectif n°1
+           - href: batiments_plain_pied.qmd
+             text: Bâtiments plain-pied
+        
+     right: 
+         - href: https://fr.linkedin.com/company/eptb-vienne
+           aria-label: LinkedIn
+           icon: linkedin
+           text: LinkedIn
+         - text: Nous contacter
+           href: https://eptb-vienne.fr/contact
+           icon: envelope
           
            
-  sidebar:
-     - id: Objectifs
-       title: "Objectifs"
-       style: "docked"
-       background: light
-       collapse-level: 2
-       contents: 
-         - section: "Objectifs 1"
-           href: objectif1.qmd
-           contents:         
-             - text: Bâtiments de plain-pied
-               href: objectif1.qmd
+  # sidebar:
+  #    - id: Objectifs
+  #      title: "Objectifs"
+  #      style: "docked"
+  #      search: true
+  #      background: light
+  #      collapse-level: 2
+  #      contents: 
+  #        - section: "Objectif n°1"
+  #          contents:         
+  #        - text: Description de l'objectif n°1
+  #          href: objectif1.qmd
+  #        - text: Bâtiments de plain-pied
+  #          href: batiments_plain_pied.qmd
            
   
   #      - text: Objectif n°1:Augmenter la sécurité des populations
