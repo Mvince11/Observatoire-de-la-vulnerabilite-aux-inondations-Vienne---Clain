@@ -23,21 +23,22 @@ include-in-header:
 
 ## {.sidebar}
 
-<font size="3" color = "#dc7633"><b> Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) </b></font> <br><br> <font size="4.5px" face="calibri"> Le niveau des eaux peut monter relativement vite pour piéger des personnes dans des locaux ne disposant pas d’un accès vers un étage refuge. Dans les locaux où la hauteur d’eau peut être importante (supérieure à 1,5m), cela représente un danger. </font> <br><br>
+```{=html}
+<div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
+ Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) 
+ </div>
 
-<a href=https://fiches.eptb-vienne.fr/ind_12a.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> <br><br>
+<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;"> Le niveau des eaux peut monter relativement vite pour piéger des personnes dans des locaux ne disposant pas d’un accès vers un étage refuge. Dans les locaux où la hauteur d’eau peut être importante (supérieure à 1,5m), cela représente un danger. </div>
 
-<font size="4.5px" face="calibri">
 
-<p>
+<a href=https://fiches.eptb-vienne.fr/ind_12a.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
 
-::: {style="width: 350px;  padding-top:10px; padding-bottom:10px;border: 1px solid #A0A0A0; text-align: center;background: #F2F2F2;"}
+
+<div style="width: auto; padding:5px; border: 1px solid #A0A0A0; border-radius:15px; text-align: center !important; background: #F2F2F2; font-size:1.1em;margin-top:10%;">
 La zone inondable correspond à l'aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.
-:::
+</div>
+```
 
-</p>
-
-</font>
 
 # Cartographie
 ```{ojs}
