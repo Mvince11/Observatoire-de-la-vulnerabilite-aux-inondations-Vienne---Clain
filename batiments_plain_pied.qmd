@@ -17,11 +17,12 @@ include-in-header:
     <link rel="stylesheet" href="js/photon-geocoder-autocomplete.min.css" type="text/css">
     <script src="js/photon-geocoder-autocomplete.min.js" type="text/javascript"></script>
 ---
+
 ```{=html}
 <div id="nav-menu-objectifs-n°1"></div>
 ```
 
-## {.sidebar}
+##  {.sidebar}
 
 ```{=html}
 <div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
@@ -39,8 +40,8 @@ La zone inondable correspond à l'aléa centennal construit à partir des donné
 </div>
 ```
 
-
 # Cartographie
+
 ```{ojs}
 //| echo: false
 //| padding: 0px
