@@ -24,6 +24,12 @@ include-in-header:
 
 ##  {.sidebar}
 
+```{ojs}
+//| echo: false
+//| output: false
+bbox_sru = FileAttachment("layers/bb.json").json()
+```
+
 ```{=html}
 <div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
  Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) 
@@ -41,6 +47,28 @@ La zone inondable correspond à l'aléa centennal construit à partir des donné
 ```
 
 # Cartographie
+
+
+## Column {width="70%"}
+
+```{ojs}
+//| echo: false
+//| output: false
+
+bassin_vienne = FileAttachment("layers/bassin_vienne.geojson").json();
+departement = FileAttachment("layers/departement.geojson").json();
+region = FileAttachment("layers/region.geojson").json();
+epci = FileAttachment("layers/epci.geojson").json();
+perimetre = FileAttachment("layers/perimetre.json").json();
+slgri = FileAttachment("layers/slgri.json").json();
+tri = FileAttachment("layers/tri.json").json();
+zone_inondable = FileAttachment("layers/zone_inondable.geojson").json();
+indicateurs = FileAttachment("layers/indicateurs.json").json();
+cours_d_eau = FileAttachment("layers/cours_d_eau.geojson").json();
+
+
+
+```
 
 ```{ojs}
 //| echo: false
@@ -67,15 +95,206 @@ map = {
 
   const map = new maplibregl.Map({
     container: container,
-    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',  // Utiliser ce style initialement
-    center: [-0.58979, 44.83449],  // Nouvelle-Aquitaine
+    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+    <!-- center: [-0.04, 46.3051],  -->
     zoom: 11
   });
 
   map.addControl(new maplibregl.FullscreenControl(), 'top-right');
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-left');
   map.addControl(new maplibregl.ScaleControl({ maxWidth: 80, unit: 'metric' }));
-}
+
+  const toggleStyle = (useOrtho) => {
+    if (useOrtho) {
+      map.setLayoutProperty('orthoIGN', 'visibility', 'visible');
+      map.setLayoutProperty('planIGN', 'visibility', 'none');
+    } else {
+      map.setLayoutProperty('orthoIGN', 'visibility', 'none');
+      map.setLayoutProperty('planIGN', 'visibility', 'visible');
+    }
+  };
+
+  map.on('load', () => {
+    map.fitBounds(
+    [
+      [-0.04, 46.3051],   // Sud-Ouest
+      [0.7741, 46.8565]   // Nord-Est
+    ],
+    {
+      padding: 20,
+      linear: true,
+      duration: 0
+    }
+  );
+    // Ajout des fonds raster IGN
+    map.addSource('raster-planign', {
+      type: 'raster',
+      tiles: [
+        `https://data.geopf.fr/wmts?SERVICE=WMTS&style=${sourcePlanIGN.style}&VERSION=1.0.0&REQUEST=GetTile&format=${sourcePlanIGN.format}&layer=${sourcePlanIGN.layer}&tilematrixset=PM&TileMatrix={z}&TileCol={x}&TileRow={y}`
+      ],
+      tileSize: 256,
+      attribution: '© <a href="https://www.ign.fr/">IGN</a>',
+      minzoom: 0,
+      maxzoom: 22
+    });
+
+    map.addSource('raster-ortho', {
+      type: 'raster',
+      tiles: [
+        `https://data.geopf.fr/wmts?SERVICE=WMTS&style=${sourceOrtho.style}&VERSION=1.0.0&REQUEST=GetTile&format=${sourceOrtho.format}&layer=${sourceOrtho.layer}&tilematrixset=PM&TileMatrix={z}&TileCol={x}&TileRow={y}`
+      ],
+      tileSize: 256,
+      attribution: '© <a href="https://www.ign.fr/">IGN</a>',
+      minzoom: 0,
+      maxzoom: 22
+    });
+
+    map.addLayer({
+      id: 'planIGN',
+      type: 'raster',
+      source: 'raster-planign',
+      layout: { visibility: 'visible' }
+    });
+
+    map.addLayer({
+      id: 'orthoIGN',
+      type: 'raster',
+      source: 'raster-ortho',
+      layout: { visibility: 'none' }
+    });
+
+    const layersData = [
+      { data: bassin_vienne, type: 'line', id: 'bassinvienneLayer', color: 'green' },
+      { data: region, type: 'line', id: 'regionLayer', color: 'red' },
+      { data: departement, type: 'line', id: 'departementLayer', color: '#a772b9', width: 2 },
+      { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3' },
+      { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' }
+    ];
+
+    // Ajout des couches vectorielles
+    layersData.forEach(layer => {
+      map.addSource(layer.id, {
+        type: 'geojson',
+        data: layer.data
+      });
+
+      const layerConfig = {
+        id: layer.id,
+        type: layer.type,
+        source: layer.id,
+        paint: {},
+        layout: { visibility: 'none' }
+      };
+
+      if (layer.type === 'fill') {
+        layerConfig.paint['fill-color'] = layer.color;
+        layerConfig.paint['fill-opacity'] = 0.4;
+      } else if (layer.type === 'line') {
+        layerConfig.paint['line-color'] = layer.color;
+        layerConfig.paint['line-width'] = layer.width || 1;
+      }
+
+      map.addLayer(layerConfig);
+
+      map.on('click', layer.id, (e) => {
+        const properties = e.features[0].properties;
+        const popupContent = Object.keys(properties)
+          .map(prop => `<strong>${prop}:</strong> ${properties[prop]}`)
+          .join('<br>');
+
+        new maplibregl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(popupContent)
+          .addTo(map);
+      });
+
+      map.on('mouseenter', layer.id, () => {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+      map.on('mouseleave', layer.id, () => {
+        map.getCanvas().style.cursor = '';
+      });
+    });
+
+    // Interface de contrôle des couches
+    const mapLayersDiv = document.createElement('div');
+    mapLayersDiv.classList.add('mapLayers');
+    mapLayersDiv.style.position = 'absolute';
+    mapLayersDiv.style.zIndex = '1000';
+    mapLayersDiv.innerHTML = `
+      <button id="toggleMapMenuButton" class="btn btn-light">
+        <img src="Images/images/icons/layers-half.svg" alt="Icône SVG" width="25" height="25">
+      </button>
+      <div id="layersList" style="display: none; background: white; padding: 10px; border: 1px solid #ccc;"></div>
+    `;
+    map.getContainer().appendChild(mapLayersDiv);
+
+    const toggleableLayerIds = layersData.map(layer => layer.id);
+    const aliasLayerIds = {
+      bassinvienneLayer: 'Bassin de la Vienne',
+      regionLayer: 'Région',
+      departementLayer: 'Département',
+      epciLayer: 'EPCI',
+      zoneinondableLayer: 'Zonage Inondable'
+    };
+
+    function toggleLayerVisibility(id, visible) {
+      const visibility = visible ? 'visible' : 'none';
+      if (map.getLayer(id)) {
+        map.setLayoutProperty(id, 'visibility', visibility);
+      }
+    }
+
+    const layersListDiv = mapLayersDiv.querySelector('#layersList');
+    toggleableLayerIds.forEach(id => {
+      const name = aliasLayerIds[id] || id;
+
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = id;
+      checkbox.className = 'form-check-input';
+      checkbox.addEventListener('change', () => toggleLayerVisibility(id, checkbox.checked));
+
+      const label = document.createElement('label');
+      label.htmlFor = id;
+      label.className = 'form-check-label';
+      label.innerText = name;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'form-check';
+      wrapper.appendChild(checkbox);
+      wrapper.appendChild(label);
+
+      layersListDiv.appendChild(wrapper);
+    });
+
+    document.getElementById('toggleMapMenuButton').addEventListener('click', () => {
+      layersListDiv.style.display = layersListDiv.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Menu bascule fond de plan
+    const mapMenuDiv = document.createElement('div');
+    mapMenuDiv.classList.add('mapFondDePlan');
+    mapMenuDiv.style.position = 'absolute';
+    mapMenuDiv.style.zIndex = '1000';
+    mapMenuDiv.innerHTML = `
+      <strong>Fond de plan :</strong>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="orthoCheckbox">
+        <label class="form-check-label" for="orthoCheckbox">Photos aériennes</label>
+      </div>
+    `;
+    map.getContainer().appendChild(mapMenuDiv);
+
+    document.getElementById('orthoCheckbox').addEventListener('change', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleStyle(this.checked);
+    });
+  });
+};
+
+
 ```
 
 ## Column {.tabset width="30%"}

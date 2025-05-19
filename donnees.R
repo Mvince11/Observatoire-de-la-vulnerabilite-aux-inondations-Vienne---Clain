@@ -3,34 +3,69 @@ library(sf)
 
 
 bassin_vienne <- readRDS("data/bassin_vienne.rds")
-write_json(bassin_vienne, "data/bassin_vienne.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(bassin_vienne, "sf")) {
+  obj <- st_as_sf(bassin_vienne)
+}
+st_write(bassin_vienne, "layers/bassin_vienne.geojson", driver = "GeoJSON")
+
 
 cours_d_eau <- readRDS("data/cours_d_eau.rds")
-write_json(cours_d_eau, "data/cours_d_eau.json", pretty=TRUE, auto_unbox=TRUE)
+if (!inherits(cours_d_eau, "sf")) {
+  cours_d_eau <- st_as_sf(cours_d_eau)
+}
+st_write(cours_d_eau, "layers/cours_d_eau.geojson", driver = "GeoJSON")
+
 
 departement <- readRDS("data/departement.rds")
-write_json(departement, "data/departement.json", pretty=TRUE, auto_unbox = TRUE)
+if (!inherits(departement, "sf")) {
+  departement <- st_as_sf(departement)
+}
+st_write(departement, "layers/departement.geojson", driver = "GeoJSON")
+
 
 region <- readRDS("data/region.rds")
-write_json(region, "data/region.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(region, "sf")) {
+  region <- st_as_sf(region)
+}
+st_write(region, "layers/region.geojson", driver = "GeoJSON")
 
 epci <- readRDS("data/epci.rds")
-write_json(epci, "data/epci.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(epci, "sf")) {
+  epci <- st_as_sf(epci)
+}
+st_write(epci, "layers/epci.geojson", driver = "GeoJSON")
 
 perimetre <- readRDS("data/perimetre.rds")
-write_json(perimetre, "data/perimetre.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(perimetre, "sf")) {
+  perimetre <- st_as_sf(perimetre)
+}
+st_write(perimetre, "layers/perimetre.geojson", driver = "GeoJSON")
 
 slgri <- readRDS("data/slgri.rds")
-write_json(slgri, "data/slgri.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(slgri, "sf")) {
+  slgri <- st_as_sf(slgri)
+}
+st_write(slgri, "layers/slgri.geojson", driver = "GeoJSON")
+
 
 tri <- readRDS("data/tri.rds")
-write_json(tri , "data/tri.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(tri, "sf")) {
+  tri <- st_as_sf(tri)
+}
+st_write(tri, "layers/tri.geojson", driver = "GeoJSON")
 
 zone_inondable <- readRDS("data/zone_inondable.rds")
-write_json(zone_inondable, "data/zone_inondable.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(zone_inondable, "sf")) {
+  zone_inondable <- st_as_sf(zone_inondable)
+}
+st_write(zone_inondable, "layers/zone_inondable.geojson", driver = "GeoJSON")
 
 indicateurs <- readRDS("data/indicateurs.rds")
-write_json(indicateurs, "data/indicateurs.json", pretty = TRUE, auto_unbox = TRUE)
+if (!inherits(indicateurs, "sf")) {
+  indicateurs <- st_as_sf(indicateurs)
+}
+st_write(indicateurs, "layers/indicateurs.geojson", driver = "GeoJSON")
+
 
 bounding_box <- readRDS("data/bb.rds")
 bounding_box <- st_bbox(bounding_box)
