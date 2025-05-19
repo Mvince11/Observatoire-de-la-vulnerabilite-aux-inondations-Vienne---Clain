@@ -435,6 +435,34 @@ div.sidebar-item-container{
   color: #3f72ce;
 }
 
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  bottom: 150%; /* distance au-dessus du bouton */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 @media (max-width: 768px) {
   #photos_crues img {
     width: 100%;

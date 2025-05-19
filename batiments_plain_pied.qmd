@@ -7,6 +7,9 @@ format:
     orientation: columns
     #page-layout: full
     
+resources:
+  - Images/icons/*.svg
+    
 include-in-header:
   text: |
     <script src="js/maplibre.js"></script>
@@ -103,6 +106,7 @@ map = {
   map.addControl(new maplibregl.FullscreenControl(), 'top-right');
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-left');
   map.addControl(new maplibregl.ScaleControl({ maxWidth: 80, unit: 'metric' }));
+  
 
   const toggleStyle = (useOrtho) => {
     if (useOrtho) {
@@ -168,7 +172,7 @@ map = {
       { data: region, type: 'line', id: 'regionLayer', color: 'red' },
       { data: departement, type: 'line', id: 'departementLayer', color: '#a772b9', width: 2 },
       { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3' },
-      { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' }
+      { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1 }
     ];
 
     // Ajout des couches vectorielles
@@ -222,8 +226,8 @@ map = {
     mapLayersDiv.style.position = 'absolute';
     mapLayersDiv.style.zIndex = '1000';
     mapLayersDiv.innerHTML = `
-      <button id="toggleMapMenuButton" class="btn btn-light">
-        <img src="Images/images/icons/layers-half.svg" alt="Icône SVG" width="25" height="25">
+      <button id="toggleMapMenuButton" class="btn btn-light aria-label="Afficher les couches" title="Afficher les couches">
+        <img src="Images/icons/layers-half.svg" alt="Icône SVG" width="25" height="25">
       </button>
       <div id="layersList" style="display: none; background: white; padding: 10px; border: 1px solid #ccc;"></div>
     `;
