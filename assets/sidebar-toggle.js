@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elem = document.getElementById("nav-menu-objectifs-n°1");
+  const elem = document.getElementById("nav-menu-objectif-n°1");
   const target = "objectif1.html";
 
   if (elem) {
