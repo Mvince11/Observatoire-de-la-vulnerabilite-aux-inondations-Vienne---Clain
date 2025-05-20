@@ -9,6 +9,7 @@ format:
     
 resources:
   - Images/icons/*.svg
+  - layers/data_s12a.json
     
 include-in-header:
   text: |
@@ -366,6 +367,61 @@ map = {
 ### Graphiques {.flow}
 
 #### Row
+
+```{r}
+#| echo: false
+library(sf)
+library(dplyr)
+library(jsonlite)
+
+# Charger le GeoJSON
+indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  st_drop_geometry() %>%
+  select(nom, s12a) %>%
+  filter(!is.na(s12a))
+
+# Sauvegarder au format JSON dans le dossier _site
+write_json(indicateurs, "layers/data_s12a.json", auto_unbox = TRUE)
+```
+
+
+```{ojs}
+//| echo: false
+//| padding: 5px
+//| expandable: false
+import { Plot } from "@observablehq/plot";
+import { Inputs } from "@observablehq/inputs";
+
+// Charger les données depuis le fichier généré par R
+data = FileAttachment("layers/data_s12a.json").json()
+
+// Créer le slider
+viewof slider = Inputs.range(
+  [0, 230], 
+  { value: 230, step: 10, label: "Population max en zone inondable" }
+)
+
+// Fonction de tri croissant
+sorted = data
+  .filter(d => d.s12a <= slider)
+  .sort((a, b) => a.s12a - b.s12a);
+  
+
+Plot.plot({
+  marks: [
+    Plot.barY(sorted, { x: "nom", y: "s12a", fill: "steelblue" }),
+    Plot.text(sorted, { x: "nom", y: "s12a", text: d => `${d.s12a}`, dy: -10 })
+  ],
+  y: { grid: true, label: "Population en zone fortement inondable" },
+  x: { label: "Commune",
+        tickRotate: -45,
+        labelAnchor: "center",
+        labelOffset: 30},
+  width: window.innerWidth * 0.95,
+  height: 550
+})
+
+```
 
 ### Tableau de données {.flow}
 
