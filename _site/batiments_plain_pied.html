@@ -158,10 +158,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-objectifs-n°1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Objectifs n°1</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-objectif-n°1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Objectif n°1</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-objectifs-n°1">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-objectif-n°1">    
         <li>
     <a class="dropdown-item" href="./batiments_plain_pied.html">
  <span class="dropdown-text">Bâtiments plain-pied</span></a>
@@ -220,7 +220,7 @@ grid-auto-rows: minmax(0, 1fr);">
 grid-auto-rows: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="cell hidden html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb2" data-startfrom="61" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>bassin_vienne <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"layers/bassin_vienne.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb2" data-startfrom="61" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>bassin_vienne <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"layers/bassin_vienne.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>departement <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"layers/departement.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
 <span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>region <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"layers/region.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>epci <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"layers/epci.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
@@ -417,13 +417,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dynamicColor</span><span class="op">:</span> { </span>
 <span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>        <span class="dt">property</span><span class="op">:</span> <span class="st">'s12a'</span><span class="op">,</span></span>
 <span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>        <span class="dt">mapping</span><span class="op">:</span> { </span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>           <span class="st">'-1'</span><span class="op">:</span> <span class="st">'#d9d9d9'</span><span class="op">,</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>           <span class="st">'-1'</span><span class="op">:</span> <span class="st">'#f1eeed'</span><span class="op">,</span></span>
 <span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>           <span class="st">'0'</span><span class="op">:</span> <span class="st">'#ffffff'</span><span class="op">,</span> </span>
 <span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>           <span class="st">'10'</span><span class="op">:</span> <span class="st">'#ffaaaa'</span><span class="op">,</span></span>
 <span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>           <span class="st">'50'</span><span class="op">:</span> <span class="st">'#ff5555'</span><span class="op">,</span> </span>
 <span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>           <span class="st">'100'</span><span class="op">:</span> <span class="st">'#ff0000'</span></span>
 <span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>          }<span class="op">,</span> </span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>         <span class="cf">default</span><span class="op">:</span> <span class="st">'#888888'</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>         <span class="cf">default</span><span class="op">:</span> <span class="st">'#f1eeed'</span></span>
 <span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>        } </span>
 <span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>         } </span>
 <span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">;</span></span>
@@ -477,117 +477,115 @@ grid-auto-rows: minmax(0, 1fr);">
 <span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>      </span>
 <span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">addLayer</span>(layerConfig)<span class="op">;</span></span>
 <span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'click'</span><span class="op">,</span> <span class="st">'indicateurs12aLayer'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">features</span><span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> feature <span class="op">=</span> e<span class="op">.</span><span class="at">features</span>[<span class="dv">0</span>]<span class="op">;</span></span>
-<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Fonction pour formater les nombres avec séparateurs de milliers</span></span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> formatNumber <span class="op">=</span> (num) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Vérifie si la valeur est définie et convertible en nombre</span></span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> parsedNum <span class="op">=</span> <span class="pp">parseInt</span>(num<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="op">!</span><span class="pp">isNaN</span>(parsedNum) <span class="op">?</span> parsedNum<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">'fr-FR'</span>) <span class="op">:</span> <span class="st">'Non disponible'</span><span class="op">;</span></span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> popupContent <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;hr&gt;&lt;strong&gt;&lt;center&gt;Commune : </span><span class="sc">${</span>feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">nom</span> <span class="op">||</span> <span class="st">'Non disponible'</span><span class="sc">}</span><span class="vs">&lt;/center&gt;&lt;/strong&gt;&lt;hr&gt;</span></span>
-<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;strong&gt;- Population :&lt;/strong&gt; </span><span class="sc">${</span><span class="fu">formatNumber</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">population</span>) <span class="op">||</span> <span class="st">'Non disponible'</span><span class="sc">}</span><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;strong&gt;- Nombre de personnes en zone fortement inondable :&lt;/strong&gt; </span><span class="sc">${</span>feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">s12a</span> <span class="op">||</span> <span class="st">'0'</span><span class="sc">}</span><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a><span class="vs">        `</span><span class="op">;</span></span>
-<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>        <span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">Popup</span>()</span>
-<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">setLngLat</span>(e<span class="op">.</span><span class="at">lngLat</span>)</span>
-<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">setHTML</span>(popupContent)</span>
-<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
-<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'mouseenter'</span><span class="op">,</span> layer<span class="op">.</span><span class="at">id</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">getCanvas</span>()<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">'pointer'</span><span class="op">;</span></span>
-<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
-<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'mouseleave'</span><span class="op">,</span> layer<span class="op">.</span><span class="at">id</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">getCanvas</span>()<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
-<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
-<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Interface de contrôle des couches</span></span>
-<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mapLayersDiv <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'mapLayers'</span>)<span class="op">;</span></span>
-<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">'absolute'</span><span class="op">;</span></span>
-<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">zIndex</span> <span class="op">=</span> <span class="st">'1000'</span><span class="op">;</span></span>
-<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;button id="toggleMapMenuButton" class="btn btn-light aria-label="Afficher les couches" title="Afficher les couches"&gt;</span></span>
-<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;img src="Images/icons/layers-half.svg" alt="Icône SVG" width="25" height="25"&gt;</span></span>
-<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/button&gt;</span></span>
-<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div id="layersList" style="display: none; background: white; padding: 10px; border: 1px solid #ccc;"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
-<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">getContainer</span>()<span class="op">.</span><span class="fu">appendChild</span>(mapLayersDiv)<span class="op">;</span></span>
-<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> toggleableLayerIds <span class="op">=</span> layersData<span class="op">.</span><span class="fu">map</span>(layer <span class="kw">=&gt;</span> layer<span class="op">.</span><span class="at">id</span>)<span class="op">;</span></span>
-<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> aliasLayerIds <span class="op">=</span> {</span>
-<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>      <span class="dt">bassinvienneLayer</span><span class="op">:</span> <span class="st">'Bassin de la Vienne'</span><span class="op">,</span></span>
-<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a>      <span class="dt">regionLayer</span><span class="op">:</span> <span class="st">'Région'</span><span class="op">,</span></span>
-<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>      <span class="dt">departementLayer</span><span class="op">:</span> <span class="st">'Département'</span><span class="op">,</span></span>
-<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a>      <span class="dt">epciLayer</span><span class="op">:</span> <span class="st">'EPCI'</span><span class="op">,</span></span>
-<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>      <span class="dt">zoneinondableLayer</span><span class="op">:</span> <span class="st">'Zonage Inondable'</span><span class="op">,</span></span>
-<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>      <span class="dt">indicateurs12aLayer</span><span class="op">:</span> <span class="st">'Bâtiments de plain-pied'</span></span>
-<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
-<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">toggleLayerVisibility</span>(id<span class="op">,</span> visible) {</span>
-<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> visibility <span class="op">=</span> visible <span class="op">?</span> <span class="st">'visible'</span> <span class="op">:</span> <span class="st">'none'</span><span class="op">;</span></span>
-<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (map<span class="op">.</span><span class="fu">getLayer</span>(id)) {</span>
-<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">setLayoutProperty</span>(id<span class="op">,</span> <span class="st">'visibility'</span><span class="op">,</span> visibility)<span class="op">;</span></span>
-<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> layersListDiv <span class="op">=</span> mapLayersDiv<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#layersList'</span>)<span class="op">;</span></span>
-<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>    toggleableLayerIds<span class="op">.</span><span class="fu">forEach</span>(id <span class="kw">=&gt;</span> {</span>
-<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> name <span class="op">=</span> aliasLayerIds[id] <span class="op">||</span> id<span class="op">;</span></span>
-<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> checkbox <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'input'</span>)<span class="op">;</span></span>
-<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">type</span> <span class="op">=</span> <span class="st">'checkbox'</span><span class="op">;</span></span>
-<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">id</span> <span class="op">=</span> id<span class="op">;</span></span>
-<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check-input'</span><span class="op">;</span></span>
-<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> () <span class="kw">=&gt;</span> <span class="fu">toggleLayerVisibility</span>(id<span class="op">,</span> checkbox<span class="op">.</span><span class="at">checked</span>))<span class="op">;</span></span>
-<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> label <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'label'</span>)<span class="op">;</span></span>
-<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">htmlFor</span> <span class="op">=</span> id<span class="op">;</span></span>
-<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check-label'</span><span class="op">;</span></span>
-<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> name<span class="op">;</span></span>
-<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> wrapper <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check'</span><span class="op">;</span></span>
-<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="fu">appendChild</span>(checkbox)<span class="op">;</span></span>
-<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="fu">appendChild</span>(label)<span class="op">;</span></span>
-<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>      layersListDiv<span class="op">.</span><span class="fu">appendChild</span>(wrapper)<span class="op">;</span></span>
-<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'toggleMapMenuButton'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>      layersListDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> layersListDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">===</span> <span class="st">'none'</span> <span class="op">?</span> <span class="st">'block'</span> <span class="op">:</span> <span class="st">'none'</span><span class="op">;</span></span>
-<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>     </span>
-<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Menu bascule fond de plan</span></span>
-<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mapMenuDiv <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'mapFondDePlan'</span>)<span class="op">;</span></span>
-<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">'absolute'</span><span class="op">;</span></span>
-<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">zIndex</span> <span class="op">=</span> <span class="st">'1000'</span><span class="op">;</span></span>
-<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;strong&gt;Fond de plan :&lt;/strong&gt;</span></span>
-<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div class="form-check form-switch"&gt;</span></span>
-<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;input class="form-check-input" type="checkbox" role="switch" id="orthoCheckbox"&gt;</span></span>
-<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;label class="form-check-label" for="orthoCheckbox"&gt;Photos aériennes&lt;/label&gt;</span></span>
-<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/div&gt;</span></span>
-<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
-<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">getContainer</span>()<span class="op">.</span><span class="fu">appendChild</span>(mapMenuDiv)<span class="op">;</span></span>
-<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'orthoCheckbox'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> <span class="kw">function</span> (e) {</span>
-<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a>      e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
-<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a>      e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span></span>
-<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>      <span class="fu">toggleStyle</span>(<span class="kw">this</span><span class="op">.</span><span class="at">checked</span>)<span class="op">;</span></span>
-<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'click'</span><span class="op">,</span> layer<span class="op">.</span><span class="at">id</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> feature <span class="op">=</span> e<span class="op">.</span><span class="at">features</span>[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> nom <span class="op">=</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">nom</span> <span class="op">||</span> <span class="st">'Non disponible'</span><span class="op">;</span></span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> population <span class="op">=</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">population</span></span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>        <span class="op">?</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">population</span><span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">'fr-FR'</span>) <span class="op">+</span> <span class="st">' hab'</span></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>        <span class="op">:</span> <span class="st">'Non disponible'</span><span class="op">;</span></span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> s12a <span class="op">=</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">s12a</span> <span class="op">||</span> <span class="st">'0'</span><span class="op">;</span></span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> popupContent <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;hr&gt;&lt;strong&gt;&lt;center&gt;Commune : </span><span class="sc">${</span>nom<span class="sc">}</span><span class="vs">&lt;/center&gt;&lt;/strong&gt;&lt;hr&gt;</span></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;strong&gt;- Population :&lt;/strong&gt; </span><span class="sc">${</span>population<span class="sc">}</span><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;strong&gt;- Nombre de personnes en zone fortement inondable :&lt;/strong&gt; </span><span class="sc">${</span>s12a<span class="sc">}</span><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a><span class="vs">        `</span><span class="op">;</span></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>        <span class="kw">new</span> maplibregl<span class="op">.</span><span class="fu">Popup</span>()</span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>          <span class="op">.</span><span class="fu">setLngLat</span>(e<span class="op">.</span><span class="at">lngLat</span>)</span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>          <span class="op">.</span><span class="fu">setHTML</span>(popupContent)</span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a>          <span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'mouseenter'</span><span class="op">,</span> layer<span class="op">.</span><span class="at">id</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">getCanvas</span>()<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">'pointer'</span><span class="op">;</span></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">on</span>(<span class="st">'mouseleave'</span><span class="op">,</span> layer<span class="op">.</span><span class="at">id</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">getCanvas</span>()<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Interface de contrôle des couches</span></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mapLayersDiv <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'mapLayers'</span>)<span class="op">;</span></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">'absolute'</span><span class="op">;</span></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">zIndex</span> <span class="op">=</span> <span class="st">'1000'</span><span class="op">;</span></span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>    mapLayersDiv<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;button id="toggleMapMenuButton" class="btn btn-light aria-label="Afficher les couches" title="Afficher les couches"&gt;</span></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;img src="Images/icons/layers-half.svg" alt="Icône SVG" width="25" height="25"&gt;</span></span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/button&gt;</span></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div id="layersList" style="display: none; background: white; padding: 10px; border: 1px solid #ccc;"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">getContainer</span>()<span class="op">.</span><span class="fu">appendChild</span>(mapLayersDiv)<span class="op">;</span></span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> toggleableLayerIds <span class="op">=</span> layersData<span class="op">.</span><span class="fu">map</span>(layer <span class="kw">=&gt;</span> layer<span class="op">.</span><span class="at">id</span>)<span class="op">;</span></span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> aliasLayerIds <span class="op">=</span> {</span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a>      <span class="dt">bassinvienneLayer</span><span class="op">:</span> <span class="st">'Bassin de la Vienne'</span><span class="op">,</span></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>      <span class="dt">regionLayer</span><span class="op">:</span> <span class="st">'Région'</span><span class="op">,</span></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>      <span class="dt">departementLayer</span><span class="op">:</span> <span class="st">'Département'</span><span class="op">,</span></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a>      <span class="dt">epciLayer</span><span class="op">:</span> <span class="st">'EPCI'</span><span class="op">,</span></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>      <span class="dt">zoneinondableLayer</span><span class="op">:</span> <span class="st">'Zonage Inondable'</span><span class="op">,</span></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a>      <span class="dt">indicateurs12aLayer</span><span class="op">:</span> <span class="st">'Bâtiments de plain-pied'</span></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">toggleLayerVisibility</span>(id<span class="op">,</span> visible) {</span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> visibility <span class="op">=</span> visible <span class="op">?</span> <span class="st">'visible'</span> <span class="op">:</span> <span class="st">'none'</span><span class="op">;</span></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (map<span class="op">.</span><span class="fu">getLayer</span>(id)) {</span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>        map<span class="op">.</span><span class="fu">setLayoutProperty</span>(id<span class="op">,</span> <span class="st">'visibility'</span><span class="op">,</span> visibility)<span class="op">;</span></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> layersListDiv <span class="op">=</span> mapLayersDiv<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#layersList'</span>)<span class="op">;</span></span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>    toggleableLayerIds<span class="op">.</span><span class="fu">forEach</span>(id <span class="kw">=&gt;</span> {</span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> name <span class="op">=</span> aliasLayerIds[id] <span class="op">||</span> id<span class="op">;</span></span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> checkbox <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'input'</span>)<span class="op">;</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">type</span> <span class="op">=</span> <span class="st">'checkbox'</span><span class="op">;</span></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">id</span> <span class="op">=</span> id<span class="op">;</span></span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check-input'</span><span class="op">;</span></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>      checkbox<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> () <span class="kw">=&gt;</span> <span class="fu">toggleLayerVisibility</span>(id<span class="op">,</span> checkbox<span class="op">.</span><span class="at">checked</span>))<span class="op">;</span></span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> label <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'label'</span>)<span class="op">;</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">htmlFor</span> <span class="op">=</span> id<span class="op">;</span></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check-label'</span><span class="op">;</span></span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>      label<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> name<span class="op">;</span></span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> wrapper <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">'form-check'</span><span class="op">;</span></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="fu">appendChild</span>(checkbox)<span class="op">;</span></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>      wrapper<span class="op">.</span><span class="fu">appendChild</span>(label)<span class="op">;</span></span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>      layersListDiv<span class="op">.</span><span class="fu">appendChild</span>(wrapper)<span class="op">;</span></span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'toggleMapMenuButton'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>      layersListDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> layersListDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">===</span> <span class="st">'none'</span> <span class="op">?</span> <span class="st">'block'</span> <span class="op">:</span> <span class="st">'none'</span><span class="op">;</span></span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Menu bascule fond de plan</span></span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> mapMenuDiv <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'mapFondDePlan'</span>)<span class="op">;</span></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">'absolute'</span><span class="op">;</span></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">zIndex</span> <span class="op">=</span> <span class="st">'1000'</span><span class="op">;</span></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a>    mapMenuDiv<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;strong&gt;Fond de plan :&lt;/strong&gt;</span></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div class="form-check form-switch"&gt;</span></span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;input class="form-check-input" type="checkbox" role="switch" id="orthoCheckbox"&gt;</span></span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;label class="form-check-label" for="orthoCheckbox"&gt;Photos aériennes&lt;/label&gt;</span></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/div&gt;</span></span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a>    map<span class="op">.</span><span class="fu">getContainer</span>()<span class="op">.</span><span class="fu">appendChild</span>(mapMenuDiv)<span class="op">;</span></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'orthoCheckbox'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> <span class="kw">function</span> (e) {</span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>      e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a>      e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a>      <span class="fu">toggleStyle</span>(<span class="kw">this</span><span class="op">.</span><span class="at">checked</span>)<span class="op">;</span></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
 
@@ -609,7 +607,339 @@ grid-auto-rows: minmax(0, 1fr);">
 </div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-2-2"><div class="card-body html-fill-item html-fill-container" data-title="Tableau de données">
 <div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div id="tbl-s12a" class="cell quarto-float quarto-figure quarto-figure-center html-fill-item html-fill-container">
+<figure class="quarto-float quarto-float-tbl figure html-fill-item html-fill-container">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-s12a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Données de la variable s12a
+</figcaption>
+<div aria-describedby="tbl-s12a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 33%">
+<col style="width: 11%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Code INSEE</th>
+<th style="text-align: left;">Commune</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Population en zone fortement inondable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">86095</td>
+<td style="text-align: left;">Dissay</td>
+<td style="text-align: right;">3233</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86014</td>
+<td style="text-align: left;">Availles-en-Châtellerault</td>
+<td style="text-align: right;">1757</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86088</td>
+<td style="text-align: left;">Croutelle</td>
+<td style="text-align: right;">851</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86253</td>
+<td style="text-align: left;">Sanxay</td>
+<td style="text-align: right;">548</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86062</td>
+<td style="text-align: left;">Chasseneuil-du-Poitou</td>
+<td style="text-align: right;">4704</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86239</td>
+<td style="text-align: left;">Sainte-Radégonde</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86114</td>
+<td style="text-align: left;">Jardres</td>
+<td style="text-align: right;">1273</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86032</td>
+<td style="text-align: left;">Bonneuil-Matours</td>
+<td style="text-align: right;">2104</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86298</td>
+<td style="text-align: left;">Vouneuil-sur-Vienne</td>
+<td style="text-align: right;">2198</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86163</td>
+<td style="text-align: left;">Montamisé</td>
+<td style="text-align: right;">3630</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86124</td>
+<td style="text-align: left;">Lavoux</td>
+<td style="text-align: right;">1180</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86020</td>
+<td style="text-align: left;">Bellefonds</td>
+<td style="text-align: right;">254</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86261</td>
+<td style="text-align: left;">Sèvres-Anxaumont</td>
+<td style="text-align: right;">2181</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86046</td>
+<td style="text-align: left;">Cenon-sur-Vienne</td>
+<td style="text-align: right;">1778</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86091</td>
+<td style="text-align: left;">Curzay-sur-Vonne</td>
+<td style="text-align: right;">410</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86028</td>
+<td style="text-align: left;">Bignoux</td>
+<td style="text-align: right;">1054</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86213</td>
+<td style="text-align: left;">Rouillé</td>
+<td style="text-align: right;">2468</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86070</td>
+<td style="text-align: left;">Chauvigny</td>
+<td style="text-align: right;">7049</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86233</td>
+<td style="text-align: left;">Valdivienne</td>
+<td style="text-align: right;">2747</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86202</td>
+<td style="text-align: left;">La Puye</td>
+<td style="text-align: right;">606</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86058</td>
+<td style="text-align: left;">La Chapelle-Moulière</td>
+<td style="text-align: right;">705</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86135</td>
+<td style="text-align: left;">Liniers</td>
+<td style="text-align: right;">561</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86226</td>
+<td style="text-align: left;">Saint-Julien-l’Ars</td>
+<td style="text-align: right;">2660</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86031</td>
+<td style="text-align: left;">Bonnes</td>
+<td style="text-align: right;">1729</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86024</td>
+<td style="text-align: left;">Béruges</td>
+<td style="text-align: right;">1469</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86133</td>
+<td style="text-align: left;">Ligugé</td>
+<td style="text-align: right;">3349</td>
+<td style="text-align: right;">85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86194</td>
+<td style="text-align: left;">Poitiers</td>
+<td style="text-align: right;">88291</td>
+<td style="text-align: right;">226</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86027</td>
+<td style="text-align: left;">Biard</td>
+<td style="text-align: right;">1751</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86158</td>
+<td style="text-align: left;">Migné-Auxances</td>
+<td style="text-align: right;">6071</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86066</td>
+<td style="text-align: left;">Châtellerault</td>
+<td style="text-align: right;">31840</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86041</td>
+<td style="text-align: left;">Buxerolles</td>
+<td style="text-align: right;">10023</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86174</td>
+<td style="text-align: left;">Naintré</td>
+<td style="text-align: right;">5911</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86139</td>
+<td style="text-align: left;">Lusignan</td>
+<td style="text-align: right;">2649</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86019</td>
+<td style="text-align: left;">Beaumont Saint-Cyr</td>
+<td style="text-align: right;">3035</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86115</td>
+<td style="text-align: left;">Jaunay-Marigny</td>
+<td style="text-align: right;">7530</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86214</td>
+<td style="text-align: left;">Saint-Benoît</td>
+<td style="text-align: right;">7233</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86116</td>
+<td style="text-align: left;">Jazeneuil</td>
+<td style="text-align: right;">804</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86222</td>
+<td style="text-align: left;">Saint-Georges-lès-Baillargeaux</td>
+<td style="text-align: right;">4168</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86244</td>
+<td style="text-align: left;">Saint-Sauvant</td>
+<td style="text-align: right;">1258</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86045</td>
+<td style="text-align: left;">Celle-Lévescault</td>
+<td style="text-align: right;">1356</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86256</td>
+<td style="text-align: left;">Savigny-Lévescault</td>
+<td style="text-align: right;">1168</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86198</td>
+<td style="text-align: left;">Pouillé</td>
+<td style="text-align: right;">657</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86157</td>
+<td style="text-align: left;">Mignaloux-Beauvoir</td>
+<td style="text-align: right;">4577</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86268</td>
+<td style="text-align: left;">Tercé</td>
+<td style="text-align: right;">1116</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86080</td>
+<td style="text-align: left;">Cloué</td>
+<td style="text-align: right;">496</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86263</td>
+<td style="text-align: left;">Smarves</td>
+<td style="text-align: right;">2810</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86297</td>
+<td style="text-align: left;">Vouneuil-sous-Biard</td>
+<td style="text-align: right;">5896</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86100</td>
+<td style="text-align: left;">Fontaine-le-Comte</td>
+<td style="text-align: right;">3853</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86083</td>
+<td style="text-align: left;">Coulombiers</td>
+<td style="text-align: right;">1164</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 
 
 <div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
@@ -661,7 +991,7 @@ bslib.Sidebar.initCollapsibleAll()
 
 
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImJib3hfc3J1ID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvYmIuanNvblwiKS5qc29uKClcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcbmJhc3Npbl92aWVubmUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9iYXNzaW5fdmllbm5lLmdlb2pzb25cIikuanNvbigpO1xyXG5kZXBhcnRlbWVudCA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL2RlcGFydGVtZW50Lmdlb2pzb25cIikuanNvbigpO1xyXG5yZWdpb24gPSBGaWxlQXR0YWNobWVudChcImxheWVycy9yZWdpb24uZ2VvanNvblwiKS5qc29uKCk7XHJcbmVwY2kgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9lcGNpLmdlb2pzb25cIikuanNvbigpO1xyXG5wZXJpbWV0cmUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9wZXJpbWV0cmUuanNvblwiKS5qc29uKCk7XHJcbnNsZ3JpID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvc2xncmkuanNvblwiKS5qc29uKCk7XHJcbnRyaSA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL3RyaS5qc29uXCIpLmpzb24oKTtcclxuem9uZV9pbm9uZGFibGUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy96b25lX2lub25kYWJsZS5nZW9qc29uXCIpLmpzb24oKTtcclxuaW5kaWNhdGV1cnMgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9pbmRpY2F0ZXVycy5qc29uXCIpLmpzb24oKTtcclxuY291cnNfZF9lYXUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9jb3Vyc19kX2VhdS5nZW9qc29uXCIpLmpzb24oKTtcclxuaW5kaWNhdGV1cnNHZW9qc29uID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvaW5kaWNhdGV1cnMuZ2VvanNvblwiKS5qc29uKCk7XHJcblxyXG5cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcblxyXG5tYXAgPSB7XHJcbiAgY29uc3QgY29udGFpbmVyID0gaHRtbGA8ZGl2IGNsYXNzPVwibWFwLWNvbnRhaW5lclwiIGlkPVwibWFwXCIgc3R5bGU9XCJoZWlnaHQ6IDcyMHB4OyB3aWR0aDogMTAwJTtcIj48L2Rpdj5gO1xyXG4gIHlpZWxkIGNvbnRhaW5lcjtcclxuXHJcbiAgY29uc3Qgc291cmNlUGxhbklHTiA9IHtcclxuICAgIHN0eWxlOiAnbm9ybWFsJyxcclxuICAgIGZvcm1hdDogJ2ltYWdlL3BuZycsXHJcbiAgICBsYXllcjogJ0dFT0dSQVBISUNBTEdSSURTWVNURU1TLlBMQU5JR05WMidcclxuICB9O1xyXG5cclxuICBjb25zdCBzb3VyY2VPcnRobyA9IHtcclxuICAgIHN0eWxlOiAnbm9ybWFsJyxcclxuICAgIGZvcm1hdDogJ2ltYWdlL2pwZWcnLFxyXG4gICAgbGF5ZXI6ICdIUi5PUlRIT0lNQUdFUlkuT1JUSE9QSE9UT1MnXHJcbiAgfTtcclxuXHJcbiAgY29uc3QgbWFwID0gbmV3IG1hcGxpYnJlZ2wuTWFwKHtcclxuICAgIGNvbnRhaW5lcjogY29udGFpbmVyLFxyXG4gICAgc3R5bGU6ICdodHRwczovL2Jhc2VtYXBzLmNhcnRvY2RuLmNvbS9nbC92b3lhZ2VyLWdsLXN0eWxlL3N0eWxlLmpzb24nLFxyXG4gICAgPCEtLSBjZW50ZXI6IFstMC4wNCwgNDYuMzA1MV0sICAtLT5cclxuICAgIHpvb206IDExXHJcbiAgfSk7XHJcblxyXG4gIG1hcC5hZGRDb250cm9sKG5ldyBtYXBsaWJyZWdsLkZ1bGxzY3JlZW5Db250cm9sKCksICd0b3AtcmlnaHQnKTtcclxuICBtYXAuYWRkQ29udHJvbChuZXcgbWFwbGlicmVnbC5OYXZpZ2F0aW9uQ29udHJvbCh7IHZpc3VhbGl6ZVBpdGNoOiB0cnVlIH0pLCAndG9wLWxlZnQnKTtcclxuICBtYXAuYWRkQ29udHJvbChuZXcgbWFwbGlicmVnbC5TY2FsZUNvbnRyb2woeyBtYXhXaWR0aDogODAsIHVuaXQ6ICdtZXRyaWMnIH0pKTtcclxuICBcclxuXHJcbiAgY29uc3QgdG9nZ2xlU3R5bGUgPSAodXNlT3J0aG8pID0+IHtcclxuICAgIGlmICh1c2VPcnRobykge1xyXG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ29ydGhvSUdOJywgJ3Zpc2liaWxpdHknLCAndmlzaWJsZScpO1xyXG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ3BsYW5JR04nLCAndmlzaWJpbGl0eScsICdub25lJyk7XHJcbiAgICB9IGVsc2Uge1xyXG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ29ydGhvSUdOJywgJ3Zpc2liaWxpdHknLCAnbm9uZScpO1xyXG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ3BsYW5JR04nLCAndmlzaWJpbGl0eScsICd2aXNpYmxlJyk7XHJcbiAgICB9XHJcbiAgfTtcclxuXHJcbiAgbWFwLm9uKCdsb2FkJywgKCkgPT4ge1xyXG4gICAgbWFwLmZpdEJvdW5kcyhcclxuICAgIFtcclxuICAgICAgWy0wLjA0LCA0Ni4zMDUxXSwgICAvLyBTdWQtT3Vlc3RcclxuICAgICAgWzAuNzc0MSwgNDYuODU2NV0gICAvLyBOb3JkLUVzdFxyXG4gICAgXSxcclxuICAgIHtcclxuICAgICAgcGFkZGluZzogMjAsXHJcbiAgICAgIGxpbmVhcjogdHJ1ZSxcclxuICAgICAgZHVyYXRpb246IDBcclxuICAgIH1cclxuICApO1xyXG4gICAgLy8gQWpvdXQgZGVzIGZvbmRzIHJhc3RlciBJR05cclxuICAgIG1hcC5hZGRTb3VyY2UoJ3Jhc3Rlci1wbGFuaWduJywge1xyXG4gICAgICB0eXBlOiAncmFzdGVyJyxcclxuICAgICAgdGlsZXM6IFtcclxuICAgICAgICBgaHR0cHM6Ly9kYXRhLmdlb3BmLmZyL3dtdHM/U0VSVklDRT1XTVRTJnN0eWxlPSR7c291cmNlUGxhbklHTi5zdHlsZX0mVkVSU0lPTj0xLjAuMCZSRVFVRVNUPUdldFRpbGUmZm9ybWF0PSR7c291cmNlUGxhbklHTi5mb3JtYXR9JmxheWVyPSR7c291cmNlUGxhbklHTi5sYXllcn0mdGlsZW1hdHJpeHNldD1QTSZUaWxlTWF0cml4PXt6fSZUaWxlQ29sPXt4fSZUaWxlUm93PXt5fWBcclxuICAgICAgXSxcclxuICAgICAgdGlsZVNpemU6IDI1NixcclxuICAgICAgYXR0cmlidXRpb246ICfCqSA8YSBocmVmPVwiaHR0cHM6Ly93d3cuaWduLmZyL1wiPklHTjwvYT4nLFxyXG4gICAgICBtaW56b29tOiAwLFxyXG4gICAgICBtYXh6b29tOiAyMlxyXG4gICAgfSk7XHJcblxyXG4gICAgbWFwLmFkZFNvdXJjZSgncmFzdGVyLW9ydGhvJywge1xyXG4gICAgICB0eXBlOiAncmFzdGVyJyxcclxuICAgICAgdGlsZXM6IFtcclxuICAgICAgICBgaHR0cHM6Ly9kYXRhLmdlb3BmLmZyL3dtdHM/U0VSVklDRT1XTVRTJnN0eWxlPSR7c291cmNlT3J0aG8uc3R5bGV9JlZFUlNJT049MS4wLjAmUkVRVUVTVD1HZXRUaWxlJmZvcm1hdD0ke3NvdXJjZU9ydGhvLmZvcm1hdH0mbGF5ZXI9JHtzb3VyY2VPcnRoby5sYXllcn0mdGlsZW1hdHJpeHNldD1QTSZUaWxlTWF0cml4PXt6fSZUaWxlQ29sPXt4fSZUaWxlUm93PXt5fWBcclxuICAgICAgXSxcclxuICAgICAgdGlsZVNpemU6IDI1NixcclxuICAgICAgYXR0cmlidXRpb246ICfCqSA8YSBocmVmPVwiaHR0cHM6Ly93d3cuaWduLmZyL1wiPklHTjwvYT4nLFxyXG4gICAgICBtaW56b29tOiAwLFxyXG4gICAgICBtYXh6b29tOiAyMlxyXG4gICAgfSk7XHJcblxyXG4gICAgbWFwLmFkZExheWVyKHtcclxuICAgICAgaWQ6ICdwbGFuSUdOJyxcclxuICAgICAgdHlwZTogJ3Jhc3RlcicsXHJcbiAgICAgIHNvdXJjZTogJ3Jhc3Rlci1wbGFuaWduJyxcclxuICAgICAgbGF5b3V0OiB7IHZpc2liaWxpdHk6ICd2aXNpYmxlJyB9XHJcbiAgICB9KTtcclxuXHJcbiAgICBtYXAuYWRkTGF5ZXIoe1xyXG4gICAgICBpZDogJ29ydGhvSUdOJyxcclxuICAgICAgdHlwZTogJ3Jhc3RlcicsXHJcbiAgICAgIHNvdXJjZTogJ3Jhc3Rlci1vcnRobycsXHJcbiAgICAgIGxheW91dDogeyB2aXNpYmlsaXR5OiAnbm9uZScgfVxyXG4gICAgfSk7XHJcbiAgICBcclxuICAgIC8vZmV0Y2goJ2xheWVycy9pbmRpY2F0ZXVycy5nZW9qc29uJylcclxuICAgICAvLy50aGVuKHJlc3BvbnNlID0+IHJlc3BvbnNlLmpzb24oKSlcclxuICAgICAvLy50aGVuKGluZGljYXRldXJzR2VvanNvbiA9PiB7IFxyXG4gICAgICAgICAgICAgIFxyXG4gICAgXHJcbiAgICBjb25zdCBsYXllcnNEYXRhID0gW1xyXG4gICAgICB7IGRhdGE6IGJhc3Npbl92aWVubmUsIHR5cGU6ICdsaW5lJywgaWQ6ICdiYXNzaW52aWVubmVMYXllcicsIGNvbG9yOiAnZ3JlZW4nIH0sXHJcbiAgICAgIHsgZGF0YTogcmVnaW9uLCB0eXBlOiAnbGluZScsIGlkOiAncmVnaW9uTGF5ZXInLCBjb2xvcjogJ3JlZCcgfSxcclxuICAgICAgeyBkYXRhOiBkZXBhcnRlbWVudCwgdHlwZTogJ2xpbmUnLCBpZDogJ2RlcGFydGVtZW50TGF5ZXInLCBjb2xvcjogJyNhNzcyYjknLCB3aWR0aDogMiB9LFxyXG4gICAgICB7IGRhdGE6IGVwY2ksIHR5cGU6ICdsaW5lJywgaWQ6ICdlcGNpTGF5ZXInLCBjb2xvcjogJyM1NjdhZTMnIH0sXHJcbiAgICAgIHsgZGF0YTogem9uZV9pbm9uZGFibGUsIHR5cGU6ICdmaWxsJywgaWQ6ICd6b25laW5vbmRhYmxlTGF5ZXInLCBjb2xvcjogJyNiNGMzZWYnICwgd2lkdGg6IDIsIG9wYWNpdHk6IDEgfSxcclxuICAgICAgeyBkYXRhOiBpbmRpY2F0ZXVyc0dlb2pzb24sIC8vIEdlb0pTT04gY29udGVuYW50IHVuZSBwcm9wcmnDqXTDqSAnczEyYScgLS0+XHJcbiAgICAgICAgdHlwZTogJ2ZpbGwnLFxyXG4gICAgICAgIGlkOiAnaW5kaWNhdGV1cnMxMmFMYXllcicsXHJcbiAgICAgICAgb3BhY2l0eTogMC43LFxyXG4gICAgICAgIHdpZHRoOiAxLFxyXG4gICAgICAgIGR5bmFtaWNDb2xvcjogeyBcclxuICAgICAgICBwcm9wZXJ0eTogJ3MxMmEnLFxyXG4gICAgICAgIG1hcHBpbmc6IHsgXHJcbiAgICAgICAgICAgJy0xJzogJyNkOWQ5ZDknLFxyXG4gICAgICAgICAgICcwJzogJyNmZmZmZmYnLCBcclxuICAgICAgICAgICAnMTAnOiAnI2ZmYWFhYScsXHJcbiAgICAgICAgICAgJzUwJzogJyNmZjU1NTUnLCBcclxuICAgICAgICAgICAnMTAwJzogJyNmZjAwMDAnXHJcbiAgICAgICAgICB9LCBcclxuICAgICAgICAgZGVmYXVsdDogJyM4ODg4ODgnXHJcbiAgICAgICAgfSBcclxuICAgICAgICAgfSBcclxuICAgIF07XHJcbiAgICAgXHJcbiAgICAvLyBBam91dCBkZXMgY291Y2hlcyB2ZWN0b3JpZWxsZXNcclxuICAgICAgbGF5ZXJzRGF0YS5mb3JFYWNoKGxheWVyID0+IHtcclxuICAgICAgICBtYXAuYWRkU291cmNlKGxheWVyLmlkLCB7XHJcbiAgICAgICAgICB0eXBlOiAnZ2VvanNvbicsXHJcbiAgICAgICAgICBkYXRhOiBsYXllci5kYXRhXHJcbiAgICAgICAgfSk7XHJcbiAgICAgIFxyXG4gICAgICAgIGNvbnN0IGxheWVyQ29uZmlnID0ge1xyXG4gICAgICAgICAgaWQ6IGxheWVyLmlkLFxyXG4gICAgICAgICAgdHlwZTogbGF5ZXIudHlwZSxcclxuICAgICAgICAgIHNvdXJjZTogbGF5ZXIuaWQsXHJcbiAgICAgICAgICBwYWludDoge30sXHJcbiAgICAgICAgICBsYXlvdXQ6IHsgdmlzaWJpbGl0eTogJ25vbmUnIH1cclxuICAgICAgICB9O1xyXG4gICAgICBcclxuICAgICAgICBpZiAobGF5ZXIudHlwZSA9PT0gJ2ZpbGwnKSB7XHJcbiAgICAgICAgICBpZiAobGF5ZXIuZHluYW1pY0NvbG9yKSB7XHJcbiAgICAgICAgICAgIC8vIENvbnN0cnVjdGlvbiBkJ3VuIHRhYmxlYXUgJ3N0ZXAnIGJhc8OpIHN1ciBkeW5hbWljQ29sb3IubWFwcGluZ1xyXG4gICAgICAgICAgICBjb25zdCBzdGVwQXJyYXkgPSBbJ3N0ZXAnLCBbJ2dldCcsIGxheWVyLmR5bmFtaWNDb2xvci5wcm9wZXJ0eV1dO1xyXG4gICAgICAgICAgICBjb25zdCBlbnRyaWVzID0gT2JqZWN0LmVudHJpZXMobGF5ZXIuZHluYW1pY0NvbG9yLm1hcHBpbmcpXHJcbiAgICAgICAgICAgICAgLm1hcCgoW2tleSwgdmFsdWVdKSA9PiBbcGFyc2VGbG9hdChrZXkpLCB2YWx1ZV0pXHJcbiAgICAgICAgICAgICAgLnNvcnQoKGEsIGIpID0+IGFbMF0gLSBiWzBdKTtcclxuICAgICAgXHJcbiAgICAgICAgICAgIC8vIFZhbGV1ciBwYXIgZMOpZmF1dCAocG91ciBsZXMgdmFsZXVycyA8IHByZW1pZXIgc2V1aWwpXHJcbiAgICAgICAgICAgIHN0ZXBBcnJheS5wdXNoKGxheWVyLmR5bmFtaWNDb2xvci5kZWZhdWx0IHx8ICcjODg4ODg4Jyk7XHJcbiAgICAgIFxyXG4gICAgICAgICAgICAvLyBBam91dGUgY2hhcXVlIHNldWlsIGF2ZWMgc2EgY291bGV1clxyXG4gICAgICAgICAgICBlbnRyaWVzLmZvckVhY2goKFt0aHJlc2hvbGQsIGNvbG9yXSkgPT4ge1xyXG4gICAgICAgICAgICAgIHN0ZXBBcnJheS5wdXNoKHRocmVzaG9sZCwgY29sb3IpO1xyXG4gICAgICAgICAgICB9KTtcclxuICAgICAgXHJcbiAgICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydmaWxsLWNvbG9yJ10gPSBzdGVwQXJyYXk7XHJcbiAgICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICBsYXllckNvbmZpZy5wYWludFsnZmlsbC1jb2xvciddID0gbGF5ZXIuY29sb3IgfHwgJyMwMDAwMDAnO1xyXG4gICAgICAgICAgfVxyXG4gICAgICBcclxuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydmaWxsLW9wYWNpdHknXSA9IGxheWVyLm9wYWNpdHkgfHwgMC40O1xyXG4gICAgICAgICAgXHJcbiAgICAgICAgICBcclxuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydmaWxsLW91dGxpbmUtY29sb3InXSA9ICcjMDAwMDAwJztcclxuICAgICAgXHJcbiAgICAgICAgfSBlbHNlIGlmIChsYXllci50eXBlID09PSAnbGluZScpIHtcclxuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydsaW5lLWNvbG9yJ10gPSBsYXllci5jb2xvciB8fCAnIzAwMDAwMCc7XHJcbiAgICAgICAgICBsYXllckNvbmZpZy5wYWludFsnbGluZS13aWR0aCddID0gbGF5ZXIud2lkdGggfHwgMTtcclxuICAgICAgICB9XHJcbiAgICAgIFxyXG4gICAgICBcclxuICAgICAgICBtYXAuYWRkTGF5ZXIobGF5ZXJDb25maWcpO1xyXG5cclxuXHJcbiAgICAgIFxyXG4gICAgICBtYXAub24oJ2NsaWNrJywgJ2luZGljYXRldXJzMTJhTGF5ZXInLCAoZSkgPT4ge1xyXG4gICAgaWYgKGUuZmVhdHVyZXMubGVuZ3RoID4gMCkge1xyXG4gICAgICAgIGNvbnN0IGZlYXR1cmUgPSBlLmZlYXR1cmVzWzBdO1xyXG4gICAgICAgIC8vIEZvbmN0aW9uIHBvdXIgZm9ybWF0ZXIgbGVzIG5vbWJyZXMgYXZlYyBzw6lwYXJhdGV1cnMgZGUgbWlsbGllcnNcclxuICAgICAgICBjb25zdCBmb3JtYXROdW1iZXIgPSAobnVtKSA9PiB7XHJcbiAgICAgICAgICAgIC8vIFbDqXJpZmllIHNpIGxhIHZhbGV1ciBlc3QgZMOpZmluaWUgZXQgY29udmVydGlibGUgZW4gbm9tYnJlXHJcbiAgICAgICAgICAgIGNvbnN0IHBhcnNlZE51bSA9IHBhcnNlSW50KG51bSwgMTApO1xyXG4gICAgICAgICAgICByZXR1cm4gIWlzTmFOKHBhcnNlZE51bSkgPyBwYXJzZWROdW0udG9Mb2NhbGVTdHJpbmcoJ2ZyLUZSJykgOiAnTm9uIGRpc3BvbmlibGUnO1xyXG4gICAgICAgIH07XHJcbiAgICAgICAgY29uc3QgcG9wdXBDb250ZW50ID0gYFxyXG4gICAgICAgICAgICA8aHI+PHN0cm9uZz48Y2VudGVyPkNvbW11bmUgOiAke2ZlYXR1cmUucHJvcGVydGllcy5ub20gfHwgJ05vbiBkaXNwb25pYmxlJ308L2NlbnRlcj48L3N0cm9uZz48aHI+XHJcbiAgICAgICAgICAgIDxzdHJvbmc+LSBQb3B1bGF0aW9uIDo8L3N0cm9uZz4gJHtmb3JtYXROdW1iZXIoZmVhdHVyZS5wcm9wZXJ0aWVzLnBvcHVsYXRpb24pIHx8ICdOb24gZGlzcG9uaWJsZSd9PGJyPlxyXG4gICAgICAgICAgICA8c3Ryb25nPi0gTm9tYnJlIGRlIHBlcnNvbm5lcyBlbiB6b25lIGZvcnRlbWVudCBpbm9uZGFibGUgOjwvc3Ryb25nPiAke2ZlYXR1cmUucHJvcGVydGllcy5zMTJhIHx8ICcwJ308YnI+XHJcbiAgICAgICAgYDtcclxuXHJcbiAgICAgICAgbmV3IG1hcGxpYnJlZ2wuUG9wdXAoKVxyXG4gICAgICAgICAgICAuc2V0TG5nTGF0KGUubG5nTGF0KVxyXG4gICAgICAgICAgICAuc2V0SFRNTChwb3B1cENvbnRlbnQpXHJcbiAgICAgICAgICAgIC5hZGRUbyhtYXApO1xyXG4gICAgICAgICAgfVxyXG4gICAgfSk7XHJcblxyXG4gICAgICBtYXAub24oJ21vdXNlZW50ZXInLCBsYXllci5pZCwgKCkgPT4ge1xyXG4gICAgICAgIG1hcC5nZXRDYW52YXMoKS5zdHlsZS5jdXJzb3IgPSAncG9pbnRlcic7XHJcbiAgICAgIH0pO1xyXG4gICAgICBtYXAub24oJ21vdXNlbGVhdmUnLCBsYXllci5pZCwgKCkgPT4ge1xyXG4gICAgICAgIG1hcC5nZXRDYW52YXMoKS5zdHlsZS5jdXJzb3IgPSAnJztcclxuICAgICAgfSk7XHJcbiAgICB9KTtcclxuXHJcbiAgICAvLyBJbnRlcmZhY2UgZGUgY29udHLDtGxlIGRlcyBjb3VjaGVzXHJcbiAgICBjb25zdCBtYXBMYXllcnNEaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcclxuICAgIG1hcExheWVyc0Rpdi5jbGFzc0xpc3QuYWRkKCdtYXBMYXllcnMnKTtcclxuICAgIG1hcExheWVyc0Rpdi5zdHlsZS5wb3NpdGlvbiA9ICdhYnNvbHV0ZSc7XHJcbiAgICBtYXBMYXllcnNEaXYuc3R5bGUuekluZGV4ID0gJzEwMDAnO1xyXG4gICAgbWFwTGF5ZXJzRGl2LmlubmVySFRNTCA9IGBcclxuICAgICAgPGJ1dHRvbiBpZD1cInRvZ2dsZU1hcE1lbnVCdXR0b25cIiBjbGFzcz1cImJ0biBidG4tbGlnaHQgYXJpYS1sYWJlbD1cIkFmZmljaGVyIGxlcyBjb3VjaGVzXCIgdGl0bGU9XCJBZmZpY2hlciBsZXMgY291Y2hlc1wiPlxyXG4gICAgICAgIDxpbWcgc3JjPVwiSW1hZ2VzL2ljb25zL2xheWVycy1oYWxmLnN2Z1wiIGFsdD1cIkljw7RuZSBTVkdcIiB3aWR0aD1cIjI1XCIgaGVpZ2h0PVwiMjVcIj5cclxuICAgICAgPC9idXR0b24+XHJcbiAgICAgIDxkaXYgaWQ9XCJsYXllcnNMaXN0XCIgc3R5bGU9XCJkaXNwbGF5OiBub25lOyBiYWNrZ3JvdW5kOiB3aGl0ZTsgcGFkZGluZzogMTBweDsgYm9yZGVyOiAxcHggc29saWQgI2NjYztcIj48L2Rpdj5cclxuICAgIGA7XHJcbiAgICBtYXAuZ2V0Q29udGFpbmVyKCkuYXBwZW5kQ2hpbGQobWFwTGF5ZXJzRGl2KTtcclxuXHJcbiAgICBjb25zdCB0b2dnbGVhYmxlTGF5ZXJJZHMgPSBsYXllcnNEYXRhLm1hcChsYXllciA9PiBsYXllci5pZCk7XHJcbiAgICBjb25zdCBhbGlhc0xheWVySWRzID0ge1xyXG4gICAgICBiYXNzaW52aWVubmVMYXllcjogJ0Jhc3NpbiBkZSBsYSBWaWVubmUnLFxyXG4gICAgICByZWdpb25MYXllcjogJ1LDqWdpb24nLFxyXG4gICAgICBkZXBhcnRlbWVudExheWVyOiAnRMOpcGFydGVtZW50JyxcclxuICAgICAgZXBjaUxheWVyOiAnRVBDSScsXHJcbiAgICAgIHpvbmVpbm9uZGFibGVMYXllcjogJ1pvbmFnZSBJbm9uZGFibGUnLFxyXG4gICAgICBpbmRpY2F0ZXVyczEyYUxheWVyOiAnQsOidGltZW50cyBkZSBwbGFpbi1waWVkJ1xyXG4gICAgfTtcclxuXHJcbiAgICBmdW5jdGlvbiB0b2dnbGVMYXllclZpc2liaWxpdHkoaWQsIHZpc2libGUpIHtcclxuICAgICAgY29uc3QgdmlzaWJpbGl0eSA9IHZpc2libGUgPyAndmlzaWJsZScgOiAnbm9uZSc7XHJcbiAgICAgIGlmIChtYXAuZ2V0TGF5ZXIoaWQpKSB7XHJcbiAgICAgICAgbWFwLnNldExheW91dFByb3BlcnR5KGlkLCAndmlzaWJpbGl0eScsIHZpc2liaWxpdHkpO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgY29uc3QgbGF5ZXJzTGlzdERpdiA9IG1hcExheWVyc0Rpdi5xdWVyeVNlbGVjdG9yKCcjbGF5ZXJzTGlzdCcpO1xyXG4gICAgdG9nZ2xlYWJsZUxheWVySWRzLmZvckVhY2goaWQgPT4ge1xyXG4gICAgICBjb25zdCBuYW1lID0gYWxpYXNMYXllcklkc1tpZF0gfHwgaWQ7XHJcblxyXG4gICAgICBjb25zdCBjaGVja2JveCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2lucHV0Jyk7XHJcbiAgICAgIGNoZWNrYm94LnR5cGUgPSAnY2hlY2tib3gnO1xyXG4gICAgICBjaGVja2JveC5pZCA9IGlkO1xyXG4gICAgICBjaGVja2JveC5jbGFzc05hbWUgPSAnZm9ybS1jaGVjay1pbnB1dCc7XHJcbiAgICAgIGNoZWNrYm94LmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsICgpID0+IHRvZ2dsZUxheWVyVmlzaWJpbGl0eShpZCwgY2hlY2tib3guY2hlY2tlZCkpO1xyXG5cclxuICAgICAgY29uc3QgbGFiZWwgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdsYWJlbCcpO1xyXG4gICAgICBsYWJlbC5odG1sRm9yID0gaWQ7XHJcbiAgICAgIGxhYmVsLmNsYXNzTmFtZSA9ICdmb3JtLWNoZWNrLWxhYmVsJztcclxuICAgICAgbGFiZWwuaW5uZXJUZXh0ID0gbmFtZTtcclxuXHJcbiAgICAgIGNvbnN0IHdyYXBwZXIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcclxuICAgICAgd3JhcHBlci5jbGFzc05hbWUgPSAnZm9ybS1jaGVjayc7XHJcbiAgICAgIHdyYXBwZXIuYXBwZW5kQ2hpbGQoY2hlY2tib3gpO1xyXG4gICAgICB3cmFwcGVyLmFwcGVuZENoaWxkKGxhYmVsKTtcclxuXHJcbiAgICAgIGxheWVyc0xpc3REaXYuYXBwZW5kQ2hpbGQod3JhcHBlcik7XHJcbiAgICB9KTtcclxuXHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndG9nZ2xlTWFwTWVudUJ1dHRvbicpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4ge1xyXG4gICAgICBsYXllcnNMaXN0RGl2LnN0eWxlLmRpc3BsYXkgPSBsYXllcnNMaXN0RGl2LnN0eWxlLmRpc3BsYXkgPT09ICdub25lJyA/ICdibG9jaycgOiAnbm9uZSc7XHJcbiAgICB9KTtcclxuICAgICBcclxuXHJcbiAgICAvLyBNZW51IGJhc2N1bGUgZm9uZCBkZSBwbGFuXHJcbiAgICBjb25zdCBtYXBNZW51RGl2ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XHJcbiAgICBtYXBNZW51RGl2LmNsYXNzTGlzdC5hZGQoJ21hcEZvbmREZVBsYW4nKTtcclxuICAgIG1hcE1lbnVEaXYuc3R5bGUucG9zaXRpb24gPSAnYWJzb2x1dGUnO1xyXG4gICAgbWFwTWVudURpdi5zdHlsZS56SW5kZXggPSAnMTAwMCc7XHJcbiAgICBtYXBNZW51RGl2LmlubmVySFRNTCA9IGBcclxuICAgICAgPHN0cm9uZz5Gb25kIGRlIHBsYW4gOjwvc3Ryb25nPlxyXG4gICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1jaGVjayBmb3JtLXN3aXRjaFwiPlxyXG4gICAgICAgIDxpbnB1dCBjbGFzcz1cImZvcm0tY2hlY2staW5wdXRcIiB0eXBlPVwiY2hlY2tib3hcIiByb2xlPVwic3dpdGNoXCIgaWQ9XCJvcnRob0NoZWNrYm94XCI+XHJcbiAgICAgICAgPGxhYmVsIGNsYXNzPVwiZm9ybS1jaGVjay1sYWJlbFwiIGZvcj1cIm9ydGhvQ2hlY2tib3hcIj5QaG90b3MgYcOpcmllbm5lczwvbGFiZWw+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgYDtcclxuICAgIG1hcC5nZXRDb250YWluZXIoKS5hcHBlbmRDaGlsZChtYXBNZW51RGl2KTtcclxuXHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb3J0aG9DaGVja2JveCcpLmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIGZ1bmN0aW9uIChlKSB7XHJcbiAgICAgIGUucHJldmVudERlZmF1bHQoKTtcclxuICAgICAgZS5zdG9wUHJvcGFnYXRpb24oKTtcclxuICAgICAgdG9nZ2xlU3R5bGUodGhpcy5jaGVja2VkKTtcclxuICAgIH0pO1xyXG4gIH0pO1xyXG59O1xyXG5cclxuXHJcbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImJib3hfc3J1ID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvYmIuanNvblwiKS5qc29uKClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuYmFzc2luX3ZpZW5uZSA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL2Jhc3Npbl92aWVubmUuZ2VvanNvblwiKS5qc29uKCk7XG5kZXBhcnRlbWVudCA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL2RlcGFydGVtZW50Lmdlb2pzb25cIikuanNvbigpO1xucmVnaW9uID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvcmVnaW9uLmdlb2pzb25cIikuanNvbigpO1xuZXBjaSA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL2VwY2kuZ2VvanNvblwiKS5qc29uKCk7XG5wZXJpbWV0cmUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy9wZXJpbWV0cmUuanNvblwiKS5qc29uKCk7XG5zbGdyaSA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL3NsZ3JpLmpzb25cIikuanNvbigpO1xudHJpID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvdHJpLmpzb25cIikuanNvbigpO1xuem9uZV9pbm9uZGFibGUgPSBGaWxlQXR0YWNobWVudChcImxheWVycy96b25lX2lub25kYWJsZS5nZW9qc29uXCIpLmpzb24oKTtcbmluZGljYXRldXJzID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvaW5kaWNhdGV1cnMuanNvblwiKS5qc29uKCk7XG5jb3Vyc19kX2VhdSA9IEZpbGVBdHRhY2htZW50KFwibGF5ZXJzL2NvdXJzX2RfZWF1Lmdlb2pzb25cIikuanNvbigpO1xuaW5kaWNhdGV1cnNHZW9qc29uID0gRmlsZUF0dGFjaG1lbnQoXCJsYXllcnMvaW5kaWNhdGV1cnMuZ2VvanNvblwiKS5qc29uKCk7XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuXG5tYXAgPSB7XG4gIGNvbnN0IGNvbnRhaW5lciA9IGh0bWxgPGRpdiBjbGFzcz1cIm1hcC1jb250YWluZXJcIiBpZD1cIm1hcFwiIHN0eWxlPVwiaGVpZ2h0OiA3MjBweDsgd2lkdGg6IDEwMCU7XCI+PC9kaXY+YDtcbiAgeWllbGQgY29udGFpbmVyO1xuXG4gIGNvbnN0IHNvdXJjZVBsYW5JR04gPSB7XG4gICAgc3R5bGU6ICdub3JtYWwnLFxuICAgIGZvcm1hdDogJ2ltYWdlL3BuZycsXG4gICAgbGF5ZXI6ICdHRU9HUkFQSElDQUxHUklEU1lTVEVNUy5QTEFOSUdOVjInXG4gIH07XG5cbiAgY29uc3Qgc291cmNlT3J0aG8gPSB7XG4gICAgc3R5bGU6ICdub3JtYWwnLFxuICAgIGZvcm1hdDogJ2ltYWdlL2pwZWcnLFxuICAgIGxheWVyOiAnSFIuT1JUSE9JTUFHRVJZLk9SVEhPUEhPVE9TJ1xuICB9O1xuXG4gIGNvbnN0IG1hcCA9IG5ldyBtYXBsaWJyZWdsLk1hcCh7XG4gICAgY29udGFpbmVyOiBjb250YWluZXIsXG4gICAgc3R5bGU6ICdodHRwczovL2Jhc2VtYXBzLmNhcnRvY2RuLmNvbS9nbC92b3lhZ2VyLWdsLXN0eWxlL3N0eWxlLmpzb24nLFxuICAgIDwhLS0gY2VudGVyOiBbLTAuMDQsIDQ2LjMwNTFdLCAgLS0+XG4gICAgem9vbTogMTFcbiAgfSk7XG5cbiAgbWFwLmFkZENvbnRyb2wobmV3IG1hcGxpYnJlZ2wuRnVsbHNjcmVlbkNvbnRyb2woKSwgJ3RvcC1yaWdodCcpO1xuICBtYXAuYWRkQ29udHJvbChuZXcgbWFwbGlicmVnbC5OYXZpZ2F0aW9uQ29udHJvbCh7IHZpc3VhbGl6ZVBpdGNoOiB0cnVlIH0pLCAndG9wLWxlZnQnKTtcbiAgbWFwLmFkZENvbnRyb2wobmV3IG1hcGxpYnJlZ2wuU2NhbGVDb250cm9sKHsgbWF4V2lkdGg6IDgwLCB1bml0OiAnbWV0cmljJyB9KSk7XG4gIFxuXG4gIGNvbnN0IHRvZ2dsZVN0eWxlID0gKHVzZU9ydGhvKSA9PiB7XG4gICAgaWYgKHVzZU9ydGhvKSB7XG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ29ydGhvSUdOJywgJ3Zpc2liaWxpdHknLCAndmlzaWJsZScpO1xuICAgICAgbWFwLnNldExheW91dFByb3BlcnR5KCdwbGFuSUdOJywgJ3Zpc2liaWxpdHknLCAnbm9uZScpO1xuICAgIH0gZWxzZSB7XG4gICAgICBtYXAuc2V0TGF5b3V0UHJvcGVydHkoJ29ydGhvSUdOJywgJ3Zpc2liaWxpdHknLCAnbm9uZScpO1xuICAgICAgbWFwLnNldExheW91dFByb3BlcnR5KCdwbGFuSUdOJywgJ3Zpc2liaWxpdHknLCAndmlzaWJsZScpO1xuICAgIH1cbiAgfTtcblxuICBtYXAub24oJ2xvYWQnLCAoKSA9PiB7XG4gICAgbWFwLmZpdEJvdW5kcyhcbiAgICBbXG4gICAgICBbLTAuMDQsIDQ2LjMwNTFdLCAgIC8vIFN1ZC1PdWVzdFxuICAgICAgWzAuNzc0MSwgNDYuODU2NV0gICAvLyBOb3JkLUVzdFxuICAgIF0sXG4gICAge1xuICAgICAgcGFkZGluZzogMjAsXG4gICAgICBsaW5lYXI6IHRydWUsXG4gICAgICBkdXJhdGlvbjogMFxuICAgIH1cbiAgKTtcbiAgICAvLyBBam91dCBkZXMgZm9uZHMgcmFzdGVyIElHTlxuICAgIG1hcC5hZGRTb3VyY2UoJ3Jhc3Rlci1wbGFuaWduJywge1xuICAgICAgdHlwZTogJ3Jhc3RlcicsXG4gICAgICB0aWxlczogW1xuICAgICAgICBgaHR0cHM6Ly9kYXRhLmdlb3BmLmZyL3dtdHM/U0VSVklDRT1XTVRTJnN0eWxlPSR7c291cmNlUGxhbklHTi5zdHlsZX0mVkVSU0lPTj0xLjAuMCZSRVFVRVNUPUdldFRpbGUmZm9ybWF0PSR7c291cmNlUGxhbklHTi5mb3JtYXR9JmxheWVyPSR7c291cmNlUGxhbklHTi5sYXllcn0mdGlsZW1hdHJpeHNldD1QTSZUaWxlTWF0cml4PXt6fSZUaWxlQ29sPXt4fSZUaWxlUm93PXt5fWBcbiAgICAgIF0sXG4gICAgICB0aWxlU2l6ZTogMjU2LFxuICAgICAgYXR0cmlidXRpb246ICfCqSA8YSBocmVmPVwiaHR0cHM6Ly93d3cuaWduLmZyL1wiPklHTjwvYT4nLFxuICAgICAgbWluem9vbTogMCxcbiAgICAgIG1heHpvb206IDIyXG4gICAgfSk7XG5cbiAgICBtYXAuYWRkU291cmNlKCdyYXN0ZXItb3J0aG8nLCB7XG4gICAgICB0eXBlOiAncmFzdGVyJyxcbiAgICAgIHRpbGVzOiBbXG4gICAgICAgIGBodHRwczovL2RhdGEuZ2VvcGYuZnIvd210cz9TRVJWSUNFPVdNVFMmc3R5bGU9JHtzb3VyY2VPcnRoby5zdHlsZX0mVkVSU0lPTj0xLjAuMCZSRVFVRVNUPUdldFRpbGUmZm9ybWF0PSR7c291cmNlT3J0aG8uZm9ybWF0fSZsYXllcj0ke3NvdXJjZU9ydGhvLmxheWVyfSZ0aWxlbWF0cml4c2V0PVBNJlRpbGVNYXRyaXg9e3p9JlRpbGVDb2w9e3h9JlRpbGVSb3c9e3l9YFxuICAgICAgXSxcbiAgICAgIHRpbGVTaXplOiAyNTYsXG4gICAgICBhdHRyaWJ1dGlvbjogJ8KpIDxhIGhyZWY9XCJodHRwczovL3d3dy5pZ24uZnIvXCI+SUdOPC9hPicsXG4gICAgICBtaW56b29tOiAwLFxuICAgICAgbWF4em9vbTogMjJcbiAgICB9KTtcblxuICAgIG1hcC5hZGRMYXllcih7XG4gICAgICBpZDogJ3BsYW5JR04nLFxuICAgICAgdHlwZTogJ3Jhc3RlcicsXG4gICAgICBzb3VyY2U6ICdyYXN0ZXItcGxhbmlnbicsXG4gICAgICBsYXlvdXQ6IHsgdmlzaWJpbGl0eTogJ3Zpc2libGUnIH1cbiAgICB9KTtcblxuICAgIG1hcC5hZGRMYXllcih7XG4gICAgICBpZDogJ29ydGhvSUdOJyxcbiAgICAgIHR5cGU6ICdyYXN0ZXInLFxuICAgICAgc291cmNlOiAncmFzdGVyLW9ydGhvJyxcbiAgICAgIGxheW91dDogeyB2aXNpYmlsaXR5OiAnbm9uZScgfVxuICAgIH0pO1xuICAgIFxuICAgIC8vZmV0Y2goJ2xheWVycy9pbmRpY2F0ZXVycy5nZW9qc29uJylcbiAgICAgLy8udGhlbihyZXNwb25zZSA9PiByZXNwb25zZS5qc29uKCkpXG4gICAgIC8vLnRoZW4oaW5kaWNhdGV1cnNHZW9qc29uID0+IHsgXG4gICAgICAgICAgICAgIFxuICAgIFxuICAgIGNvbnN0IGxheWVyc0RhdGEgPSBbXG4gICAgICB7IGRhdGE6IGJhc3Npbl92aWVubmUsIHR5cGU6ICdsaW5lJywgaWQ6ICdiYXNzaW52aWVubmVMYXllcicsIGNvbG9yOiAnZ3JlZW4nIH0sXG4gICAgICB7IGRhdGE6IHJlZ2lvbiwgdHlwZTogJ2xpbmUnLCBpZDogJ3JlZ2lvbkxheWVyJywgY29sb3I6ICdyZWQnIH0sXG4gICAgICB7IGRhdGE6IGRlcGFydGVtZW50LCB0eXBlOiAnbGluZScsIGlkOiAnZGVwYXJ0ZW1lbnRMYXllcicsIGNvbG9yOiAnI2E3NzJiOScsIHdpZHRoOiAyIH0sXG4gICAgICB7IGRhdGE6IGVwY2ksIHR5cGU6ICdsaW5lJywgaWQ6ICdlcGNpTGF5ZXInLCBjb2xvcjogJyM1NjdhZTMnIH0sXG4gICAgICB7IGRhdGE6IHpvbmVfaW5vbmRhYmxlLCB0eXBlOiAnZmlsbCcsIGlkOiAnem9uZWlub25kYWJsZUxheWVyJywgY29sb3I6ICcjYjRjM2VmJyAsIHdpZHRoOiAyLCBvcGFjaXR5OiAxIH0sXG4gICAgICB7IGRhdGE6IGluZGljYXRldXJzR2VvanNvbiwgLy8gR2VvSlNPTiBjb250ZW5hbnQgdW5lIHByb3ByacOpdMOpICdzMTJhJyAtLT5cbiAgICAgICAgdHlwZTogJ2ZpbGwnLFxuICAgICAgICBpZDogJ2luZGljYXRldXJzMTJhTGF5ZXInLFxuICAgICAgICBvcGFjaXR5OiAwLjcsXG4gICAgICAgIHdpZHRoOiAxLFxuICAgICAgICBkeW5hbWljQ29sb3I6IHsgXG4gICAgICAgIHByb3BlcnR5OiAnczEyYScsXG4gICAgICAgIG1hcHBpbmc6IHsgXG4gICAgICAgICAgICctMSc6ICcjZjFlZWVkJyxcbiAgICAgICAgICAgJzAnOiAnI2ZmZmZmZicsIFxuICAgICAgICAgICAnMTAnOiAnI2ZmYWFhYScsXG4gICAgICAgICAgICc1MCc6ICcjZmY1NTU1JywgXG4gICAgICAgICAgICcxMDAnOiAnI2ZmMDAwMCdcbiAgICAgICAgICB9LCBcbiAgICAgICAgIGRlZmF1bHQ6ICcjZjFlZWVkJ1xuICAgICAgICB9IFxuICAgICAgICAgfSBcbiAgICBdO1xuICAgICBcbiAgICAvLyBBam91dCBkZXMgY291Y2hlcyB2ZWN0b3JpZWxsZXNcbiAgICAgIGxheWVyc0RhdGEuZm9yRWFjaChsYXllciA9PiB7XG4gICAgICAgIG1hcC5hZGRTb3VyY2UobGF5ZXIuaWQsIHtcbiAgICAgICAgICB0eXBlOiAnZ2VvanNvbicsXG4gICAgICAgICAgZGF0YTogbGF5ZXIuZGF0YVxuICAgICAgICB9KTtcbiAgICAgIFxuICAgICAgICBjb25zdCBsYXllckNvbmZpZyA9IHtcbiAgICAgICAgICBpZDogbGF5ZXIuaWQsXG4gICAgICAgICAgdHlwZTogbGF5ZXIudHlwZSxcbiAgICAgICAgICBzb3VyY2U6IGxheWVyLmlkLFxuICAgICAgICAgIHBhaW50OiB7fSxcbiAgICAgICAgICBsYXlvdXQ6IHsgdmlzaWJpbGl0eTogJ25vbmUnIH1cbiAgICAgICAgfTtcbiAgICAgIFxuICAgICAgICBpZiAobGF5ZXIudHlwZSA9PT0gJ2ZpbGwnKSB7XG4gICAgICAgICAgaWYgKGxheWVyLmR5bmFtaWNDb2xvcikge1xuICAgICAgICAgICAgLy8gQ29uc3RydWN0aW9uIGQndW4gdGFibGVhdSAnc3RlcCcgYmFzw6kgc3VyIGR5bmFtaWNDb2xvci5tYXBwaW5nXG4gICAgICAgICAgICBjb25zdCBzdGVwQXJyYXkgPSBbJ3N0ZXAnLCBbJ2dldCcsIGxheWVyLmR5bmFtaWNDb2xvci5wcm9wZXJ0eV1dO1xuICAgICAgICAgICAgY29uc3QgZW50cmllcyA9IE9iamVjdC5lbnRyaWVzKGxheWVyLmR5bmFtaWNDb2xvci5tYXBwaW5nKVxuICAgICAgICAgICAgICAubWFwKChba2V5LCB2YWx1ZV0pID0+IFtwYXJzZUZsb2F0KGtleSksIHZhbHVlXSlcbiAgICAgICAgICAgICAgLnNvcnQoKGEsIGIpID0+IGFbMF0gLSBiWzBdKTtcbiAgICAgIFxuICAgICAgICAgICAgLy8gVmFsZXVyIHBhciBkw6lmYXV0IChwb3VyIGxlcyB2YWxldXJzIDwgcHJlbWllciBzZXVpbClcbiAgICAgICAgICAgIHN0ZXBBcnJheS5wdXNoKGxheWVyLmR5bmFtaWNDb2xvci5kZWZhdWx0IHx8ICcjODg4ODg4Jyk7XG4gICAgICBcbiAgICAgICAgICAgIC8vIEFqb3V0ZSBjaGFxdWUgc2V1aWwgYXZlYyBzYSBjb3VsZXVyXG4gICAgICAgICAgICBlbnRyaWVzLmZvckVhY2goKFt0aHJlc2hvbGQsIGNvbG9yXSkgPT4ge1xuICAgICAgICAgICAgICBzdGVwQXJyYXkucHVzaCh0aHJlc2hvbGQsIGNvbG9yKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgXG4gICAgICAgICAgICBsYXllckNvbmZpZy5wYWludFsnZmlsbC1jb2xvciddID0gc3RlcEFycmF5O1xuICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICBsYXllckNvbmZpZy5wYWludFsnZmlsbC1jb2xvciddID0gbGF5ZXIuY29sb3IgfHwgJyMwMDAwMDAnO1xuICAgICAgICAgIH1cbiAgICAgIFxuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydmaWxsLW9wYWNpdHknXSA9IGxheWVyLm9wYWNpdHkgfHwgMC40O1xuICAgICAgICAgIFxuICAgICAgICAgIFxuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydmaWxsLW91dGxpbmUtY29sb3InXSA9ICcjMDAwMDAwJztcbiAgICAgIFxuICAgICAgICB9IGVsc2UgaWYgKGxheWVyLnR5cGUgPT09ICdsaW5lJykge1xuICAgICAgICAgIGxheWVyQ29uZmlnLnBhaW50WydsaW5lLWNvbG9yJ10gPSBsYXllci5jb2xvciB8fCAnIzAwMDAwMCc7XG4gICAgICAgICAgbGF5ZXJDb25maWcucGFpbnRbJ2xpbmUtd2lkdGgnXSA9IGxheWVyLndpZHRoIHx8IDE7XG4gICAgICAgIH1cbiAgICAgIFxuICAgICAgXG4gICAgICAgIG1hcC5hZGRMYXllcihsYXllckNvbmZpZyk7XG5cbiAgICAgIFxuICAgICAgbWFwLm9uKCdjbGljaycsIGxheWVyLmlkLCAoZSkgPT4ge1xuICAgICAgICBjb25zdCBmZWF0dXJlID0gZS5mZWF0dXJlc1swXTtcbiAgICAgIFxuICAgICAgICBjb25zdCBub20gPSBmZWF0dXJlLnByb3BlcnRpZXMubm9tIHx8ICdOb24gZGlzcG9uaWJsZSc7XG4gICAgICAgIGNvbnN0IHBvcHVsYXRpb24gPSBmZWF0dXJlLnByb3BlcnRpZXMucG9wdWxhdGlvblxuICAgICAgICA/IGZlYXR1cmUucHJvcGVydGllcy5wb3B1bGF0aW9uLnRvTG9jYWxlU3RyaW5nKCdmci1GUicpICsgJyBoYWInXG4gICAgICAgIDogJ05vbiBkaXNwb25pYmxlJztcbiAgICAgICAgY29uc3QgczEyYSA9IGZlYXR1cmUucHJvcGVydGllcy5zMTJhIHx8ICcwJztcbiAgICAgIFxuICAgICAgICBjb25zdCBwb3B1cENvbnRlbnQgPSBgXG4gICAgICAgICAgPGhyPjxzdHJvbmc+PGNlbnRlcj5Db21tdW5lIDogJHtub219PC9jZW50ZXI+PC9zdHJvbmc+PGhyPlxuICAgICAgICAgIDxzdHJvbmc+LSBQb3B1bGF0aW9uIDo8L3N0cm9uZz4gJHtwb3B1bGF0aW9ufTxicj5cbiAgICAgICAgICA8c3Ryb25nPi0gTm9tYnJlIGRlIHBlcnNvbm5lcyBlbiB6b25lIGZvcnRlbWVudCBpbm9uZGFibGUgOjwvc3Ryb25nPiAke3MxMmF9PGJyPlxuICAgICAgICBgO1xuICAgICAgXG4gICAgICAgIG5ldyBtYXBsaWJyZWdsLlBvcHVwKClcbiAgICAgICAgICAuc2V0TG5nTGF0KGUubG5nTGF0KVxuICAgICAgICAgIC5zZXRIVE1MKHBvcHVwQ29udGVudClcbiAgICAgICAgICAuYWRkVG8obWFwKTtcbiAgICAgIH0pO1xuXG4gICAgICBtYXAub24oJ21vdXNlZW50ZXInLCBsYXllci5pZCwgKCkgPT4ge1xuICAgICAgICBtYXAuZ2V0Q2FudmFzKCkuc3R5bGUuY3Vyc29yID0gJ3BvaW50ZXInO1xuICAgICAgfSk7XG4gICAgICBtYXAub24oJ21vdXNlbGVhdmUnLCBsYXllci5pZCwgKCkgPT4ge1xuICAgICAgICBtYXAuZ2V0Q2FudmFzKCkuc3R5bGUuY3Vyc29yID0gJyc7XG4gICAgICB9KTtcbiAgICB9KTtcblxuICAgIC8vIEludGVyZmFjZSBkZSBjb250csO0bGUgZGVzIGNvdWNoZXNcbiAgICBjb25zdCBtYXBMYXllcnNEaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbiAgICBtYXBMYXllcnNEaXYuY2xhc3NMaXN0LmFkZCgnbWFwTGF5ZXJzJyk7XG4gICAgbWFwTGF5ZXJzRGl2LnN0eWxlLnBvc2l0aW9uID0gJ2Fic29sdXRlJztcbiAgICBtYXBMYXllcnNEaXYuc3R5bGUuekluZGV4ID0gJzEwMDAnO1xuICAgIG1hcExheWVyc0Rpdi5pbm5lckhUTUwgPSBgXG4gICAgICA8YnV0dG9uIGlkPVwidG9nZ2xlTWFwTWVudUJ1dHRvblwiIGNsYXNzPVwiYnRuIGJ0bi1saWdodCBhcmlhLWxhYmVsPVwiQWZmaWNoZXIgbGVzIGNvdWNoZXNcIiB0aXRsZT1cIkFmZmljaGVyIGxlcyBjb3VjaGVzXCI+XG4gICAgICAgIDxpbWcgc3JjPVwiSW1hZ2VzL2ljb25zL2xheWVycy1oYWxmLnN2Z1wiIGFsdD1cIkljw7RuZSBTVkdcIiB3aWR0aD1cIjI1XCIgaGVpZ2h0PVwiMjVcIj5cbiAgICAgIDwvYnV0dG9uPlxuICAgICAgPGRpdiBpZD1cImxheWVyc0xpc3RcIiBzdHlsZT1cImRpc3BsYXk6IG5vbmU7IGJhY2tncm91bmQ6IHdoaXRlOyBwYWRkaW5nOiAxMHB4OyBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1wiPjwvZGl2PlxuICAgIGA7XG4gICAgbWFwLmdldENvbnRhaW5lcigpLmFwcGVuZENoaWxkKG1hcExheWVyc0Rpdik7XG5cbiAgICBjb25zdCB0b2dnbGVhYmxlTGF5ZXJJZHMgPSBsYXllcnNEYXRhLm1hcChsYXllciA9PiBsYXllci5pZCk7XG4gICAgY29uc3QgYWxpYXNMYXllcklkcyA9IHtcbiAgICAgIGJhc3NpbnZpZW5uZUxheWVyOiAnQmFzc2luIGRlIGxhIFZpZW5uZScsXG4gICAgICByZWdpb25MYXllcjogJ1LDqWdpb24nLFxuICAgICAgZGVwYXJ0ZW1lbnRMYXllcjogJ0TDqXBhcnRlbWVudCcsXG4gICAgICBlcGNpTGF5ZXI6ICdFUENJJyxcbiAgICAgIHpvbmVpbm9uZGFibGVMYXllcjogJ1pvbmFnZSBJbm9uZGFibGUnLFxuICAgICAgaW5kaWNhdGV1cnMxMmFMYXllcjogJ0LDonRpbWVudHMgZGUgcGxhaW4tcGllZCdcbiAgICB9O1xuXG4gICAgZnVuY3Rpb24gdG9nZ2xlTGF5ZXJWaXNpYmlsaXR5KGlkLCB2aXNpYmxlKSB7XG4gICAgICBjb25zdCB2aXNpYmlsaXR5ID0gdmlzaWJsZSA/ICd2aXNpYmxlJyA6ICdub25lJztcbiAgICAgIGlmIChtYXAuZ2V0TGF5ZXIoaWQpKSB7XG4gICAgICAgIG1hcC5zZXRMYXlvdXRQcm9wZXJ0eShpZCwgJ3Zpc2liaWxpdHknLCB2aXNpYmlsaXR5KTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBjb25zdCBsYXllcnNMaXN0RGl2ID0gbWFwTGF5ZXJzRGl2LnF1ZXJ5U2VsZWN0b3IoJyNsYXllcnNMaXN0Jyk7XG4gICAgdG9nZ2xlYWJsZUxheWVySWRzLmZvckVhY2goaWQgPT4ge1xuICAgICAgY29uc3QgbmFtZSA9IGFsaWFzTGF5ZXJJZHNbaWRdIHx8IGlkO1xuXG4gICAgICBjb25zdCBjaGVja2JveCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2lucHV0Jyk7XG4gICAgICBjaGVja2JveC50eXBlID0gJ2NoZWNrYm94JztcbiAgICAgIGNoZWNrYm94LmlkID0gaWQ7XG4gICAgICBjaGVja2JveC5jbGFzc05hbWUgPSAnZm9ybS1jaGVjay1pbnB1dCc7XG4gICAgICBjaGVja2JveC5hZGRFdmVudExpc3RlbmVyKCdjaGFuZ2UnLCAoKSA9PiB0b2dnbGVMYXllclZpc2liaWxpdHkoaWQsIGNoZWNrYm94LmNoZWNrZWQpKTtcblxuICAgICAgY29uc3QgbGFiZWwgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdsYWJlbCcpO1xuICAgICAgbGFiZWwuaHRtbEZvciA9IGlkO1xuICAgICAgbGFiZWwuY2xhc3NOYW1lID0gJ2Zvcm0tY2hlY2stbGFiZWwnO1xuICAgICAgbGFiZWwuaW5uZXJUZXh0ID0gbmFtZTtcblxuICAgICAgY29uc3Qgd3JhcHBlciA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuICAgICAgd3JhcHBlci5jbGFzc05hbWUgPSAnZm9ybS1jaGVjayc7XG4gICAgICB3cmFwcGVyLmFwcGVuZENoaWxkKGNoZWNrYm94KTtcbiAgICAgIHdyYXBwZXIuYXBwZW5kQ2hpbGQobGFiZWwpO1xuXG4gICAgICBsYXllcnNMaXN0RGl2LmFwcGVuZENoaWxkKHdyYXBwZXIpO1xuICAgIH0pO1xuXG4gICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3RvZ2dsZU1hcE1lbnVCdXR0b24nKS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHtcbiAgICAgIGxheWVyc0xpc3REaXYuc3R5bGUuZGlzcGxheSA9IGxheWVyc0xpc3REaXYuc3R5bGUuZGlzcGxheSA9PT0gJ25vbmUnID8gJ2Jsb2NrJyA6ICdub25lJztcbiAgICB9KTtcbiAgICAgXG5cbiAgICAvLyBNZW51IGJhc2N1bGUgZm9uZCBkZSBwbGFuXG4gICAgY29uc3QgbWFwTWVudURpdiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuICAgIG1hcE1lbnVEaXYuY2xhc3NMaXN0LmFkZCgnbWFwRm9uZERlUGxhbicpO1xuICAgIG1hcE1lbnVEaXYuc3R5bGUucG9zaXRpb24gPSAnYWJzb2x1dGUnO1xuICAgIG1hcE1lbnVEaXYuc3R5bGUuekluZGV4ID0gJzEwMDAnO1xuICAgIG1hcE1lbnVEaXYuaW5uZXJIVE1MID0gYFxuICAgICAgPHN0cm9uZz5Gb25kIGRlIHBsYW4gOjwvc3Ryb25nPlxuICAgICAgPGRpdiBjbGFzcz1cImZvcm0tY2hlY2sgZm9ybS1zd2l0Y2hcIj5cbiAgICAgICAgPGlucHV0IGNsYXNzPVwiZm9ybS1jaGVjay1pbnB1dFwiIHR5cGU9XCJjaGVja2JveFwiIHJvbGU9XCJzd2l0Y2hcIiBpZD1cIm9ydGhvQ2hlY2tib3hcIj5cbiAgICAgICAgPGxhYmVsIGNsYXNzPVwiZm9ybS1jaGVjay1sYWJlbFwiIGZvcj1cIm9ydGhvQ2hlY2tib3hcIj5QaG90b3MgYcOpcmllbm5lczwvbGFiZWw+XG4gICAgICA8L2Rpdj5cbiAgICBgO1xuICAgIG1hcC5nZXRDb250YWluZXIoKS5hcHBlbmRDaGlsZChtYXBNZW51RGl2KTtcblxuICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdvcnRob0NoZWNrYm94JykuYWRkRXZlbnRMaXN0ZW5lcignY2hhbmdlJywgZnVuY3Rpb24gKGUpIHtcbiAgICAgIGUucHJldmVudERlZmF1bHQoKTtcbiAgICAgIGUuc3RvcFByb3BhZ2F0aW9uKCk7XG4gICAgICB0b2dnbGVTdHlsZSh0aGlzLmNoZWNrZWQpO1xuICAgIH0pO1xuICB9KTtcbn07XG5cbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

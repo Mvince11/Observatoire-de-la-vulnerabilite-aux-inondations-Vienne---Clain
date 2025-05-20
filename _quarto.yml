@@ -20,7 +20,7 @@ website:
             href: https://www.eptb-vienne.fr
             target: _blank
         #- sidebar:Objectifs
-        - text: Objectifs n°1
+        - text: Objectif n°1
           menu:
            - href: batiments_plain_pied.qmd
              text: Bâtiments plain-pied

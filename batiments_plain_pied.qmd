@@ -186,13 +186,13 @@ map = {
         dynamicColor: { 
         property: 's12a',
         mapping: { 
-           '-1': '#d9d9d9',
+           '-1': '#f1eeed',
            '0': '#ffffff', 
            '10': '#ffaaaa',
            '50': '#ff5555', 
            '100': '#ff0000'
           }, 
-         default: '#888888'
+         default: '#f1eeed'
         } 
          } 
     ];
@@ -248,27 +248,27 @@ map = {
 
 
       
-      map.on('click', 'indicateurs12aLayer', (e) => {
-    if (e.features.length > 0) {
+      map.on('click', layer.id, (e) => {
         const feature = e.features[0];
-        // Fonction pour formater les nombres avec séparateurs de milliers
-        const formatNumber = (num) => {
-            // Vérifie si la valeur est définie et convertible en nombre
-            const parsedNum = parseInt(num, 10);
-            return !isNaN(parsedNum) ? parsedNum.toLocaleString('fr-FR') : 'Non disponible';
-        };
+      
+        const nom = feature.properties.nom || 'Non disponible';
+        const population = feature.properties.population
+        ? feature.properties.population.toLocaleString('fr-FR') + ' hab'
+        : 'Non disponible';
+        const s12a = feature.properties.s12a || '0';
+      
         const popupContent = `
-            <hr><strong><center>Commune : ${feature.properties.nom || 'Non disponible'}</center></strong><hr>
-            <strong>- Population :</strong> ${formatNumber(feature.properties.population) || 'Non disponible'}<br>
-            <strong>- Nombre de personnes en zone fortement inondable :</strong> ${feature.properties.s12a || '0'}<br>
+          <hr><strong><center>Commune : ${nom}</center></strong><hr>
+          <strong>- Population :</strong> ${population}<br>
+          <strong>- Nombre de personnes en zone fortement inondable :</strong> ${s12a}<br>
         `;
-
+      
         new maplibregl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(popupContent)
-            .addTo(map);
-          }
-    });
+          .setLngLat(e.lngLat)
+          .setHTML(popupContent)
+          .addTo(map);
+      });
+
 
       map.on('mouseenter', layer.id, () => {
         map.getCanvas().style.cursor = 'pointer';
@@ -361,7 +361,7 @@ map = {
 
 ```
 
-## Column {.tabset width="30%"}
+## Column {.tabset width=30%}
 
 ### Graphiques {.flow}
 
@@ -370,3 +370,28 @@ map = {
 ### Tableau de données {.flow}
 
 #### Row
+```{r}
+#| label: tbl-s12a
+#| tbl-cap: "Données de la variable s12a"
+
+library(sf)
+library(dplyr)
+library(knitr)
+library(scales)
+
+indicateur_s12a <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  mutate(s12a = ifelse(is.na(s12a), 0, s12a)) %>%  # Remplace NA par 0
+  st_drop_geometry() %>%
+  select(insee_com, nom, population, s12a)%>%
+  
+  rename(
+    Commune = nom,
+    `Code INSEE` = insee_com,
+    Population = population,
+    `Population en zone fortement inondable` = s12a
+  )
+  
+
+kable(indicateur_s12a)
+
+```
