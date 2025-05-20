@@ -1,5 +1,7 @@
 library(jsonlite)
 library(sf)
+library(dplyr)
+library(shiny)
 
 
 bassin_vienne <- readRDS("data/bassin_vienne.rds")
@@ -71,3 +73,23 @@ bounding_box <- readRDS("data/bb.rds")
 bounding_box <- st_bbox(bounding_box)
 bounding_box <- as.list(bounding_box)
 write_json(bounding_box, "data/bb.json", pretty = TRUE, auto_unbox = TRUE)
+
+
+
+indicateur <- st_read("layers/indicateurs.geojson")
+
+indicateur_s12a <- indicateur %>%
+  filter(!is.na(s12a)) %>%
+  mutate(
+    s12a_cat = as.numeric(cut(
+      s12a,
+      breaks = c(-1, 0, 10, 50, 100, 226),
+      labels = c(1, 2, 3, 4, 5),
+      include.lowest = TRUE
+    ))
+  )
+
+pal_s12a <- colorFactor(
+  palette = c("#d9d9d9", "#ffffff", "#ffaaaa", "#ff5555", "#ff0000"),
+  domain = 1:5
+)
