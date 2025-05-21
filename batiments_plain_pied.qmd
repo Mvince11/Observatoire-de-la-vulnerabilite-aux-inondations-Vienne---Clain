@@ -52,7 +52,6 @@ La zone inondable correspond à l'aléa centennal construit à partir des donné
 
 # Cartographie
 
-
 ## Column {width="70%"}
 
 ```{ojs}
@@ -251,7 +250,7 @@ map = {
         map.addLayer(layerConfig);
         
       
-      map.on('click', layer.id, (e) => {
+      map.on('click', 'indicateurs12aLayer', (e) => {
         const feature = e.features[0];
       
         const nom = feature.properties.nom || 'Non disponible';
@@ -273,10 +272,10 @@ map = {
       });
 
 
-      map.on('mouseenter', layer.id, () => {
+      map.on('mouseenter', 'indicateurs12aLayer', () => {
         map.getCanvas().style.cursor = 'pointer';
       });
-      map.on('mouseleave', layer.id, () => {
+      map.on('mouseleave', 'indicateurs12aLayer', () => {
         map.getCanvas().style.cursor = '';
       });
     });
@@ -372,7 +371,7 @@ map = {
 
 ```
 
-## Column {.tabset width=30%}
+## Column {.tabset width="30%"}
 
 ### Graphiques {.flow}
 
@@ -393,7 +392,6 @@ indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
 # Sauvegarder au format JSON dans le dossier _site
 write_json(indicateurs, "layers/data_s12a.json", auto_unbox = TRUE)
 ```
-
 
 ```{ojs}
 //| echo: false
@@ -442,6 +440,7 @@ Plot.plot({
 ### Tableau de données {.flow}
 
 #### Row
+
 ```{r}
 #| echo: false
 #| message: false
