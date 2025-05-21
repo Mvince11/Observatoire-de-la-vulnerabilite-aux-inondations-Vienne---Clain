@@ -174,11 +174,10 @@ map = {
               
     
     const layersData = [
-      { data: bassin_vienne, type: 'line', id: 'bassinvienneLayer', color: 'green' },
-      { data: region, type: 'line', id: 'regionLayer', color: 'red' },
-      { data: departement, type: 'line', id: 'departementLayer', color: '#a772b9', width: 2 },
-      { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3' },
-      { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1 },
+      { data: bassin_vienne, type: 'line', id: 'bassinvienneLayer', color: 'green', layout: {visibility:'none'}},
+      { data: region, type: 'line', id: 'regionLayer', color: 'red', layout: {visibility:'none'} },
+      { data: departement, type: 'line', id: 'departementLayer', color: '#a772b9', width: 2,  layout:{visibility:'none'}},
+      { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3', layout: {visibility:'none'} },
       { data: indicateursGeojson, // GeoJSON contenant une propriété 's12a' -->
         type: 'fill',
         id: 'indicateurs12aLayer',
@@ -194,8 +193,12 @@ map = {
            '100': '#ff0000'
           }, 
          default: '#f1eeed'
-        } 
-         } 
+        }
+        , layout: {visibility:'visible'}
+         },
+      { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
+      layout: {visibility:'visible'} }
+      
     ];
      
     // Ajout des couches vectorielles
@@ -210,7 +213,7 @@ map = {
           type: layer.type,
           source: layer.id,
           paint: {},
-          layout: { visibility: 'none' }
+          layout: layer.layout
         };
       
         if (layer.type === 'fill') {
@@ -246,15 +249,14 @@ map = {
       
       
         map.addLayer(layerConfig);
-
-
+        
       
       map.on('click', layer.id, (e) => {
         const feature = e.features[0];
       
         const nom = feature.properties.nom || 'Non disponible';
         const population = feature.properties.population
-        ? feature.properties.population.toLocaleString('fr-FR') + ' hab'
+        ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
         : 'Non disponible';
         const s12a = feature.properties.s12a || '0';
       
@@ -310,6 +312,7 @@ map = {
     }
 
     const layersListDiv = mapLayersDiv.querySelector('#layersList');
+    
     toggleableLayerIds.forEach(id => {
       const name = aliasLayerIds[id] || id;
 
@@ -317,6 +320,13 @@ map = {
       checkbox.type = 'checkbox';
       checkbox.id = id;
       checkbox.className = 'form-check-input';
+      
+      // ✅ Lire la visibilité actuelle directement dans la carte
+      map.once('idle', () => {
+        const visibility = map.getLayoutProperty(id, 'visibility');
+        checkbox.checked = visibility === 'visible';
+      });
+  
       checkbox.addEventListener('change', () => toggleLayerVisibility(id, checkbox.checked));
 
       const label = document.createElement('label');
