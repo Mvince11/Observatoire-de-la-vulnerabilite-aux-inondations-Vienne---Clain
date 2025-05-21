@@ -398,7 +398,7 @@ data = FileAttachment("layers/data_s12a.json").json()
 // Créer le slider
 viewof slider = Inputs.range(
   [0, 230], 
-  { value: 230, step: 10, label: "Population max en zone inondable" }
+  { value: 230, step: 10, label: "Population en zone inondable" }
 )
 
 // Fonction de tri croissant
@@ -415,10 +415,16 @@ Plot.plot({
   y: { grid: true, label: "Population en zone fortement inondable" },
   x: { label: "Commune",
         tickRotate: -45,
-        labelAnchor: "center",
+        labelAnchor: "right",
         labelOffset: 30},
   width: window.innerWidth * 0.95,
-  height: 550
+  height: 600,
+  style: {
+    fontSize: "10px",
+    fill: "black",
+    fontWeight: "bold"
+  },
+  marginBottom: 130
 })
 
 ```
@@ -427,27 +433,45 @@ Plot.plot({
 
 #### Row
 ```{r}
-#| label: tbl-s12a
-#| tbl-cap: "Données de la variable s12a"
+#| echo: false
+#| message: false
+#| warning: false
 
 library(sf)
 library(dplyr)
-library(knitr)
-library(scales)
+library(reactable)
 
+# Charger et transformer les données
 indicateur_s12a <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
-  mutate(s12a = ifelse(is.na(s12a), 0, s12a)) %>%  # Remplace NA par 0
+  mutate(s12a = ifelse(is.na(s12a), 0, s12a)) %>%
   st_drop_geometry() %>%
-  select(insee_com, nom, population, s12a)%>%
-  
+  select(insee_com, nom, population, s12a) %>%
   rename(
     Commune = nom,
     `Code INSEE` = insee_com,
     Population = population,
     `Population en zone fortement inondable` = s12a
+  ) %>%
+  mutate(
+    Population = format(Population, big.mark = " ", scientific = FALSE),
+    `Population en zone fortement inondable` = format(`Population en zone fortement inondable`, big.mark = " ", scientific = FALSE)
   )
-  
 
-kable(indicateur_s12a)
+# Afficher avec reactable
+reactable(indicateur_s12a,
+          filterable = TRUE,
+          striped = TRUE,
+          sortable = TRUE,
+          resizable = TRUE,
+          pagination = TRUE,
+          defaultPageSize = 10,
+          highlight = TRUE,
+          theme = reactableTheme(
+            borderColor = "#E0E0E0",
+            stripedColor = "#f5f5f5",
+            highlightColor = "#7591e5",
+            cellPadding = "8px 12px",
+            style = list(fontSize = "14px", fontFamily = "sans-serif")
+          ))
 
 ```
