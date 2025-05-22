@@ -24,4 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const elem = document.getElementById("nav-menu-objectif-n°2");
+  const target = "objectif2.html";
 
+  if (elem) {
+    elem.addEventListener("click", function () {
+      const current = window.location.pathname;
+      if (!current.endsWith(target)) {
+        window.location.href = target;
+      }
+    });
+  }
+})

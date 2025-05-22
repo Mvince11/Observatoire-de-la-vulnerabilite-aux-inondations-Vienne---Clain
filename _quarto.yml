@@ -12,18 +12,26 @@ website:
         - href: index.qmd
           text: Accueil
   #        icon: house
+  
         - href: mieux_comprendre.qmd
           text: Comprendre les inondations
+        #- sidebar:Objectifs
+        
+        - text: Objectif n°1
+          menu:
+           - href: batiments_plain_pied.qmd
+             text: Bâtiments plain-pied
+             
+        - text: Objectif n°2
+          menu:
+           - href: dommages_entreprises.qmd
+             text: Dommages aux entreprises
+             
         - text: Â propos
           menu:
           - text: EPTB-vienne.fr
             href: https://www.eptb-vienne.fr
             target: _blank
-        #- sidebar:Objectifs
-        - text: Objectif n°1
-          menu:
-           - href: batiments_plain_pied.qmd
-             text: Bâtiments plain-pied
         
      right: 
          - href: https://fr.linkedin.com/company/eptb-vienne
@@ -33,6 +41,17 @@ website:
          - text: Nous contacter
            href: https://eptb-vienne.fr/contact
            icon: envelope
+           
+  page-footer:
+    left: "Site créé avec [Quarto](https://quarto.org/)"
+    center: "©CEREMA"
+    right: 
+      - icon: linkedin
+        href: https://fr.linkedin.com/company/cerema
+      - icon: twitter-x 
+        href: https://x.com/ceremacom
+      - icon: youtube
+        href: https://www.youtube.com/@cerema3139
           
            
   # sidebar:

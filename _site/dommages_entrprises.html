@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mieux_comprendre</title>
+<title>Carte Intercative</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,23 +53,30 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 <script src="assets/inject-logos.js"></script>
 
 <script src="assets/sidebar-toggle.js"></script>
 
+<script src="js/maplibre.js"></script>
+<link href="js/maplibre.css" rel="stylesheet">
+<script src="js/jquery_3.5.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="js/photon-geocoder-autocomplete.min.css" type="text/css">
+<script src="js/photon-geocoder-autocomplete.min.js" type="text/javascript"></script>
 
 
 </head>
@@ -85,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./images/logo_porteurs_projet_transparent.png" alt="" class="navbar-logo">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -95,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./mieux_comprendre.html" aria-current="page"> 
+    <a class="nav-link" href="./mieux_comprendre.html"> 
 <span class="menu-text">Comprendre les inondations</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -115,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-objectif-n°2">    
         <li>
-    <a class="dropdown-item" href="./dommages_entreprises.html">
+    <a class="dropdown-item" href="./dommages_entreprises.qmd">
  <span class="dropdown-text">Dommages aux entreprises</span></a>
   </li>  
     </ul>
@@ -154,63 +161,35 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sur cette page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#pour-mieux-comprendre-les-inondations" id="toc-pour-mieux-comprendre-les-inondations" class="nav-link active" data-scroll-target="#pour-mieux-comprendre-les-inondations">Pour mieux comprendre les inondations</a></li>
-  <li><a href="#quest-ce-que-le-risque-inondation" id="toc-quest-ce-que-le-risque-inondation" class="nav-link" data-scroll-target="#quest-ce-que-le-risque-inondation">Qu’est-ce que le risque inondation ?</a></li>
-  <li><a href="#doù-viennent-les-inondations" id="toc-doù-viennent-les-inondations" class="nav-link" data-scroll-target="#doù-viennent-les-inondations">D’où viennent les inondations ?</a></li>
-  <li><a href="#quelle-stratégie-pour-réduire-le-risque-quelles-actions" id="toc-quelle-stratégie-pour-réduire-le-risque-quelles-actions" class="nav-link" data-scroll-target="#quelle-stratégie-pour-réduire-le-risque-quelles-actions">Quelle stratégie pour réduire le risque ? Quelles actions ?</a></li>
-  <li><a href="#lobservatoire-un-outil-dynamique" id="toc-lobservatoire-un-outil-dynamique" class="nav-link" data-scroll-target="#lobservatoire-un-outil-dynamique">L’observatoire, un outil dynamique</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Carte Intercative</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
 
-<section id="pour-mieux-comprendre-les-inondations" class="level2">
-<h2 class="anchored" data-anchor-id="pour-mieux-comprendre-les-inondations">Pour mieux comprendre les inondations</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Le <i><b>bassin versant*</b></i> de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents. <img src="images/carte_bv_01.jpg" height="226px" width="400px" align="left" style="float:left; margin-right:10000px; margin-bottom:45px"> </font></p>
-<p></p>
-<p><br><br></p>
-</section>
-<section id="quest-ce-que-le-risque-inondation" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-le-risque-inondation">Qu’est-ce que le risque inondation ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages). <img src="images/schema_risque_inondation.jpg" height="194px" width="404px" align="right" style="float:left; margin-right:10000px; margin-bottom:45px"> </font></p>
-<p></p>
-<p><br><br></p>
-</section>
-<section id="doù-viennent-les-inondations" class="level2">
-<h2 class="anchored" data-anchor-id="doù-viennent-les-inondations">D’où viennent les inondations ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes…<br> L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau.<br></font></p>
-<p></p>
-<p><br></p>
-</section>
-<section id="quelle-stratégie-pour-réduire-le-risque-quelles-actions" class="level2">
-<h2 class="anchored" data-anchor-id="quelle-stratégie-pour-réduire-le-risque-quelles-actions">Quelle stratégie pour réduire le risque ? Quelles actions ?</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> <img src="images/carte_slgri_vienne_clain_v2_03_02_01.jpg" height="549px" width="400px" align="left" style="float:left; margin-right:10px;"> En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de <i><b>17 communes**</b></i>.<br> Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain.<br> La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :<br> &nbsp;&nbsp;- Amélioration de la connaissance et de la conscience du risque,<br> &nbsp;&nbsp;- Surveillance, prévision des crues et des inondations,<br> &nbsp;&nbsp;- Alerte et gestion de crise,<br> &nbsp;&nbsp;- Prise en compte du risque d’inondation dans l’urbanisme,<br> &nbsp;&nbsp;- Réduction de la vulnérabilité des personnes et des biens,<br> &nbsp;&nbsp;- Gestion des écoulements,<br> &nbsp;&nbsp;- Gestion des ouvrages de protection hydrauliques.<br> <br> Pour en savoir plus sur les actions menées : <a href="http://www.eptb-vienne.fr/-Inondations-.html" target="_blank">http://www.eptb-vienne.fr/-Inondations-.html</a><br> </font></p>
-<p></p>
-<p><br></p>
-</section>
-<section id="lobservatoire-un-outil-dynamique" class="level2">
-<h2 class="anchored" data-anchor-id="lobservatoire-un-outil-dynamique">L’observatoire, un outil dynamique</h2>
-<p align="justify">
-</p><p><font size="4.5px" face="calibri"> L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain.<br><br> <i><b>*</b> Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU).<br><br> <b>**</b> Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne.</i> </font></p>
-<p></p>
 
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -254,12 +233,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
