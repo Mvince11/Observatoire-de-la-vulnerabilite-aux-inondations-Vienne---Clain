@@ -23,7 +23,7 @@ include-in-header:
 ---
 
 ```{=html}
-<div id="nav-menu-objectifs-n°1"></div>
+<div id="nav-menu-objectif-n°1"></div>
 ```
 
 ##  {.sidebar}
@@ -81,7 +81,7 @@ indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
 
 
 map = {
-  const container = html`<div class="map-container" id="map" style="height: 720px; width: 100%;"></div>`;
+  const container = html`<div class="map-container" id="map" style="height: 626px; width: 100%;"></div>`;
   yield container;
 
   const sourcePlanIGN = {
