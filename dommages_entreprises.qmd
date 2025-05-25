@@ -445,55 +445,78 @@ write_json(indicateurs, "layers/data_s27a.json", auto_unbox = TRUE)
 //| echo: false
 //| padding: 5px
 //| expandable: false
+
 import { Plot } from "@observablehq/plot";
 import { Inputs } from "@observablehq/inputs";
 
-// Charger les données depuis le fichier généré par R
+// Charger les données
 data = FileAttachment("layers/data_s27a.json").json()
 
-// Créer le slider
+// Label du slider
+html`<label for="slider-s27a" style="display: block; margin-top: 1em; font-weight: bold; margin-bottom: 1em;">
+  Dommages financiers causés aux entreprises (€)
+</label>`
+
+// Slider
 viewof slider = Inputs.range(
   [0, 6000000], 
-  { value: 6000000, step: 100000, label: "Dommages financiers causés aux entreprises en €" }
+  {
+    value: 3000000,
+    step: 100000,
+    id: "slider-s27a"
+  }
 )
 
+// Espace avant le graphique
+html`<div style="margin-top: 30px;"></div>`
+
+// Données filtrées et triées
 sorted = data
   .filter(d => +d.s27a <= slider)
-  .map(d => ({ ...d, s27a: +d.s27a })) // Conversion explicite
+  .map(d => ({ ...d, s27a: +d.s27a }))
   .sort((a, b) => a.s27a - b.s27a);
 
+// Graphique
 Plot.plot({
   marks: [
-    Plot.barY(sorted, { x: "nom", y: "s27a", fill: "steelblue" }),
+    Plot.barY(sorted, {
+      x: d => d.nom,
+      y: d => d.s27a,
+      fill: "steelblue"
+    }),
     Plot.text(sorted, {
-      x: "nom",
-      y: "s27a",
-      text: d => d.s27a.toLocaleString("fr-FR", { maximumFractionDigits: 0 }),
-      dy: -8, // Moins haut pour éviter de sortir du cadre
-      fontSize: 7
+      x: d => d.nom,
+      y: d => d.s27a,
+      text: d => d.s27a.toLocaleString("fr-FR"),
+      dy: -8,
+      fontSize: 9,
+      fill: "black",
+      textAnchor: "middle"
     })
   ],
   y: {
     grid: true,
-    label: "Dommages financiers causés aux entreprises en €",
-    domain: [0, 6000000],
-    tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 }) // Axe Y sans décimales
+    label: "Montant (€)",
+    domain: [0, Math.max(...data.map(d => +d.s27a))],
+    tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
     label: "Commune",
     tickRotate: -45,
-    labelAnchor: "right",
-    labelOffset: 30
+    labelAnchor: "right"
   },
-  width: window.innerWidth * 0.95,
-  height: window.innerHeight * 0.75,
   style: {
-    fontSize: "10px",
-    fill: "black",
+    fontSize: "11px",
+    fontFamily: "sans-serif",
     fontWeight: "bold"
   },
-  marginBottom: 130
-});
-
+  width: window.innerWidth * 0.95,
+  height: window.innerHeight * 0.65,
+  marginBottom: 120,
+  marginTop: 50,
+  marginLeft: 80  // ← solution au texte tronqué
+})
 
 ```
+
+
