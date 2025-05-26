@@ -243,24 +243,45 @@ map = {
           layerConfig.paint['line-width'] = layer.width || 1;
         }
 
-      
-      
         map.addLayer(layerConfig);
+        
+         map.addLayer({
+                  id: 'indicateurs27aLabels',
+                  type: 'symbol',
+                  source: 'indicateurs27aLayer', // le même id que ta source GeoJSON
+                  layout: {
+                    'text-field': ['get', 'nom'],
+                    'text-size': 11,
+                    'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+                    'text-offset': [0, 0.6],
+                    'text-anchor': 'top'
+                  },
+                  paint: {
+                    'text-color': '#000000',
+                    'text-halo-color': '#ffffff',
+                    'text-halo-width': 1
+                  }
+                });
         
       
       map.on('click', 'indicateurs27aLayer', (e) => {
         const feature = e.features[0];
       
         const nom = feature.properties.nom || 'Non disponible';
+      
         const population = feature.properties.population
-        ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
-        : 'Non disponible';
-        const s27a = feature.properties.s27a || '0';
+          ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
+          : 'Non disponible';
+      
+        const s27aValue = parseFloat(feature.properties.s27a);
+        const dommages = !isNaN(s27aValue)
+          ? s27aValue.toLocaleString('fr-FR') + ' €'
+          : '0 €';
       
         const popupContent = `
           <hr><strong><center>Commune : ${nom}</center></strong><hr>
           <strong>- Population :</strong> ${population}<br>
-          <strong>- Dommages financiers causés aux entreprises en € :</strong> ${s27a}<br>
+          <strong>- Dommages financiers causés aux entreprises :</strong> ${dommages}<br>
         `;
       
         new maplibregl.Popup()
@@ -268,6 +289,7 @@ map = {
           .setHTML(popupContent)
           .addTo(map);
       });
+
 
 
       map.on('mouseenter', 'indicateurs27aLayer', () => {
@@ -385,10 +407,11 @@ map = {
 library(sf)
 library(dplyr)
 library(reactable)
+library(tidyr)
 
 # Charger et transformer les données
 indicateur_s27a <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
-  mutate(s27a = ifelse(is.na(s27a), 0, s27a)) %>%
+  mutate(s27a = replace_na(s27a, 0)) %>%
   st_drop_geometry() %>%
   select(insee_com, nom, population, s27a) %>%
   rename(
@@ -483,10 +506,15 @@ viewof slider = Inputs.range(
 html`<div style="margin-top: 30px;"></div>`
 
 // Données filtrées et triées
-sorted = data
-  .filter(d => +d.s27a <= slider)
-  .map(d => ({ ...d, s27a: +d.s27a }))
-  .sort((a, b) => a.s27a - b.s27a);
+    sorted = data
+      .map(d => ({
+        ...d,
+        s27a: isNaN(+d.s27a) ? 0 : +d.s27a  // attrape null, undefined, "", "NaN", etc.
+      }))
+      .filter(d => d.s27a <= slider)
+      .sort((a, b) => a.s27a - b.s27a)
+
+
 
 // Graphique
 Plot.plot({
@@ -494,7 +522,15 @@ Plot.plot({
     Plot.barY(sorted, {
       x: d => d.nom,
       y: d => d.s27a,
-      fill: "#55a37c" 
+      fill: d => {
+        const val = d.s27a;
+        if (val === 0) return "#d9d9d9";        // null ou 0
+        if (val < 150000) return "#f9f0d9";
+        if (val < 500000) return "#fdb77a";
+        if (val < 2000000) return "#ec603F";
+        return "#b30000";
+      }
+ 
     }),
     Plot.text(sorted, {
       x: d => d.nom,
@@ -509,7 +545,7 @@ Plot.plot({
   y: {
     grid: true,
     label: "Montant (€)",
-    domain: [0, Math.max(...data.map(d => +d.s27a))],
+    domain: [0, Math.max(...sorted.map(d => d.s27a))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
