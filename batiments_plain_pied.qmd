@@ -423,7 +423,7 @@ reactable(indicateur_s12a,
 
 ### Graphiques {.flow}
 
-#### Row 
+#### Row
 
 ```{r}
 #| echo: false
