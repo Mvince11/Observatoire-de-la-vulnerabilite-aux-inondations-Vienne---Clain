@@ -286,6 +286,7 @@ map = {
             border-radius: 8px;
             width: max-content;
             box-shadow: rgba(101, 147, 220, 0.2) 0px 4px 8px 0px;
+            border-color: rgba(101, 147, 220, 0.5);
           }
         </style>
           <div style="font-family: sans-serif; font-size: 13px; margin:10px;">

@@ -271,12 +271,25 @@ map = {
         const s12a = feature.properties.s12a || '0';
       
         const popupContent = `
-          <hr><strong><center>Commune : ${nom}</center></strong><hr>
-          <strong>- Population :</strong> ${population}<br>
-          <strong>- Nombre de personnes en zone fortement inondable :</strong> ${s12a}<br>
+        <style>
+          .maplibregl-popup-content {
+            padding: 4px !important;
+            border: 1px solid;
+            border-radius: 8px;
+            width: 270px;
+            box-shadow: rgba(101, 147, 220, 0.2) 0px 4px 8px 0px;
+            border-color: rgba(101, 147, 220, 0.5);
+          }
+        </style>
+           <div style="font-family: sans-serif; font-size: 13px; margin:10px;">
+          <div style="background-color: #d1ee9c; border: 1px solid; border-radius:8px; margin-bottom:16px; padding:10px;"><strong>
+          <center>${nom}</center>
+          </strong></div>
+          <p style="text-align:center !important"><strong>- Population :</strong> ${population}</p>
+          <p style="text-align:center !important"><strong>- Nombre de personnes en zone fortement inondable :</strong> ${s12a}</p>
         `;
       
-        new maplibregl.Popup()
+        new maplibregl.Popup({closeButton: false})
           .setLngLat(e.lngLat)
           .setHTML(popupContent)
           .addTo(map);
@@ -463,11 +476,29 @@ import { Inputs } from "@observablehq/inputs";
 // Charger les données depuis le fichier généré par R
 data = FileAttachment("layers/data_s12a.json").json()
 
+html`<label for="slider-s12a" style="display: block;
+  margin-top: 1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;">
+  Population en zone inondable
+</label>`
+
 // Créer le slider
 viewof slider = Inputs.range(
   [0, 230], 
-  { value: 230, step: 10, label: "Population en zone inondable" }
+  { value: 230, step: 10, 
+  id: "slider-s12a"
+  }
 )
+
+html`<div style="margin-top: 30px;"></div>`
 
 // Fonction de tri croissant
 sorted = data
@@ -477,7 +508,17 @@ sorted = data
 
 Plot.plot({
   marks: [
-    Plot.barY(sorted, { x: "nom", y: "s12a", fill: "steelblue" }),
+    Plot.barY(sorted, { x: "nom", y: "s12a", 
+    fill: d => {
+        const val = d.s12a;
+        if (val === 0) return "#d9d9d9";        // null ou 0
+        if (val < 10) return "#f9e9e9";
+        if (val < 50) return "#ffaaaa";
+        if (val < 100) return "#ff5555";
+        if (val >= 100) return "#ff0000";
+        return "#b30000";
+      }
+      }),
     Plot.text(sorted, { x: "nom", y: "s12a", text: d => `${d.s12a}`, dy: -10 })
   ],
   y: { grid: true, label: "Population en zone fortement inondable" },
@@ -497,3 +538,5 @@ Plot.plot({
 })
 
 ```
+
+# Informations relatives à l'indicateur {.flow}
