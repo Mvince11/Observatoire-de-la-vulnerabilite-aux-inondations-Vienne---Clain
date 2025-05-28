@@ -7,7 +7,7 @@ website:
   #title: "Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain"
   navbar:
      search: false
-     logo: images/logo_porteurs_projet_transparent.png
+     logo: Images/logo_porteurs_projet_transparent.png
      left:
         - href: index.qmd
           text: Accueil

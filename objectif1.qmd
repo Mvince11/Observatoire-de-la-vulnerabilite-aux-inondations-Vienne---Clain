@@ -4,7 +4,7 @@ sidebar: objectifs
 toc: false
 ---
 
-<img src="images/Objectif1.png" height="150px" width="148px" align="center" style="float:center; margin-right:1000px;"/>
+<img src="Images/Objectif1.png" height="150px" width="148px" align="center" style="float:center; margin-right:1000px;"/>
 
 ## Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.
 

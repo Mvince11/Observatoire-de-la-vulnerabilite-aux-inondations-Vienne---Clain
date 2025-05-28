@@ -44,5 +44,5 @@ lang: fr
 
 </p>
 
-<br> <a href="mailto:contact@eptb-vienne.fr" target=_blank><i class="fa fa-comments fa-1x"></i>Nous contacter</a> (contact\@eptb-vienne.fr) <br><br> <img src="images/logo_financeurs.png" height="70px" width="350px" align="right"/>
+<br> <a href="mailto:contact@eptb-vienne.fr" target=_blank><i class="fa fa-comments fa-1x"></i>Nous contacter</a> (contact\@eptb-vienne.fr) <br><br> <img src="Images/logo_financeurs.png" height="70px" width="350px" align="right"/>
 ```
