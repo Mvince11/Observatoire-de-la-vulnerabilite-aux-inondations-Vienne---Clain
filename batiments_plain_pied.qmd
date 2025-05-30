@@ -80,7 +80,7 @@ indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
 
 
 map = {
-  const container = html`<div class="map-container" id="map" style="height: 626px; width: 100%;"></div>`;
+  const container = html`<div class="map-container" id="map" style="height: 665px; width: 100%;"></div>`;
   yield container;
 
   const sourcePlanIGN = {
@@ -293,6 +293,13 @@ map = {
           .setLngLat(e.lngLat)
           .setHTML(popupContent)
           .addTo(map);
+          
+          // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
+         document.getElementById('donnees').innerHTML = `
+         <strong>- Commune :</strong> ${nom}<br>
+         <strong>- Nombre d'habitants :</strong> ${population}<br>
+         <strong>- Nombre de personnes en zone fortement inondable :</strong> ${s12a}
+         `;
       });
 
 
@@ -303,6 +310,7 @@ map = {
         map.getCanvas().style.cursor = '';
       });
     });
+    
 
     // Interface de contrôle des couches
     const mapLayersDiv = document.createElement('div');
@@ -396,6 +404,22 @@ map = {
 ```
 
 ## Column {.tabset width="40%"}
+
+### Données de la commune {.flow}
+#### Row
+```{ojs}
+//| echo: false
+//| padding: 5px
+//| expandable: false
+md`
+<div id="donnees" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
+    Cliquez sur une commune pour voir les informations ici.<br>
+</div>
+
+`
+
+
+```
 
 ### Tableau de données {.flow}
 
