@@ -296,9 +296,9 @@ map = {
           
           // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
          document.getElementById('donnees').innerHTML = `
-         <strong>- Commune :</strong> ${nom}<br>
-         <strong>- Nombre d'habitants :</strong> ${population}<br>
-         <strong>- Nombre de personnes en zone fortement inondable :</strong> ${s12a}
+         <strong><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
+         <strong><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong> ${population}<br>
+         <strong><i class="bi bi-droplet-half"></i> Nombre de personnes en zone fortement inondable :</strong> ${s12a}
          `;
       });
 
