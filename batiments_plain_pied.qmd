@@ -621,6 +621,107 @@ md`
         zone d’aléa supérieure à 1,5 m et on comptabilise le nombre de personnes (habitants ou employés). Le résultat est ensuite 
         agrégé à la commune.</td>
   </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Échelle de représentation</td>
+    <td colspan="3" style="border:1px solid;">Communale</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Points de vigilance</td>
+    <td colspan="3" style="border:1px solid;">Pour les effectifs des employés, les valeurs renseignées dans SIREN sont des fourchettes         de valeurs hautes et basses. Ici, le choix de prendre la valeur haute a été retenu pour éviter de minimiser le total.
+        Lors de l’affectation des personnes au bâtiment, pour des carreaux à faible densité de personnes, des valeurs décimales ont pu         être attribuées aux bâtiments.</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Table cible</td>
+    <td colspan="3" style="border:1px solid;">p_obj1_securite_personnes. s12a_pop_plainpied_zi_fort</td>
+  </tr>
+  <tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Variables mobilisées</td>
+    <td colspan="3" style="border:1px solid;">Zd : hauteur d’eau > 1.5m,
+        Pop1 : habitants,
+        Pop2 : employés</td>
+  </tr>
+  <tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
+    <td colspan="3" style="border:1px solid;">non</td>
+  </tr>
+  <tr>
+</table>
+
+<br>
+
+<table style="width:90%; border-collapse: collapse; border:1px solid; text-align:center; margin:auto;">
+  <colgroup>
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+    <col style="width:10%;">
+  </colgroup>
+
+  <tr>
+    <td colspan="10" style="background-color:bisque; border:1px solid; font-weight: bold;">Données sources</td>
+  </tr>
+  <tr>
+    <th style="background-color:bisque; border:1px solid;" colspan="2">Désignation</th>
+    <th style="background-color:bisque; border:1px solid;">Millésime</th>
+    <th style="background-color:bisque; border:1px solid;">Nationale/locale</th>
+    <th style="background-color:bisque; border:1px solid;">Format</th>
+    <th style="background-color:bisque; border:1px solid;">Type</th>
+    <th style="background-color:bisque; border:1px solid;" colspan="2">Producteur</th>
+    <th style="background-color:bisque; border:1px solid;" colspan="2">Nom fichier</th>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Hauteur d’eau >1.5m</td>
+    <td style="border:1px solid;">2019</td>
+    <td style="border:1px solid;">Locale</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">Cerema</td>
+    <td colspan="2" style="border:1px solid;">zd_sup_1m50.shp</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Bâtiment BDTOPO</td>
+    <td style="border:1px solid;">2020</td>
+    <td style="border:1px solid;">Nationale</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
+    <td colspan="2" style="border:1px solid;">Batiment.shp</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Population carreau 200m INSEE</td>
+    <td style="border:1px solid;">2015</td>
+    <td style="border:1px solid;">Nationale</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">INSEE</td>
+    <td colspan="2" style="border:1px solid;">filosofi2015_carreaux_200m.shp</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Effectif des entreprises</td>
+    <td style="border:1px solid;">2021</td>
+    <td style="border:1px solid;">Nationale</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Point</td>
+    <td colspan="2" style="border:1px solid;">INSEE</td>
+    <td colspan="2" style="border:1px solid;">geo_siret.shp</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Communes</td>
+    <td style="border:1px solid;">2020</td>
+    <td style="border:1px solid;">Nationale</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">Cerema</td>
+    <td colspan="2" style="border:1px solid;">Commune.shp</td>
+  </tr>
 </table>
 
 
