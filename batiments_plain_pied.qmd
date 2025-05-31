@@ -296,9 +296,9 @@ map = {
           
           // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
          document.getElementById('donnees').innerHTML = `
-         <strong><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
-         <strong><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong> ${population}<br>
-         <strong><i class="bi bi-droplet-half"></i> Nombre de personnes en zone fortement inondable :</strong> ${s12a}
+         <strong style="font-size:1.2em"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
+         <strong style="font-size:1.2em"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong> ${population}<br>
+         <strong style="font-size:1.2em"><i class="bi bi-droplet-half"></i> Nombre de personnes en zone fortement inondable :</strong> ${s12a}
          `;
       });
 
@@ -412,7 +412,7 @@ map = {
 //| padding: 5px
 //| expandable: false
 md`
-<div id="donnees" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
+<div id="donnees" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-top:1%;">
     Cliquez sur une commune pour voir les informations ici.<br>
 </div>
 
@@ -564,3 +564,65 @@ Plot.plot({
 ```
 
 # Informations relatives à l'indicateur {.flow}
+
+```{ojs}
+//| echo: false
+//| padding: 5px
+//| expandable: false
+md`
+
+<table style="width:90%; border-collapse: collapse; border:1px solid; text-align:center; margin:auto;">
+  <colgroup>
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+  </colgroup>
+  <tr>
+    <th style="background-color:bisque; border:1px solid;" colspan="2">Numéro d'indicateur</th>
+    <th style="border:1px solid;">Ind1/2a</th>
+    <th style="background-color:bisque; border:1px solid;">Date de mise à jour</th>
+    <th style="border:1px solid;">31/05/2025</th>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Intitulé</td>
+    <td colspan="3" style="border:1px solid;">Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied
+        fortement inondables (plus de 1,5 m d’eau)</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
+    <td colspan="3" style="border:1px solid;">Objectif n°1 : Augmenter la sécurité des populations exposées</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">Axe 1/1 La mise en danger des personnes au sein des bâtiments</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">S1/2 Inondation de bâtiments et risque de rupture des ouvrants dans les zones pouvant
+        comporter une hauteur d’eau importante</td>
+  </tr>
+</table>
+
+<br>
+
+<table style="width:90%; border-collapse: collapse; border:1px solid; text-align:center; margin:auto;">
+  <colgroup>
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+    <col style="width:20%;">
+  </colgroup>
+  <tr>
+    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Modalités du calcul</td>
+    <td colspan="3" style="border:1px solid;">On sélectionne les bâtiments (habitation ou activité) de plain-pied qui intersectent la 
+        zone d’aléa supérieure à 1,5 m et on comptabilise le nombre de personnes (habitants ou employés). Le résultat est ensuite 
+        agrégé à la commune.</td>
+  </tr>
+</table>
+
+
+`
+```
