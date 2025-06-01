@@ -622,28 +622,26 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <th style="background-color:bisque; border:1px solid;" colspan="2">Numéro d'indicateur</th>
+    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Numéro d'indicateur</th>
     <th style="border:1px solid;">Ind2/7a</th>
-    <th style="background-color:bisque; border:1px solid;">Date de mise à jour</th>
+    <th style="background-color:#c4e3ff; border:1px solid;">Date de mise à jour</th>
     <th style="border:1px solid;">31/05/2025</th>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Intitulé</td>
-    <td colspan="3" style="border:1px solid;">Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied
-        fortement inondables (plus de 1,5 m d’eau)</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Intitulé</td>
+    <td colspan="3" style="border:1px solid;">Dommages aux entreprises en fonction de paramètres hydrauliques</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
-    <td colspan="3" style="border:1px solid;">Objectif n°1 : Augmenter la sécurité des populations exposées</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
+    <td colspan="3" style="border:1px solid;">Objectif n°2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages liés à l’inondation</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">Axe 1/1 La mise en danger des personnes au sein des bâtiments</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">Axe 2/3 Les dommages aux activités et aux biens</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">S1/2 Inondation de bâtiments et risque de rupture des ouvrants dans les zones pouvant
-        comporter une hauteur d’eau importante</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">S2/7 Inondation des bâtiments, du mobilier et des stocks, et pertes d’activité des entreprises</td>
   </tr>
 </table>
 
@@ -658,34 +656,40 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Modalités du calcul</td>
-    <td colspan="3" style="border:1px solid;">On sélectionne les bâtiments (habitation ou activité) de plain-pied qui intersectent la 
-        zone d’aléa supérieure à 1,5 m et on comptabilise le nombre de personnes (habitants ou employés). Le résultat est ensuite 
-        agrégé à la commune.</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Modalités du calcul</td>
+    <td colspan="3" style="border:1px solid;">Application de la méthode du référentiel national.
+    On utilise le tableau du guide AMC sur les dommages aux entreprises (pour l’aléa fluvial), qui
+    dépendent du type d’activité de l’entreprise (code NACE), de la durée et de la hauteur de
+    submersion. On considère que la durée de submersion est supérieure à 48 h dans tous les cas.
+    Les points Geo-Siren ont été affectés aux bâtiments de la BDTOPO, soit directement si le point se
+    trouve dans le bâtiment, soit au bâtiment dans la parcelle la plus proche.
+    La couche des bâtiments (type ACTIVITE) est croisée avec la zone inondable contenant
+    l’information de hauteur d’eau.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Échelle de représentation</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Échelle de représentation</td>
     <td colspan="3" style="border:1px solid;">Communale</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Points de vigilance</td>
-    <td colspan="3" style="border:1px solid;">Pour les effectifs des employés, les valeurs renseignées dans SIREN sont des fourchettes         de valeurs hautes et basses. Ici, le choix de prendre la valeur haute a été retenu pour éviter de minimiser le total.
-        Lors de l’affectation des personnes au bâtiment, pour des carreaux à faible densité de personnes, des valeurs décimales ont pu         être attribuées aux bâtiments.</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Points de vigilance</td>
+    <td colspan="3" style="border:1px solid;">Les points de la base geo-siren ont différents niveaux de précision, qui vont du             numéro du bâtiment, à la rue et au centre de la commune. Seuls les points géocodés au bâtiments ont été
+    pris en compte. Cela représente plus de 80% des points sur la zone d’étude.
+    Le calcul du coût des dommages aux entreprises dépend de la surface du bâtiment, de la hauteur
+    d'eau, de la durée de submersion et du type d'activité. La perte d'activité n'est pas considérée
+    dans l'estimation du coût.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Table cible</td>
-    <td colspan="3" style="border:1px solid;">p_obj1_securite_personnes. s12a_pop_plainpied_zi_fort</td>
-  </tr>
-  <tr>
-  <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Variables mobilisées</td>
-    <td colspan="3" style="border:1px solid;">Zd : hauteur d’eau > 1.5m,
-        Pop1 : habitants,
-        Pop2 : employés</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Table cible</td>
+    <td colspan="3" style="border:1px solid;">p_obj2_cout_dommages.s27a_dommages_entreprises</td>
   </tr>
   <tr>
   <tr>
-    <td colspan="2" style="background-color:bisque; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Variables mobilisées</td>
+    <td colspan="3" style="border:1px solid;">Zx : zone inondable, Zf : durée de submersion, Oc3 : activité</td>
+  </tr>
+  <tr>
+  <tr>
+    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
     <td colspan="3" style="border:1px solid;">non</td>
   </tr>
   <tr>
@@ -708,46 +712,37 @@ md`
   </colgroup>
 
   <tr>
-    <td colspan="10" style="background-color:bisque; border:1px solid; font-weight: bold;">Données sources</td>
+    <td colspan="10" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Données sources</td>
   </tr>
   <tr>
-    <th style="background-color:bisque; border:1px solid;" colspan="2">Désignation</th>
-    <th style="background-color:bisque; border:1px solid;">Millésime</th>
-    <th style="background-color:bisque; border:1px solid;">Nationale/locale</th>
-    <th style="background-color:bisque; border:1px solid;">Format</th>
-    <th style="background-color:bisque; border:1px solid;">Type</th>
-    <th style="background-color:bisque; border:1px solid;" colspan="2">Producteur</th>
-    <th style="background-color:bisque; border:1px solid;" colspan="2">Nom fichier</th>
+    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Désignation</th>
+    <th style="background-color:#c4e3ff; border:1px solid;">Millésime</th>
+    <th style="background-color:#c4e3ff; border:1px solid;">Nationale/locale</th>
+    <th style="background-color:#c4e3ff; border:1px solid;">Format</th>
+    <th style="background-color:#c4e3ff; border:1px solid;">Type</th>
+    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Producteur</th>
+    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Nom fichier</th>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Hauteur d’eau >1.5m</td>
+    <td colspan="2" style="border:1px solid;">Zone inondable</td>
     <td style="border:1px solid;">2019</td>
     <td style="border:1px solid;">Locale</td>
     <td style="border:1px solid;">Shape</td>
     <td style="border:1px solid;">Polygone</td>
     <td colspan="2" style="border:1px solid;">Cerema</td>
-    <td colspan="2" style="border:1px solid;">zd_sup_1m50.shp</td>
+    <td colspan="2" style="border:1px solid;">Zx_zone_inondable.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Bâtiment BDTOPO</td>
-    <td style="border:1px solid;">2020</td>
-    <td style="border:1px solid;">Nationale</td>
+    <td colspan="2" style="border:1px solid;">Hauteurs d’eau par pas de 10 cm</td>
+    <td style="border:1px solid;">2019</td>
+    <td style="border:1px solid;">Locale</td>
     <td style="border:1px solid;">Shape</td>
     <td style="border:1px solid;">Polygone</td>
-    <td colspan="2" style="border:1px solid;">IGN</td>
-    <td colspan="2" style="border:1px solid;">Batiment.shp</td>
+    <td colspan="2" style="border:1px solid;">Cerema</td>
+    <td colspan="2" style="border:1px solid;">hauteur_pas_10cm.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Population carreau 200m INSEE</td>
-    <td style="border:1px solid;">2015</td>
-    <td style="border:1px solid;">Nationale</td>
-    <td style="border:1px solid;">Shape</td>
-    <td style="border:1px solid;">Polygone</td>
-    <td colspan="2" style="border:1px solid;">INSEE</td>
-    <td colspan="2" style="border:1px solid;">filosofi2015_carreaux_200m.shp</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="border:1px solid;">Effectif des entreprises</td>
+    <td colspan="2" style="border:1px solid;">Base geo-siren des entreprises</td>
     <td style="border:1px solid;">2021</td>
     <td style="border:1px solid;">Nationale</td>
     <td style="border:1px solid;">Shape</td>
@@ -756,12 +751,21 @@ md`
     <td colspan="2" style="border:1px solid;">geo_siret.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Communes</td>
+    <td colspan="2" style="border:1px solid;">Fonction de dommages aux entreprises du guide AMC</td>
+    <td style="border:1px solid;">2016</td>
+    <td style="border:1px solid;">Nationale</td>
+    <td style="border:1px solid;">Csv</td>
+    <td style="border:1px solid;">Tableau</td>
+    <td colspan="2" style="border:1px solid;">CGDD</td>
+    <td colspan="2" style="border:1px solid;">amc_dommages_fluvial_entreprise</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid;">Communes (BDTOPO)</td>
     <td style="border:1px solid;">2020</td>
     <td style="border:1px solid;">Nationale</td>
     <td style="border:1px solid;">Shape</td>
     <td style="border:1px solid;">Polygone</td>
-    <td colspan="2" style="border:1px solid;">Cerema</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
     <td colspan="2" style="border:1px solid;">Commune.shp</td>
   </tr>
 </table>
