@@ -528,50 +528,13 @@ div.sidebar-item-container{
   }
 }
 
-@media (max-width: 991px){
+@media (max-width: 1199px){
   .navbar .navbar-collapse{
     height: auto;
+    padding-left: inherit;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1360px) {
-  .navbar .navbar-collapse {
-    flex-basis: 100%;
-    width: 100%;
-    margin-top: 10px;
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .navbar .navbar-toggler {
-    display: block !important;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-  }
-
-  .navbar .navbar-brand {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .navbar-logo {
-    max-height: 80px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 991px) {
-
-  .navbar .navbar-collapse {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-  }
-}
 
 
 
@@ -580,7 +543,20 @@ div.sidebar-item-container{
     display: block !important;
     font-size: 0.8em;
   }
+  
+  .navbar .navbar-toggler {
+  order: 21;
+  margin-left: auto;
+  display: block !important;
+}
+
+
 }*/
+
+
+
+
+
   
   /*.navbar-container {
   width: 100%;

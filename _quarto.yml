@@ -7,15 +7,16 @@ website:
   #title: "Observatoire de la vulnérabilité <br> aux inondations Vienne - Clain"
   navbar:
      search: false
-     collapse-below: lg
      logo: Images/logo_porteurs_projet_transparent.png
+     collapse-below: xl
+     tools-collapse: false
      left:
         - href: index.qmd
           text: Accueil
   #        icon: house
-  
+          
         - href: mieux_comprendre.qmd
-          text: Comprendre les inondations
+          text: Les inondations ?
         #- sidebar:Objectifs
         
         - text: Objectif n°1
@@ -28,13 +29,18 @@ website:
            - href: dommages_entreprises.qmd
              text: Dommages aux entreprises
              
+        - text: Objectif n°3
+          menu:
+           - href: dommages_entreprises.qmd
+             text: Dommages aux entreprises
+             
         - text: Â propos
           menu:
           - text: EPTB-vienne.fr
             href: https://www.eptb-vienne.fr
             target: _blank
         
-     right: 
+     tools: 
          - href: https://fr.linkedin.com/company/eptb-vienne
            aria-label: LinkedIn
            icon: linkedin
@@ -46,6 +52,7 @@ website:
   page-footer:
     left: "Site créé avec [Quarto](https://quarto.org/)"
     center: "©CEREMA"
+    background: light
     right: 
       - icon: linkedin
         href: https://fr.linkedin.com/company/cerema

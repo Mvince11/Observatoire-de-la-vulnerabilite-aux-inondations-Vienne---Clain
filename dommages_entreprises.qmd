@@ -23,6 +23,7 @@ include-in-header:
 ---
 
 ##  {.sidebar}
+
 ```{=html}
 <div id="nav-menu-objectif-n°2"></div>
 ```
@@ -48,6 +49,7 @@ bbox_sru = FileAttachment("layers/bb.json").json()
 La zone inondable correspond à l'aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.
 </div>
 ```
+
 # Cartographie
 
 ## Column {width="60%"}
@@ -413,11 +415,12 @@ map = {
 
 ```
 
-
 ## Column {.tabset width="40%"}
 
 ### Données de la commune {.flow}
+
 #### Row
+
 ```{ojs}
 //| echo: false
 //| padding: 5px
