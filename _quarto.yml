@@ -31,8 +31,8 @@ website:
              
         - text: Objectif n°3
           menu:
-           - href: dommages_entreprises.qmd
-             text: Dommages aux entreprises
+           - href: habitants_zones_inondables.qmd
+             text: Nombre et proportion d'habitants en zone inondable 
              
         - text: Â propos
           menu:
