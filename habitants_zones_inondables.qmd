@@ -519,6 +519,23 @@ indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
 write_json(indicateurs, "layers/data_s31atx.json", auto_unbox = TRUE)
 ```
 
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(sf)
+library(dplyr)
+library(jsonlite)
+
+indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  st_drop_geometry() %>%
+  select(nom, s31apop) %>%
+  filter(!is.na(s31apop))
+
+write_json(indicateurs, "layers/data_s31apop.json", auto_unbox = TRUE)
+```
+
+
 ```{ojs}
 //| echo: false
 //| padding: 5px
@@ -546,46 +563,37 @@ html`<label for="slider-s31atx" style="display: block;
 </label>`
 
 // Slider
-viewof slider = Inputs.range(
-  [0, 20], 
-  {
-    value: 15,
-    step: 1,
-    id: "slider-s31atx"
-  }
-)
+import { Plot as PlotTaux } from "@observablehq/plot";
+import { Inputs as InputsTaux } from "@observablehq/inputs";
 
-// Espace avant le graphique
-html`<div style="margin-top: 30px;"></div>`
+data_s31atx = FileAttachment("layers/data_s31atx.json").json()
 
-// Données filtrées et triées
-    sorted = data
-      .map(d => ({
-        ...d,
-        s31atx: isNaN(+d.s31atx) ? 0 : +d.s31atx  // attrape null, undefined, "", "NaN", etc.
-      }))
-      .filter(d => d.s31atx <= slider)
-      .sort((a, b) => a.s31atx - b.s31atx)
-              
+viewof slider_s31atx = InputsTaux.range([0, 20], {
+  value: 15,
+  step: 1,
+  label: "Taux d'habitants en zone inondable (%)"
+})
 
-// Graphique
-Plot.plot({
+sorted_s31atx = data_s31atx
+  .map(d => ({ ...d, s31atx: +d.s31atx || 0 }))
+  .filter(d => d.s31atx <= slider_s31atx)
+  .sort((a, b) => a.s31atx - b.s31atx)
+
+PlotTaux.plot({
   marks: [
-    Plot.barY(sorted, {
+    PlotTaux.barY(sorted_s31atx, {
       x: d => d.nom,
       y: d => d.s31atx,
       fill: d => {
         const val = d.s31atx;
-        if (val === 0) return "#cdcdcd";        // null ou 0
+        if (val === 0) return "#cdcdcd";
         if (val <= 1) return "#fff5f0";
         if (val < 4) return "#fca487";
-        if (val <10) return "#eb362a";
-        if (val > 10) return "#67000d";
-        return "#cdcdcd";
+        if (val < 10) return "#eb362a";
+        return "#67000d";
       }
- 
     }),
-    Plot.text(sorted, {
+    PlotTaux.text(sorted_s31atx, {
       x: d => d.nom,
       y: d => d.s31atx,
       text: d => d.s31atx.toLocaleString("fr-FR"),
@@ -598,7 +606,7 @@ Plot.plot({
   y: {
     grid: true,
     label: "Taux (%)",
-    domain: [0, Math.max(...sorted.map(d => d.s31atx))],
+    domain: [0, Math.max(...sorted_s31atx.map(d => d.s31atx))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
@@ -615,9 +623,97 @@ Plot.plot({
   height: window.innerHeight * 0.65,
   marginBottom: 120,
   marginTop: 50,
-  marginLeft: 80  // ← solution au texte tronqué
+  marginLeft: 80
+})
+```
+
+
+```{ojs}
+//| echo: false
+//| padding: 5px
+//| expandable: false
+
+import { Plot } from "@observablehq/plot";
+import { Inputs } from "@observablehq/inputs";
+
+// Charger les données
+data_s31apop = FileAttachment("layers/data_s31apop.json").json()
+
+// Label du slider
+html`<label for="slider-s31apop" style="display: block;
+  margin-top: 1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;">
+  Nombre d'habitants en zone inondable
+</label>`
+
+// Slider
+import { Plot as PlotPop } from "@observablehq/plot";
+import { Inputs as InputsPop} from "@observablehq/inputs";
+
+viewof slider_s31apop = InputsPop.range([0, 1200], {
+  value: 600,
+  step: 20,
+  label: "Nombre d'habitants en zone inondable"
 })
 
+sorted_s31apop = data_s31apop
+  .map(d => ({ ...d, s31apop: +d.s31apop || 0 }))
+  .filter(d => d.s31apop <= slider_s31apop)
+  .sort((a, b) => a.s31apop - b.s31apop)
+
+PlotTaux.plot({
+  marks: [
+    PlotTaux.barY(sorted_s31apop, {
+      x: d => d.nom,
+      y: d => d.s31apop,
+      fill: d => {
+        const val = d.s31apop;
+        if (val === 0) return "#cdcdcd";
+        if (val < 600) return "#fca487";
+        if (val < 1000) return "#eb362a";
+        return "#67000d";
+      }
+    }),
+    PlotTaux.text(sorted_s31apop, {
+      x: d => d.nom,
+      y: d => d.s31apop,
+      text: d => d.s31apop.toLocaleString("fr-FR"),
+      dy: -8,
+      fontSize: 9,
+      fill: "black",
+      textAnchor: "middle"
+    })
+  ],
+  y: {
+    grid: true,
+    label: "Nombre d'habitants",
+    domain: [0, Math.max(...sorted_s31apop.map(d => d.s31apop))],
+    tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
+  },
+  x: {
+    label: "Commune",
+    tickRotate: -45,
+    labelAnchor: "right"
+  },
+  style: {
+    fontSize: "11px",
+    fontFamily: "sans-serif",
+    fontWeight: "bold"
+  },
+  width: window.innerWidth * 0.95,
+  height: window.innerHeight * 0.65,
+  marginBottom: 120,
+  marginTop: 50,
+  marginLeft: 80
+})
 ```
 
 # Informations relatives à l'indicateur {.flow}
