@@ -265,8 +265,19 @@ map = {
                     'text-halo-width': 1
                   }
                 });
+                
+        map.addLayer({
+                 id: 'indicateurs31atx-hover',
+                 type: 'line',
+                 source: 'indicateurs31atxLayer', // même source
+                 paint: {
+                   'line-color': '#000',
+                   'line-width': 2
+                  },
+                 filter: ['==', 'nom', ''] // vide au début
+                  });
         
-      
+        
       map.on('click', 'indicateurs31atxLayer', (e) => {
         const feature = e.features[0];
       
@@ -323,13 +334,22 @@ map = {
 
 
 
-      map.on('mouseenter', 'indicateurs31atxLayer', () => {
-        map.getCanvas().style.cursor = 'pointer';
+      map.on('mousemove', 'indicateurs31atxLayer', (e) => {
+        if (e.features.length > 0) {
+          const nomCommune = e.features[0].properties.nom;
+      
+          map.setFilter('indicateurs31atx-hover', ['==', 'nom', nomCommune]);
+      
+          map.getCanvas().style.cursor = 'pointer';
+        }
       });
-      map.on('mouseleave', 'indicateurs31atxLayer', () => {
-        map.getCanvas().style.cursor = '';
+
+        map.on('mouseleave', 'indicateurs31atxLayer', () => {
+          map.setFilter('indicateurs31atx-hover', ['==', 'nom', '']);
+          map.getCanvas().style.cursor = '';
+        });
       });
-    });
+
 
     // Interface de contrôle des couches
     const mapLayersDiv = document.createElement('div');
