@@ -166,6 +166,7 @@ map = {
       source: 'raster-ortho',
       layout: { visibility: 'none' }
     });
+
     
     //fetch('layers/indicateurs.geojson')
      //.then(response => response.json())
@@ -295,6 +296,12 @@ map = {
         const hab_inondable = !isNaN(s31apopValue)
           ? s31apopValue.toLocaleString('fr-FR')
           : '0';
+        const batimentsValue = feature.properties.nb_batiments;
+        const batiments = !isNaN(parseFloat(batimentsValue))
+          ? parseInt(batimentsValue).toLocaleString('fr-FR')
+          : 'Non disponible';
+        const batindif = feature.properties.nb_bat_indif?.toLocaleString('fr-FR');
+
       
         const popupContent = `
         <style>
@@ -328,7 +335,10 @@ map = {
          <strong style="font-size:1.2em"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
          <strong style="font-size:1.2em"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong>      ${population}<br>
          <strong style="font-size:1.2em"><i class="bi bi-percent"></i> Taux d'habitants en zone inondable :</strong> ${dommages}<br>
-         <strong style="font-size:1.2em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}
+         <strong style="font-size:1.2em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}<br>
+         <strong style="font-size:1.2em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
+         <strong style="margin-left:8%;">Dont : </strong>
+         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li><br>
          `;
       });
 
@@ -555,14 +565,13 @@ indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
 write_json(indicateurs, "layers/data_s31apop.json", auto_unbox = TRUE)
 ```
 
-
 ```{ojs}
 //| echo: false
 //| padding: 5px
 //| expandable: false
 
-import { Plot } from "@observablehq/plot";
-import { Inputs } from "@observablehq/inputs";
+import { Plot as PlotTaux } from "@observablehq/plot";
+import { Inputs as InputsTaux } from "@observablehq/inputs";
 
 // Charger les données
 data = FileAttachment("layers/data_s31atx.json").json()
@@ -583,8 +592,7 @@ html`<label for="slider-s31atx" style="display: block;
 </label>`
 
 // Slider
-import { Plot as PlotTaux } from "@observablehq/plot";
-import { Inputs as InputsTaux } from "@observablehq/inputs";
+
 
 data_s31atx = FileAttachment("layers/data_s31atx.json").json()
 
@@ -647,14 +655,13 @@ PlotTaux.plot({
 })
 ```
 
-
 ```{ojs}
 //| echo: false
 //| padding: 5px
 //| expandable: false
 
-import { Plot } from "@observablehq/plot";
-import { Inputs } from "@observablehq/inputs";
+import { Plot as PlotPop } from "@observablehq/plot";
+import { Inputs as InputsPop} from "@observablehq/inputs";
 
 // Charger les données
 data_s31apop = FileAttachment("layers/data_s31apop.json").json()
@@ -675,8 +682,7 @@ html`<label for="slider-s31apop" style="display: block;
 </label>`
 
 // Slider
-import { Plot as PlotPop } from "@observablehq/plot";
-import { Inputs as InputsPop} from "@observablehq/inputs";
+
 
 viewof slider_s31apop = InputsPop.range([0, 1200], {
   value: 600,
