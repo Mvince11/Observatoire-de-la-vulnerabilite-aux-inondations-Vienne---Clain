@@ -301,6 +301,12 @@ map = {
           ? parseInt(batimentsValue).toLocaleString('fr-FR')
           : 'Non disponible';
         const batindif = feature.properties.nb_bat_indif?.toLocaleString('fr-FR');
+        const batsportifValue = parseFloat(feature.properties.nb_bat_sportif);
+        const batsportif = (!isNaN(batsportifValue) ? batsportifValue : 0).toLocaleString('fr-FR');
+        const batagricolefValue = parseFloat(feature.properties.nb_bat_agricole);
+        const batagricole = (!isNaN(batagricolefValue) ? batagricolefValue : 0).toLocaleString('fr-FR');
+        const batresidentielValue = parseFloat(feature.properties.nb_bat_residentiel);
+        const batresidentiel = (!isNaN(batresidentielValue) ? batresidentielValue : 0).toLocaleString('fr-FR');
 
       
         const popupContent = `
@@ -338,7 +344,10 @@ map = {
          <strong style="font-size:1.2em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}<br>
          <strong style="font-size:1.2em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
          <strong style="margin-left:8%;">Dont : </strong>
-         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li><br>
+         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li>
+         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batsportif}<strong> bâtiments sportifs</strong></h5></li>
+         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batagricole}<strong> bâtiments agricoles</strong></h5></li>
+         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batresidentiel}<strong> bâtiments résidentiels</strong></h5></li>
          `;
       });
 

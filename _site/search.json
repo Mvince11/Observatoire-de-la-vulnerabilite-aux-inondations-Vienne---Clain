@@ -1,290 +1,297 @@
 [
   {
-    "objectID": "objectif2.html",
-    "href": "objectif2.html",
-    "title": "Objectif n°2 : Stabiliser/réduire le coût des dommages",
+    "objectID": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
+    "href": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
+    "title": "Objectif n°3 : Raccourcir le délai de retour à la normale",
+    "section": "Raccourcir le délai de retour à la normale.",
+    "text": "Raccourcir le délai de retour à la normale.\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable"
+  },
+  {
+    "objectID": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
+    "href": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
+    "title": "Objectif n°1 : Augmenter la sécurité des populations",
+    "section": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.",
+    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable."
+  },
+  {
+    "objectID": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
+    "href": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
+    "title": "Objectif n°1 : Augmenter la sécurité des populations",
+    "section": "Liste des indicateurs de l’objectif 1",
+    "text": "Liste des indicateurs de l’objectif 1\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans"
+  },
+  {
+    "objectID": "js/readme.html",
+    "href": "js/readme.html",
+    "title": "Pour mémoire",
     "section": "",
-    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Back to top"
+    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;\n\n\n\nversion 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js\n\n\n\nversion 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js\n\n\n\ninclude-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
   },
   {
-    "objectID": "mieux_comprendre.html",
-    "href": "mieux_comprendre.html",
-    "title": "",
+    "objectID": "js/readme.html#maplibre",
+    "href": "js/readme.html#maplibre",
+    "title": "Pour mémoire",
     "section": "",
-    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
+    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;"
   },
   {
-    "objectID": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
-    "href": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
-    "title": "",
+    "objectID": "js/readme.html#pmtiles",
+    "href": "js/readme.html#pmtiles",
+    "title": "Pour mémoire",
     "section": "",
-    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
+    "text": "version 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js"
   },
   {
-    "objectID": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
-    "href": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
-    "title": "",
-    "section": "Qu’est-ce que le risque inondation ?",
-    "text": "Qu’est-ce que le risque inondation ?\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages)."
-  },
-  {
-    "objectID": "mieux_comprendre.html#doù-viennent-les-inondations",
-    "href": "mieux_comprendre.html#doù-viennent-les-inondations",
-    "title": "",
-    "section": "D’où viennent les inondations ?",
-    "text": "D’où viennent les inondations ?\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau."
-  },
-  {
-    "objectID": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
-    "href": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
-    "title": "",
-    "section": "Quelle stratégie pour réduire le risque ? Quelles actions ?",
-    "text": "Quelle stratégie pour réduire le risque ? Quelles actions ?\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html"
-  },
-  {
-    "objectID": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
-    "href": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
-    "title": "",
-    "section": "L’observatoire, un outil dynamique",
-    "text": "L’observatoire, un outil dynamique\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "objectID": "js/readme.html#turf",
+    "href": "js/readme.html#turf",
+    "title": "Pour mémoire",
     "section": "",
-    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
+    "text": "version 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js"
   },
   {
-    "objectID": "index.html#pourquoi-un-observatoire",
-    "href": "index.html#pourquoi-un-observatoire",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "objectID": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
+    "href": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
+    "title": "Pour mémoire",
     "section": "",
-    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
+    "text": "include-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
   },
   {
-    "objectID": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
-    "href": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Des indicateurs pour connaître la vulnérabilité",
-    "text": "Des indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l'efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n\n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l'indicateur et la carte de vulnérabilité."
-  },
-  {
-    "objectID": "index.html#les-auteurs-de-lobservatoire",
-    "href": "index.html#les-auteurs-de-lobservatoire",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Les auteurs de l’observatoire",
-    "text": "Les auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n\n\n Nous contacter (contact\\@eptb-vienne.fr)"
-  },
-  {
-    "objectID": "Images/tableau_donnees_32c.html",
-    "href": "Images/tableau_donnees_32c.html",
+    "objectID": "Images/tableau_donnees_39b.html",
+    "href": "Images/tableau_donnees_39b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois \n\n\n\n Back to top"
+    "text": "Proportion de réseau routier de desserte locale potentiellement inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_31c.html",
-    "href": "Images/tableau_donnees_31c.html",
+    "objectID": "Images/tableau_donnees_31f.html",
+    "href": "Images/tableau_donnees_31f.html",
     "title": "",
     "section": "",
-    "text": "Surface des emprises des bâtiments d’habitation pouvant être inondés \n\n\n\n Back to top"
+    "text": "Proportion de la surface agricole communale impactée par la zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_31a.html",
-    "href": "Images/tableau_donnees_31a.html",
+    "objectID": "Images/tableau_donnees_31b.html",
+    "href": "Images/tableau_donnees_31b.html",
     "title": "",
     "section": "",
-    "text": "Nombre et proportion d’habitants en zone inondable \n\n\n\n Back to top"
+    "text": "Nombre d’employés en zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_26a.html",
-    "href": "Images/tableau_donnees_26a.html",
+    "objectID": "Images/tableau_donnees_27a.html",
+    "href": "Images/tableau_donnees_27a.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
+    "text": "Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_25c.html",
-    "href": "Images/tableau_donnees_25c.html",
+    "objectID": "Images/tableau_donnees_25d.html",
+    "href": "Images/tableau_donnees_25d.html",
     "title": "",
     "section": "",
-    "text": "Surface d’espaces naturels protégés vulnérables \n\n\n\n Back to top"
+    "text": "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_24ab.html",
-    "href": "Images/tableau_donnees_24ab.html",
+    "objectID": "Images/tableau_donnees_25b.html",
+    "href": "Images/tableau_donnees_25b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés \n\n\n\n Back to top"
+    "text": "Nombre d’installations susceptibles de déverser des produits polluants \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_210d.html",
-    "href": "Images/tableau_donnees_210d.html",
+    "objectID": "Images/tableau_donnees_22a.html",
+    "href": "Images/tableau_donnees_22a.html",
     "title": "",
     "section": "",
-    "text": "Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n Back to top"
+    "text": "Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_210a.html",
-    "href": "Images/tableau_donnees_210a.html",
+    "objectID": "Images/tableau_donnees_210c.html",
+    "href": "Images/tableau_donnees_210c.html",
     "title": "",
     "section": "",
-    "text": "Nombre de postes électriques (répartition et distribution) en zone inondable \n\n\n\n Back to top"
+    "text": "Linéaire de voies ferrées impactées par la zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_14.html",
-    "href": "Images/tableau_donnees_14.html",
+    "objectID": "Images/tableau_donnees_16b.html",
+    "href": "Images/tableau_donnees_16b.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable \n\n\n\n Back to top"
+    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_12a.html",
-    "href": "Images/tableau_donnees_12a.html",
+    "objectID": "Images/tableau_donnees_13b.html",
+    "href": "Images/tableau_donnees_13b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) \n\n\n\n Back to top"
+    "text": "Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_114c.html",
-    "href": "Images/tableau_donnees_114c.html",
+    "objectID": "Images/tableau_donnees_114e.html",
+    "href": "Images/tableau_donnees_114e.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n Back to top"
+    "text": "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_110.html",
-    "href": "Images/tableau_donnees_110.html",
+    "objectID": "Images/tableau_donnees_114b.html",
+    "href": "Images/tableau_donnees_114b.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’établissements hébergeant des personnes dépendantes en zone de fragilité électrique \n\n\n\n Back to top"
+    "text": "Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/Objectif2.html",
-    "href": "Images/Objectif2.html",
+    "objectID": "Images/Objectif3.html",
+    "href": "Images/Objectif3.html",
     "title": "",
     "section": "",
-    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Back to top"
+    "text": "Raccourcir le délai de retour à la normale.\n\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable \n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/mieux_comprendre.html",
-    "href": "Images/mieux_comprendre.html",
+    "objectID": "Images/Objectif1.html",
+    "href": "Images/Objectif1.html",
     "title": "",
     "section": "",
-    "text": "Pour mieux comprendre les inondations\n\n\n Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents.  \n\n\n\nQu’est-ce que le risque inondation ?\n\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages).  \n\n\n\nD’où viennent les inondations ?\n\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau.\n\n\n\nQuelle stratégie pour réduire le risque ? Quelles actions ?\n\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html \n\n\n\nL’observatoire, un outil dynamique\n\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne. \n\n\n\n\n Back to top"
+    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable. \n\n\nListe des indicateurs de l’objectif 1\n\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_s12b.html",
-    "href": "Images/ind_s12b.html",
+    "objectID": "Images/ind_s13b.html",
+    "href": "Images/ind_s13b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes occupant des bâtiments fortement inondables (plus de 1,5 m d’eau) \n\nNuméro indicateur : Ind1/2b\nDate de mise à jour : 01/12/21\nAxe de vulnérabilité : Axe 1/1 La mise en danger des personnes au sein des bâtiments\nSource de vulnérabilité : S1/2 Inondation de bâtiments et risque de rupture des ouvrants dans les zones pouvant comporter une hauteur d’eau importante\nModalités du calcul : On sélectionne les bâtiments (habitation ou activité) de plain-pied qui intersectent la zone d’aléa supérieure à 1,5 m et on comptabilise le nombre de personnes (habitants ou employés). Le résultat est ensuite agrégé à la commune.\nPoints de vigilance : Pour les effectifs des employés, les valeurs renseignées dans SIREN sont des fourchettes de valeurs hautes et basses. Ici, le choix de prendre la valeur haute a été retenu pour éviter de minimiser le total. Lors de l’affectation des personnes au bâtiment, pour des carreaux à faible densité de personnes, des valeurs décimales ont pu être attribuées aux bâtiments.\nAnalyse / Commentaire : Au regard de la population totale dans la zone d’étude et sur la Ville de Poitiers, le nombre de personnes pouvant être considérées dans un cadre de danger est faible, toutefois, chaque situation est à considérer.\n\n Télécharger la fiche indicateur et la carte \n\n\n&lt;div style=“width: 350px; padding-top:10px; padding-bottom:10px;border: 1px solid #A0A0A0; text-align: center;background: #F2F2F2;”La zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n Back to top"
+    "text": "Nombre de personnes occupant des bâtiments fortement inondables (plus de 1,5 m d’eau) \n\nNuméro indicateur : Ind1/3b\nDate de mise à jour : 01/12/21\nAxe de vulnérabilité : Axe 1/1 La mise en danger des personnes au sein des bâtiments\nSource de vulnérabilité : S1/3 Déstabilisation ou inondation d’habitats légers\nModalités du calcul : La méthode retenue est celle du référentiel. On sélectionne les campings qui intersectent la zone d’aléa &gt;1m puis on multiplie par 3 le nombre d’emplacements pour obtenir le nombre de personnes potentiellement impactées.\nPoints de vigilance : Un camping est situé en zone inondable à Chauvigny, mais n’apparaît pas dans le résultat. En effet la modélisation de la zone inondable n’a pas une couverture complète de la zone d’étude, en particulier il manque certains affluents (notamment Talbat à Chauvigny). L’indicateur estime le nombre de personnes impactés dans des campings submergés par plus d’un mètre d’eau.\nAnalyse / Commentaire : Le caractère des lieux présentant un caractère inondable par débordement de cours d’eau (situation hivernale et début de printemps) est à mettre en relation avec les périodes de fréquentation (estivale). Au-delà de l’impact potentiel sur les personnes, le critère renseigne sur le risque porté pour les biens et équipements permettant cette nature de pratique. Le camping de Chauvigny est impacté par le débordement du Talbat. Il compte 100 emplacements soit 300 personnes potentiellement impactées.\n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_32c.html",
-    "href": "Images/ind_32c.html",
+    "objectID": "Images/ind_39b.html",
+    "href": "Images/ind_39b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois    L’évaluation du nombre de logements dont la durée de retour à la normale est supérieure à 6 mois permet de rendre compte de l’aptitude d’un territoire à se remettre rapidement d’une inondation. On considère qu’il s’agit des logements inondés par plus de 1m d’eau pendant plus de 48h. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Proportion de réseau routier de desserte locale potentiellement inondable     Pour les routes, la longueur du réseau concerné par les inondations est représentative de la gêne occasionnée à tous les riverains desservis. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_31c.html",
-    "href": "Images/ind_31c.html",
+    "objectID": "Images/ind_31f.html",
+    "href": "Images/ind_31f.html",
     "title": "",
     "section": "",
-    "text": "Surface des emprises des bâtiments d’habitation pouvant être inondés    Dans les zones inondables, et sauf travaux spécifiques empêchant les entrées d’eau (systèmes d’obturation tels que les batardeaux) ou mises hors d’eau par surélévation à la construction, l’intérieur des bâtiments est inondé, entraînant des dégâts. L’indicateur permet d’évaluer l’emprise totale des bâtiments d’habitation exposés, sans souci de l’importance des dommages liés aux hauteurs d’eau, objet d’un autre indicateur (voir objectif 2). \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Proportion de la surface agricole communale impactée par la zone inondable    L’identification des surfaces agricoles exposées est un premier indicateur de la vulnérabilité de l’agriculture sur le territoire. Il ne permet cependant pas d’évaluer le montant des pertes à attendre, objet d’un autre indicateur (voir objectif 2). \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_31a.html",
-    "href": "Images/ind_31a.html",
+    "objectID": "Images/ind_31b.html",
+    "href": "Images/ind_31b.html",
     "title": "",
     "section": "",
-    "text": "Nombre et proportion d’habitants en zone inondable    Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les habitants touchés directement par l’événement, et leur proportion au sein du «territoire de vie». \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre d’employés en zone inondable    Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les employés touchés directement par l’événement, et leur proportion au sein du «territoire de vie». \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_27a.html",
-    "href": "Images/ind_27a.html",
+    "objectID": "Images/ind_28a.html",
+    "href": "Images/ind_28a.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion    Selon les caractéristiques de l’inondation, il est possible, d’évaluer le montant des pertes à attendre selon le type d’entreprises.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Dommages aux établissements publics en fonction de paramètres hydrauliques    Selon les caractéristiques de l’inondation, il est possible d’évaluer le montant des pertes à attendre sur ce type de bâtiments.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_25d.html",
-    "href": "Images/ind_25d.html",
+    "objectID": "Images/ind_26a.html",
+    "href": "Images/ind_26a.html",
     "title": "",
     "section": "",
-    "text": "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable    La présence de captages d’eau potable peut potentiellement poser un problème si des pollutions sont entraînées par l’inondation, ou s’ils sont colmatés par des atterrissements.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion    Selon les caractéristiques de l’inondation, la saisonnalité de ces inondations et les types de cultures, il est possible d’évaluer le montant des pertes à attendre.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_25b.html",
-    "href": "Images/ind_25b.html",
+    "objectID": "Images/ind_25c.html",
+    "href": "Images/ind_25c.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’installations susceptibles de déverser des produits polluants    L’inondation d’installations polluantes est potentiellement la source de pollution. Il s’agit d’identifier les principaux établissements polluants susceptibles d’être concernés. Seule une étude de danger poussée peut permettre d’aller plus loin.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Surface d’espaces naturels protégés vulnérables    Les protections des espaces naturels peuvent être justifiées par la sensibilité de ces espaces. Il s’agit de les identifier pour les mettre en perspective avec les pollutions potentielles.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_23b.html",
-    "href": "Images/ind_23b.html",
+    "objectID": "Images/ind_24ab.html",
+    "href": "Images/ind_24ab.html",
     "title": "",
     "section": "",
-    "text": "Les mobil-homes ont souvent perdu leur moyen de mobilité et ne peuvent être mis à l’abri. En cas d’inondation, les dommages sont très importants. Il s’agit d’évaluer leur nombre et les dommages potentiels en cas d’inondation. \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés    Les monuments historiques, bâtiments patrimoniaux et musées, ainsi que les collections qu’ils abritent sont susceptibles d’être endommagés par une inondation. Il s’agit d’identifier les principaux bâtiments exposés. Seul un diagnostic individuel peut permettre d’aller plus loin et d’identifier la vulnérabilité de chaque enjeu.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_210d.html",
-    "href": "Images/ind_210d.html",
+    "objectID": "Images/ind_22a.html",
+    "href": "Images/ind_22a.html",
     "title": "",
     "section": "",
-    "text": "Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable    L’indicateur cherche à identifier les parties de réseaux de bus situées en zone inondable et qui seraient susceptibles d’être endommagées.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion    La pénétration d’eau dans les logements entraîne des dégâts dépendant principalement de la hauteur et de la durée de submersion. Le présent indicateur permet d’évaluer les dégâts aux habitations pour l’inondation retenue.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_210a.html",
-    "href": "Images/ind_210a.html",
+    "objectID": "Images/ind_210c.html",
+    "href": "Images/ind_210c.html",
     "title": "",
     "section": "",
-    "text": "Nombre de postes électriques (répartition et distribution) en zone inondable    Un réseau électrique est notamment constitué de nœuds (postes de transformation d’électricité, poste de source d’électricité). La vulnérabilité d’un réseau peut difficilement être appréhendée par un acteur autre que le gestionnaire de réseau lui-même, car les travaux de protection ne sont pas toujours visibles, et parce que des substituts peuvent avoir été envisagés pour assurer un fonctionnement alternatif ou dégradé. L’indicateur cherche à identifier les postes électriques susceptibles d’être endommagés par l’inondation.\n \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Linéaire de voies ferrées impactées par la zone inondable    L’indicateur cherche à identifier les voies ferrées situées en zone inondable et qui seraient susceptibles d’être endommagées.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_17.html",
-    "href": "Images/ind_17.html",
+    "objectID": "Images/ind_19.html",
+    "href": "Images/ind_19.html",
     "title": "",
     "section": "",
-    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne    Les itinéraires routiers traversant des zones d’aléa dangereuses pour une personne, sont également dangereux pour un automobiliste. Un véhicule peut être emporté avec 30 ou 40 cm d’eau seulement s’il y a du courant. Si la prise de risque inconsidérée est le premier facteur à l’origine des nombreux accidents relevés, notamment lors du franchissement de passages à gué, la gestion des itinéraires dangereux est une priorité pour limiter l’exposition.    Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre d’enjeux associés à des zones de concentration \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_14.html",
-    "href": "Images/ind_14.html",
+    "objectID": "Images/ind_16b.html",
+    "href": "Images/ind_16b.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable    Un établissement sensible est un établissement dans lequel l’évacuation de la population peut poser des difficultés, en raison de sa mobilité, de son état de santé ou de son nombre. Ces personnes courent des risques a priori analogues à ceux identifiés par ailleurs, mais leur manque d’autonomie les rend plus vulnérables et justifie leur identification. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne    Les itinéraires routiers traversant des zones d’aléa dangereuses pour une personne, sont également dangereux pour un automobiliste. Si la prise de risque inconsidérée est le premier facteur à l’origine des nombreux accidents relevés, notamment lors du franchissement de passages à gué, la gestion des itinéraires dangereux est une priorité pour limiter l’exposition. Cet indicateur permet de visualiser le linéaire de routes situées dans des zones inondables où les hauteurs d’eau sont supérieures à 1 m.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_12a.html",
-    "href": "Images/ind_12a.html",
+    "objectID": "Images/ind_13b.html",
+    "href": "Images/ind_13b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)    Le niveau des eaux peut monter relativement vite pour piéger des personnes dans des locaux ne disposant pas d’un accès vers un étage refuge. Dans les locaux où la hauteur d’eau peut être importante (supérieure à 1,5m), cela représente un danger.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne    L’hôtellerie de plein air représente un enjeu humain important dans les territoires inondables: les habitats sont vulnérables (mobil-home, habitations légères de loisir) à très vulnérables (tentes). Cet indicateur identifie le nombre de personnes potentielles dans les campings exposées à des hauteurs d’eau pouvant présenter un danger pour les personnes (supérieures à 1m).  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_114e.html",
-    "href": "Images/ind_114e.html",
+    "objectID": "Images/ind_115b.html",
+    "href": "Images/ind_115b.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner    Les dispositifs de gestion de crise s’appuient sur des enjeux potentiellement vulnérables : mairie, salles polyvalentes, salles d’accueil, casernes de pompiers, gendarmeries, centres d’exploitation …. Il s’agit d’évaluer si ces bâtiments sont exposés à l’inondation.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes impactées par une hauteur d’eau dangereuse pour la sécurité d’une personne dans des communes sans dispositif réglementaire et financier (PPRI, PAPI) \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_114b.html",
-    "href": "Images/ind_114b.html",
+    "objectID": "Images/ind_114c.html",
+    "href": "Images/ind_114c.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes sans Plan Communal de Sauvegarde (PCS) obligatoire ou qui doit être révisé    L’existence d’un plan communal de sauvegarde récent (moins de 5 ans) contribue à une prise en compte générale du risque dans la commune. Ce n’est cependant pas l’assurance d’une bonne gestion si une crise intervient.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes sans Document d’Information Communal sur les Risques Majeurs (DICRIM) obligatoire ou qui doit être révisé    La réalisation d’un dossier d’information communal sur les risques majeurs permet, lorsqu’il est pertinent, de diffuser une information importante auprès de la population.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_113.html",
-    "href": "Images/ind_113.html",
+    "objectID": "Images/ind_113a.html",
+    "href": "Images/ind_113a.html",
     "title": "",
     "section": "",
     "text": "Variation saisonnière de la population \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Images/ind_110.html",
+    "href": "Images/ind_110.html",
+    "title": "",
+    "section": "",
+    "text": "Nombre d’établissements hébergeant des personnes dépendantes en zone de fragilité électrique    L’inondation, en impactant des installations du réseau électrique, peut engendrer une coupure de ce réseau dont les conséquences vont au-delà de la simple zone inondable. Les personnes dépendant d’un dispositif électrique peuvent potentiellement être mises en danger. Cet indicateur définit le nombre d’établissements de santé vulnérables à une défaillance du réseau électrique par l’inondation.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Images/apropos_data.html",
+    "href": "Images/apropos_data.html",
+    "title": "Données utilisées",
+    "section": "",
+    "text": "Données utilisées\nAlii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes annuos fructus, quae a primo ad ultimum solem se abunde iactitant possidere, ignorantes profecto maiores suos, per quos ita magnitudo Romana porrigitur, non divitiis eluxisse sed per bella saevissima, nec opibus nec victu nec indumentorum vilitate gregariis militibus discrepantes opposita cuncta superasse virtute. &gt; Commentaire\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Images/apropos_accueil-1.html",
+    "href": "Images/apropos_accueil-1.html",
+    "title": "",
+    "section": "",
+    "text": "Pourquoi un observatoire ?\n\n\n L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire. \n\n \n\nDes indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l’efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l’indicateur et la carte de vulnérabilité. \n\n\n\nLes auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n Nous contacter (contact@eptb-vienne.fr)  \n\n\n\n Back to top"
   },
   {
     "objectID": "Images/apropos_mentions_legales.html",
@@ -336,297 +343,290 @@
     "text": "Conception\n\n Ce site a été conçu et développé par le Cerema."
   },
   {
-    "objectID": "Images/apropos_accueil-1.html",
-    "href": "Images/apropos_accueil-1.html",
-    "title": "",
-    "section": "",
-    "text": "Pourquoi un observatoire ?\n\n\n L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire. \n\n \n\nDes indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l’efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l’indicateur et la carte de vulnérabilité. \n\n\n\nLes auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n Nous contacter (contact@eptb-vienne.fr)  \n\n\n\n Back to top"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Images/apropos_data.html",
-    "href": "Images/apropos_data.html",
-    "title": "Données utilisées",
-    "section": "",
-    "text": "Données utilisées\nAlii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes annuos fructus, quae a primo ad ultimum solem se abunde iactitant possidere, ignorantes profecto maiores suos, per quos ita magnitudo Romana porrigitur, non divitiis eluxisse sed per bella saevissima, nec opibus nec victu nec indumentorum vilitate gregariis militibus discrepantes opposita cuncta superasse virtute. &gt; Commentaire\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Images/ind_110.html",
-    "href": "Images/ind_110.html",
-    "title": "",
-    "section": "",
-    "text": "Nombre d’établissements hébergeant des personnes dépendantes en zone de fragilité électrique    L’inondation, en impactant des installations du réseau électrique, peut engendrer une coupure de ce réseau dont les conséquences vont au-delà de la simple zone inondable. Les personnes dépendant d’un dispositif électrique peuvent potentiellement être mises en danger. Cet indicateur définit le nombre d’établissements de santé vulnérables à une défaillance du réseau électrique par l’inondation.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Images/ind_113a.html",
-    "href": "Images/ind_113a.html",
+    "objectID": "Images/ind_113.html",
+    "href": "Images/ind_113.html",
     "title": "",
     "section": "",
     "text": "Variation saisonnière de la population \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_114c.html",
-    "href": "Images/ind_114c.html",
+    "objectID": "Images/ind_114b.html",
+    "href": "Images/ind_114b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes sans Document d’Information Communal sur les Risques Majeurs (DICRIM) obligatoire ou qui doit être révisé    La réalisation d’un dossier d’information communal sur les risques majeurs permet, lorsqu’il est pertinent, de diffuser une information importante auprès de la population.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes sans Plan Communal de Sauvegarde (PCS) obligatoire ou qui doit être révisé    L’existence d’un plan communal de sauvegarde récent (moins de 5 ans) contribue à une prise en compte générale du risque dans la commune. Ce n’est cependant pas l’assurance d’une bonne gestion si une crise intervient.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_115b.html",
-    "href": "Images/ind_115b.html",
+    "objectID": "Images/ind_114e.html",
+    "href": "Images/ind_114e.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes impactées par une hauteur d’eau dangereuse pour la sécurité d’une personne dans des communes sans dispositif réglementaire et financier (PPRI, PAPI) \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner    Les dispositifs de gestion de crise s’appuient sur des enjeux potentiellement vulnérables : mairie, salles polyvalentes, salles d’accueil, casernes de pompiers, gendarmeries, centres d’exploitation …. Il s’agit d’évaluer si ces bâtiments sont exposés à l’inondation.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_13b.html",
-    "href": "Images/ind_13b.html",
+    "objectID": "Images/ind_12a.html",
+    "href": "Images/ind_12a.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne    L’hôtellerie de plein air représente un enjeu humain important dans les territoires inondables: les habitats sont vulnérables (mobil-home, habitations légères de loisir) à très vulnérables (tentes). Cet indicateur identifie le nombre de personnes potentielles dans les campings exposées à des hauteurs d’eau pouvant présenter un danger pour les personnes (supérieures à 1m).  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)    Le niveau des eaux peut monter relativement vite pour piéger des personnes dans des locaux ne disposant pas d’un accès vers un étage refuge. Dans les locaux où la hauteur d’eau peut être importante (supérieure à 1,5m), cela représente un danger.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_16b.html",
-    "href": "Images/ind_16b.html",
+    "objectID": "Images/ind_14.html",
+    "href": "Images/ind_14.html",
     "title": "",
     "section": "",
-    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne    Les itinéraires routiers traversant des zones d’aléa dangereuses pour une personne, sont également dangereux pour un automobiliste. Si la prise de risque inconsidérée est le premier facteur à l’origine des nombreux accidents relevés, notamment lors du franchissement de passages à gué, la gestion des itinéraires dangereux est une priorité pour limiter l’exposition. Cet indicateur permet de visualiser le linéaire de routes situées dans des zones inondables où les hauteurs d’eau sont supérieures à 1 m.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable    Un établissement sensible est un établissement dans lequel l’évacuation de la population peut poser des difficultés, en raison de sa mobilité, de son état de santé ou de son nombre. Ces personnes courent des risques a priori analogues à ceux identifiés par ailleurs, mais leur manque d’autonomie les rend plus vulnérables et justifie leur identification. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_19.html",
-    "href": "Images/ind_19.html",
+    "objectID": "Images/ind_17.html",
+    "href": "Images/ind_17.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’enjeux associés à des zones de concentration \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne    Les itinéraires routiers traversant des zones d’aléa dangereuses pour une personne, sont également dangereux pour un automobiliste. Un véhicule peut être emporté avec 30 ou 40 cm d’eau seulement s’il y a du courant. Si la prise de risque inconsidérée est le premier facteur à l’origine des nombreux accidents relevés, notamment lors du franchissement de passages à gué, la gestion des itinéraires dangereux est une priorité pour limiter l’exposition.    Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_210c.html",
-    "href": "Images/ind_210c.html",
+    "objectID": "Images/ind_210a.html",
+    "href": "Images/ind_210a.html",
     "title": "",
     "section": "",
-    "text": "Linéaire de voies ferrées impactées par la zone inondable    L’indicateur cherche à identifier les voies ferrées situées en zone inondable et qui seraient susceptibles d’être endommagées.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de postes électriques (répartition et distribution) en zone inondable    Un réseau électrique est notamment constitué de nœuds (postes de transformation d’électricité, poste de source d’électricité). La vulnérabilité d’un réseau peut difficilement être appréhendée par un acteur autre que le gestionnaire de réseau lui-même, car les travaux de protection ne sont pas toujours visibles, et parce que des substituts peuvent avoir été envisagés pour assurer un fonctionnement alternatif ou dégradé. L’indicateur cherche à identifier les postes électriques susceptibles d’être endommagés par l’inondation.\n \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_22a.html",
-    "href": "Images/ind_22a.html",
+    "objectID": "Images/ind_210d.html",
+    "href": "Images/ind_210d.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion    La pénétration d’eau dans les logements entraîne des dégâts dépendant principalement de la hauteur et de la durée de submersion. Le présent indicateur permet d’évaluer les dégâts aux habitations pour l’inondation retenue.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable    L’indicateur cherche à identifier les parties de réseaux de bus situées en zone inondable et qui seraient susceptibles d’être endommagées.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_24ab.html",
-    "href": "Images/ind_24ab.html",
+    "objectID": "Images/ind_23b.html",
+    "href": "Images/ind_23b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés    Les monuments historiques, bâtiments patrimoniaux et musées, ainsi que les collections qu’ils abritent sont susceptibles d’être endommagés par une inondation. Il s’agit d’identifier les principaux bâtiments exposés. Seul un diagnostic individuel peut permettre d’aller plus loin et d’identifier la vulnérabilité de chaque enjeu.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Les mobil-homes ont souvent perdu leur moyen de mobilité et ne peuvent être mis à l’abri. En cas d’inondation, les dommages sont très importants. Il s’agit d’évaluer leur nombre et les dommages potentiels en cas d’inondation. \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_25c.html",
-    "href": "Images/ind_25c.html",
+    "objectID": "Images/ind_25b.html",
+    "href": "Images/ind_25b.html",
     "title": "",
     "section": "",
-    "text": "Surface d’espaces naturels protégés vulnérables    Les protections des espaces naturels peuvent être justifiées par la sensibilité de ces espaces. Il s’agit de les identifier pour les mettre en perspective avec les pollutions potentielles.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre d’installations susceptibles de déverser des produits polluants    L’inondation d’installations polluantes est potentiellement la source de pollution. Il s’agit d’identifier les principaux établissements polluants susceptibles d’être concernés. Seule une étude de danger poussée peut permettre d’aller plus loin.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_26a.html",
-    "href": "Images/ind_26a.html",
+    "objectID": "Images/ind_25d.html",
+    "href": "Images/ind_25d.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion    Selon les caractéristiques de l’inondation, la saisonnalité de ces inondations et les types de cultures, il est possible d’évaluer le montant des pertes à attendre.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable    La présence de captages d’eau potable peut potentiellement poser un problème si des pollutions sont entraînées par l’inondation, ou s’ils sont colmatés par des atterrissements.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_28a.html",
-    "href": "Images/ind_28a.html",
+    "objectID": "Images/ind_27a.html",
+    "href": "Images/ind_27a.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux établissements publics en fonction de paramètres hydrauliques    Selon les caractéristiques de l’inondation, il est possible d’évaluer le montant des pertes à attendre sur ce type de bâtiments.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion    Selon les caractéristiques de l’inondation, il est possible, d’évaluer le montant des pertes à attendre selon le type d’entreprises.  \n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_31b.html",
-    "href": "Images/ind_31b.html",
+    "objectID": "Images/ind_31a.html",
+    "href": "Images/ind_31a.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’employés en zone inondable    Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les employés touchés directement par l’événement, et leur proportion au sein du «territoire de vie». \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre et proportion d’habitants en zone inondable    Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les habitants touchés directement par l’événement, et leur proportion au sein du «territoire de vie». \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_31f.html",
-    "href": "Images/ind_31f.html",
+    "objectID": "Images/ind_31c.html",
+    "href": "Images/ind_31c.html",
     "title": "",
     "section": "",
-    "text": "Proportion de la surface agricole communale impactée par la zone inondable    L’identification des surfaces agricoles exposées est un premier indicateur de la vulnérabilité de l’agriculture sur le territoire. Il ne permet cependant pas d’évaluer le montant des pertes à attendre, objet d’un autre indicateur (voir objectif 2). \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Surface des emprises des bâtiments d’habitation pouvant être inondés    Dans les zones inondables, et sauf travaux spécifiques empêchant les entrées d’eau (systèmes d’obturation tels que les batardeaux) ou mises hors d’eau par surélévation à la construction, l’intérieur des bâtiments est inondé, entraînant des dégâts. L’indicateur permet d’évaluer l’emprise totale des bâtiments d’habitation exposés, sans souci de l’importance des dommages liés aux hauteurs d’eau, objet d’un autre indicateur (voir objectif 2). \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_39b.html",
-    "href": "Images/ind_39b.html",
+    "objectID": "Images/ind_32c.html",
+    "href": "Images/ind_32c.html",
     "title": "",
     "section": "",
-    "text": "Proportion de réseau routier de desserte locale potentiellement inondable     Pour les routes, la longueur du réseau concerné par les inondations est représentative de la gêne occasionnée à tous les riverains desservis. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois    L’évaluation du nombre de logements dont la durée de retour à la normale est supérieure à 6 mois permet de rendre compte de l’aptitude d’un territoire à se remettre rapidement d’une inondation. On considère qu’il s’agit des logements inondés par plus de 1m d’eau pendant plus de 48h. \n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/ind_s13b.html",
-    "href": "Images/ind_s13b.html",
+    "objectID": "Images/ind_s12b.html",
+    "href": "Images/ind_s12b.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes occupant des bâtiments fortement inondables (plus de 1,5 m d’eau) \n\nNuméro indicateur : Ind1/3b\nDate de mise à jour : 01/12/21\nAxe de vulnérabilité : Axe 1/1 La mise en danger des personnes au sein des bâtiments\nSource de vulnérabilité : S1/3 Déstabilisation ou inondation d’habitats légers\nModalités du calcul : La méthode retenue est celle du référentiel. On sélectionne les campings qui intersectent la zone d’aléa &gt;1m puis on multiplie par 3 le nombre d’emplacements pour obtenir le nombre de personnes potentiellement impactées.\nPoints de vigilance : Un camping est situé en zone inondable à Chauvigny, mais n’apparaît pas dans le résultat. En effet la modélisation de la zone inondable n’a pas une couverture complète de la zone d’étude, en particulier il manque certains affluents (notamment Talbat à Chauvigny). L’indicateur estime le nombre de personnes impactés dans des campings submergés par plus d’un mètre d’eau.\nAnalyse / Commentaire : Le caractère des lieux présentant un caractère inondable par débordement de cours d’eau (situation hivernale et début de printemps) est à mettre en relation avec les périodes de fréquentation (estivale). Au-delà de l’impact potentiel sur les personnes, le critère renseigne sur le risque porté pour les biens et équipements permettant cette nature de pratique. Le camping de Chauvigny est impacté par le débordement du Talbat. Il compte 100 emplacements soit 300 personnes potentiellement impactées.\n\n Télécharger la fiche indicateur et la carte \n\n\n\nLa zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n\n\n\n\n\n\n Back to top"
+    "text": "Nombre de personnes occupant des bâtiments fortement inondables (plus de 1,5 m d’eau) \n\nNuméro indicateur : Ind1/2b\nDate de mise à jour : 01/12/21\nAxe de vulnérabilité : Axe 1/1 La mise en danger des personnes au sein des bâtiments\nSource de vulnérabilité : S1/2 Inondation de bâtiments et risque de rupture des ouvrants dans les zones pouvant comporter une hauteur d’eau importante\nModalités du calcul : On sélectionne les bâtiments (habitation ou activité) de plain-pied qui intersectent la zone d’aléa supérieure à 1,5 m et on comptabilise le nombre de personnes (habitants ou employés). Le résultat est ensuite agrégé à la commune.\nPoints de vigilance : Pour les effectifs des employés, les valeurs renseignées dans SIREN sont des fourchettes de valeurs hautes et basses. Ici, le choix de prendre la valeur haute a été retenu pour éviter de minimiser le total. Lors de l’affectation des personnes au bâtiment, pour des carreaux à faible densité de personnes, des valeurs décimales ont pu être attribuées aux bâtiments.\nAnalyse / Commentaire : Au regard de la population totale dans la zone d’étude et sur la Ville de Poitiers, le nombre de personnes pouvant être considérées dans un cadre de danger est faible, toutefois, chaque situation est à considérer.\n\n Télécharger la fiche indicateur et la carte \n\n\n&lt;div style=“width: 350px; padding-top:10px; padding-bottom:10px;border: 1px solid #A0A0A0; text-align: center;background: #F2F2F2;”La zone inondable correspond à l’aléa centennal construit à partir des données disponibles et notamment réglementaires mais en aucun cas ne se substitue aux documents réglementaires en vigueur.\n Back to top"
   },
   {
-    "objectID": "Images/Objectif1.html",
-    "href": "Images/Objectif1.html",
+    "objectID": "Images/mieux_comprendre.html",
+    "href": "Images/mieux_comprendre.html",
     "title": "",
     "section": "",
-    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable. \n\n\nListe des indicateurs de l’objectif 1\n\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n\n\n Back to top"
+    "text": "Pour mieux comprendre les inondations\n\n\n Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents.  \n\n\n\nQu’est-ce que le risque inondation ?\n\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages).  \n\n\n\nD’où viennent les inondations ?\n\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau.\n\n\n\nQuelle stratégie pour réduire le risque ? Quelles actions ?\n\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html \n\n\n\nL’observatoire, un outil dynamique\n\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne. \n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/Objectif3.html",
-    "href": "Images/Objectif3.html",
+    "objectID": "Images/Objectif2.html",
+    "href": "Images/Objectif2.html",
     "title": "",
     "section": "",
-    "text": "Raccourcir le délai de retour à la normale.\n\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable \n\n\n\n\n\n Back to top"
+    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_114b.html",
-    "href": "Images/tableau_donnees_114b.html",
+    "objectID": "Images/tableau_donnees_110.html",
+    "href": "Images/tableau_donnees_110.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n Back to top"
+    "text": "Nombre d’établissements hébergeant des personnes dépendantes en zone de fragilité électrique \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_114e.html",
-    "href": "Images/tableau_donnees_114e.html",
+    "objectID": "Images/tableau_donnees_114c.html",
+    "href": "Images/tableau_donnees_114c.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner \n\n\n\n Back to top"
+    "text": "Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_13b.html",
-    "href": "Images/tableau_donnees_13b.html",
+    "objectID": "Images/tableau_donnees_12a.html",
+    "href": "Images/tableau_donnees_12a.html",
     "title": "",
     "section": "",
-    "text": "Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne \n\n\n\n Back to top"
+    "text": "Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau) \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_16b.html",
-    "href": "Images/tableau_donnees_16b.html",
+    "objectID": "Images/tableau_donnees_14.html",
+    "href": "Images/tableau_donnees_14.html",
     "title": "",
     "section": "",
-    "text": "Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne \n\n\n\n Back to top"
+    "text": "Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_210c.html",
-    "href": "Images/tableau_donnees_210c.html",
+    "objectID": "Images/tableau_donnees_210a.html",
+    "href": "Images/tableau_donnees_210a.html",
     "title": "",
     "section": "",
-    "text": "Linéaire de voies ferrées impactées par la zone inondable \n\n\n\n Back to top"
+    "text": "Nombre de postes électriques (répartition et distribution) en zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_22a.html",
-    "href": "Images/tableau_donnees_22a.html",
+    "objectID": "Images/tableau_donnees_210d.html",
+    "href": "Images/tableau_donnees_210d.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
+    "text": "Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_25b.html",
-    "href": "Images/tableau_donnees_25b.html",
+    "objectID": "Images/tableau_donnees_24ab.html",
+    "href": "Images/tableau_donnees_24ab.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’installations susceptibles de déverser des produits polluants \n\n\n\n Back to top"
+    "text": "Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_25d.html",
-    "href": "Images/tableau_donnees_25d.html",
+    "objectID": "Images/tableau_donnees_25c.html",
+    "href": "Images/tableau_donnees_25c.html",
     "title": "",
     "section": "",
-    "text": "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable \n\n\n\n Back to top"
+    "text": "Surface d’espaces naturels protégés vulnérables \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_27a.html",
-    "href": "Images/tableau_donnees_27a.html",
+    "objectID": "Images/tableau_donnees_26a.html",
+    "href": "Images/tableau_donnees_26a.html",
     "title": "",
     "section": "",
-    "text": "Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
+    "text": "Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_31b.html",
-    "href": "Images/tableau_donnees_31b.html",
+    "objectID": "Images/tableau_donnees_31a.html",
+    "href": "Images/tableau_donnees_31a.html",
     "title": "",
     "section": "",
-    "text": "Nombre d’employés en zone inondable \n\n\n\n Back to top"
+    "text": "Nombre et proportion d’habitants en zone inondable \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_31f.html",
-    "href": "Images/tableau_donnees_31f.html",
+    "objectID": "Images/tableau_donnees_31c.html",
+    "href": "Images/tableau_donnees_31c.html",
     "title": "",
     "section": "",
-    "text": "Proportion de la surface agricole communale impactée par la zone inondable \n\n\n\n Back to top"
+    "text": "Surface des emprises des bâtiments d’habitation pouvant être inondés \n\n\n\n Back to top"
   },
   {
-    "objectID": "Images/tableau_donnees_39b.html",
-    "href": "Images/tableau_donnees_39b.html",
+    "objectID": "Images/tableau_donnees_32c.html",
+    "href": "Images/tableau_donnees_32c.html",
     "title": "",
     "section": "",
-    "text": "Proportion de réseau routier de desserte locale potentiellement inondable \n\n\n\n Back to top"
+    "text": "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois \n\n\n\n Back to top"
   },
   {
-    "objectID": "js/readme.html",
-    "href": "js/readme.html",
-    "title": "Pour mémoire",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;\n\n\n\nversion 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js\n\n\n\nversion 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js\n\n\n\ninclude-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
+    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
   },
   {
-    "objectID": "js/readme.html#maplibre",
-    "href": "js/readme.html#maplibre",
-    "title": "Pour mémoire",
+    "objectID": "index.html#pourquoi-un-observatoire",
+    "href": "index.html#pourquoi-un-observatoire",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;"
+    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
   },
   {
-    "objectID": "js/readme.html#pmtiles",
-    "href": "js/readme.html#pmtiles",
-    "title": "Pour mémoire",
+    "objectID": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
+    "href": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "section": "Des indicateurs pour connaître la vulnérabilité",
+    "text": "Des indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l'efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n\n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l'indicateur et la carte de vulnérabilité."
+  },
+  {
+    "objectID": "index.html#les-auteurs-de-lobservatoire",
+    "href": "index.html#les-auteurs-de-lobservatoire",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "section": "Les auteurs de l’observatoire",
+    "text": "Les auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n\n\n Nous contacter (contact\\@eptb-vienne.fr)"
+  },
+  {
+    "objectID": "mieux_comprendre.html",
+    "href": "mieux_comprendre.html",
+    "title": "",
     "section": "",
-    "text": "version 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js"
+    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
   },
   {
-    "objectID": "js/readme.html#turf",
-    "href": "js/readme.html#turf",
-    "title": "Pour mémoire",
+    "objectID": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
+    "href": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
+    "title": "",
     "section": "",
-    "text": "version 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js"
+    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
   },
   {
-    "objectID": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
-    "href": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
-    "title": "Pour mémoire",
+    "objectID": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
+    "href": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
+    "title": "",
+    "section": "Qu’est-ce que le risque inondation ?",
+    "text": "Qu’est-ce que le risque inondation ?\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages)."
+  },
+  {
+    "objectID": "mieux_comprendre.html#doù-viennent-les-inondations",
+    "href": "mieux_comprendre.html#doù-viennent-les-inondations",
+    "title": "",
+    "section": "D’où viennent les inondations ?",
+    "text": "D’où viennent les inondations ?\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau."
+  },
+  {
+    "objectID": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
+    "href": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
+    "title": "",
+    "section": "Quelle stratégie pour réduire le risque ? Quelles actions ?",
+    "text": "Quelle stratégie pour réduire le risque ? Quelles actions ?\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html"
+  },
+  {
+    "objectID": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
+    "href": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
+    "title": "",
+    "section": "L’observatoire, un outil dynamique",
+    "text": "L’observatoire, un outil dynamique\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne."
+  },
+  {
+    "objectID": "objectif2.html",
+    "href": "objectif2.html",
+    "title": "Objectif n°2 : Stabiliser/réduire le coût des dommages",
     "section": "",
-    "text": "include-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
-  },
-  {
-    "objectID": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
-    "href": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
-    "title": "Objectif n°1 : Augmenter la sécurité des populations",
-    "section": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.",
-    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable."
-  },
-  {
-    "objectID": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
-    "href": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
-    "title": "Objectif n°1 : Augmenter la sécurité des populations",
-    "section": "Liste des indicateurs de l’objectif 1",
-    "text": "Liste des indicateurs de l’objectif 1\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans"
-  },
-  {
-    "objectID": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
-    "href": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
-    "title": "Objectif n°3 : Raccourcir le délai de retour à la normale",
-    "section": "Raccourcir le délai de retour à la normale.",
-    "text": "Raccourcir le délai de retour à la normale.\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable"
+    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Back to top"
   }
 ]
