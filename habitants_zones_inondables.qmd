@@ -343,7 +343,7 @@ map = {
          <strong style="font-size:1.2em"><i class="bi bi-percent"></i> Taux d'habitants en zone inondable :</strong> ${dommages}<br>
          <strong style="font-size:1.2em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}<br>
          <strong style="font-size:1.2em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
-         <strong style="margin-left:8%;">Dont : </strong>
+         <div style="margin-left:8%;">Dont : </div>
          <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li>
          <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batsportif}<strong> bâtiments sportifs</strong></h5></li>
          <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batagricole}<strong> bâtiments agricoles</strong></h5></li>
@@ -693,7 +693,7 @@ html`<label for="slider-s31apop" style="display: block;
 // Slider
 
 
-viewof slider_s31apop = InputsPop.range([0, 1200], {
+viewof slider_s31apop = InputsPop.range([0, 2400], {
   value: 600,
   step: 20,
   label: "Nombre d'habitants en zone inondable"
