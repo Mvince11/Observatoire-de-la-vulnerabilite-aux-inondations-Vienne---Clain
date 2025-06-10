@@ -42,7 +42,7 @@ bbox_sru = FileAttachment("layers/bb.json").json()
 <div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;"> Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les habitants touchés directement par l’événement, et leur proportion au sein du «territoire de vie». </div>
 
 
-<a href=https://fiches.eptb-vienne.fr/ind_27a.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
+<a href=https://fiches.eptb-vienne.fr/ind_31a.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
 
 
 <div style="width: auto; padding:5px; border: 1px solid #A0A0A0; border-radius:15px; text-align: center !important; background: #F2F2F2; font-size:1.1em;margin-top:10%;">
@@ -307,7 +307,14 @@ map = {
         const batagricole = (!isNaN(batagricolefValue) ? batagricolefValue : 0).toLocaleString('fr-FR');
         const batresidentielValue = parseFloat(feature.properties.nb_bat_residentiel);
         const batresidentiel = (!isNaN(batresidentielValue) ? batresidentielValue : 0).toLocaleString('fr-FR');
-
+        const batannexeValue = parseFloat(feature.properties.nb_bat_annexe);
+        const batannexe = (!isNaN(batannexeValue) ? batannexeValue : 0).toLocaleString('fr-FR');
+        const batreligieuxValue = parseFloat(feature.properties.nb_bat_religieux);
+        const batreligieux = (!isNaN(batreligieuxValue) ? batreligieuxValue : 0).toLocaleString('fr-FR');
+        const batindustrielValue = parseFloat(feature.properties.nb_bat_industriel);
+        const batindustriel = (!isNaN(batindustrielValue) ? batindustrielValue : 0).toLocaleString('fr-FR');
+        const batcommercialValue = parseFloat(feature.properties.nb_bat_commercial);
+        const batcommercial = (!isNaN(batcommercialValue) ? batcommercialValue : 0).toLocaleString('fr-FR');
       
         const popupContent = `
         <style>
@@ -321,12 +328,12 @@ map = {
           }
         </style>
           <div style="font-family: sans-serif; font-size: 13px; margin:10px;">
-          <div style="background-color: #d1ee9c; border: 1px solid; border-radius:8px; margin-bottom:16px; padding:10px;"><strong>
+          <div style="background-color: #69774f; border: 1px solid; border-radius:8px; margin-bottom:16px; padding:10px; color:white;"><strong>
           <center>${nom}</center>
           </strong></div>
-            <p><strong>Population :</strong> ${population}</p>
-            <p><strong>Taux d'habitants en zone inondable :</strong> ${dommages}</p>
-            <p><strong>Nombre d'habitants en zone inondable :</strong> ${hab_inondable}</p>
+            <p style="margin:auto;"><strong>Population :</strong> ${population}</p>
+            <p style="margin:auto;"><strong>Taux d'habitants en zone inondable :</strong> ${dommages}</p>
+            <p style="margin:auto;"><strong>Nombre d'habitants en zone inondable :</strong> ${hab_inondable}</p>
           </div>
         `;
       
@@ -338,16 +345,22 @@ map = {
           
           // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
          document.getElementById('donnees').innerHTML = `
-         <strong style="font-size:1.2em"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
-         <strong style="font-size:1.2em"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong>      ${population}<br>
-         <strong style="font-size:1.2em"><i class="bi bi-percent"></i> Taux d'habitants en zone inondable :</strong> ${dommages}<br>
-         <strong style="font-size:1.2em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}<br>
-         <strong style="font-size:1.2em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
-         <div style="margin-left:8%;">Dont : </div>
-         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li>
-         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batsportif}<strong> bâtiments sportifs</strong></h5></li>
-         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batagricole}<strong> bâtiments agricoles</strong></h5></li>
-         <li style="margin-left:15%;"><h5 style="font-size:1em;"> ${batresidentiel}<strong> bâtiments résidentiels</strong></h5></li>
+         <strong style="font-size:1.1em"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
+         <strong style="font-size:1.1em"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong>      ${population}<br>
+         <strong style="font-size:1.1em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
+         <div style="margin-left:2vw;">Dont : </div>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batsportif}<strong> bâtiments sportifs</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batagricole}<strong> bâtiments agricoles</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batresidentiel}<strong> bâtiments résidentiels</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batannexe}<strong> bâtiments annexes</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batreligieux}<strong> bâtiments religieux</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batindustriel}<strong> bâtiments industriels</strong></h5></li>
+         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batcommercial}<strong> bâtiments commerciaux</strong></h5></li>
+         
+         <div>Conséquences de l'aléa :</div>
+         <strong style="font-size:1.1em"><i class="bi bi-percent"></i> Taux d'habitants en zone inondable :</strong> ${dommages}<br>
+         <strong style="font-size:1.1em"><i class="bi bi-person-fill"></i> Nombre d'habitants en zone inondable                 :</strong> ${hab_inondable}
          `;
       });
 
@@ -388,7 +401,7 @@ map = {
       bassinvienneLayer: 'Bassin de la Vienne',
       regionLayer: 'Région',
       departementLayer: 'Département',
-      epciLayer: 'EPCI',
+      epciLayer: 'Etablissement Public de Coopération Intercommunale',
       zoneinondableLayer: 'Zonage Inondable',
       indicateurs31atxLayer: 'Dommages financiers des entreprises'
     };
@@ -768,26 +781,26 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Numéro d'indicateur</th>
-    <th style="border:1px solid;">Ind2/7a</th>
-    <th style="background-color:#c4e3ff; border:1px solid;">Date de mise à jour</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Numéro d'indicateur</th>
+    <th style="border:1px solid;">Ind3/1a</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Date de mise à jour</th>
     <th style="border:1px solid;">31/05/2025</th>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Intitulé</td>
-    <td colspan="3" style="border:1px solid;">Dommages aux entreprises en fonction de paramètres hydrauliques</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Intitulé</td>
+    <td colspan="3" style="border:1px solid;">Nombre et proportion d’habitants en zone inondable</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
-    <td colspan="3" style="border:1px solid;">Objectif n°2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages liés à l’inondation</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
+    <td colspan="3" style="border:1px solid;">Objectif n°3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">Axe 2/3 Les dommages aux activités et aux biens</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">Axe 3/1 L’impact au territoire et ses capacités à rétablir les fonctions d’habitat, d’activité, etc.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">S2/7 Inondation des bâtiments, du mobilier et des stocks, et pertes d’activité des entreprises</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">S3/1 Impact potentiel d’une crue sur le territoire</td>
   </tr>
 </table>
 
@@ -802,41 +815,31 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Modalités du calcul</td>
-    <td colspan="3" style="border:1px solid;">Application de la méthode du référentiel national.
-    On utilise le tableau du guide AMC sur les dommages aux entreprises (pour l’aléa fluvial), qui
-    dépendent du type d’activité de l’entreprise (code NACE), de la durée et de la hauteur de
-    submersion. On considère que la durée de submersion est supérieure à 48 h dans tous les cas.
-    Les points Geo-Siren ont été affectés aux bâtiments de la BDTOPO, soit directement si le point se
-    trouve dans le bâtiment, soit au bâtiment dans la parcelle la plus proche.
-    La couche des bâtiments (type ACTIVITE) est croisée avec la zone inondable contenant
-    l’information de hauteur d’eau.</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Modalités du calcul</td>
+    <td colspan="3" style="border:1px solid;">On calcule le nombre total de personnes (habitants) en zone inondable (Zx) et on la          rapporte à la population totale (recensement INSEE).
+    Deux indicateurs sont produits : le nombre total et la proportion par rapport à la population totale par commune.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Échelle de représentation</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Échelle de représentation</td>
     <td colspan="3" style="border:1px solid;">Communale</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Points de vigilance</td>
-    <td colspan="3" style="border:1px solid;">Les points de la base geo-siren ont différents niveaux de précision, qui vont du             numéro du bâtiment, à la rue et au centre de la commune. Seuls les points géocodés au bâtiments ont été
-    pris en compte. Cela représente plus de 80% des points sur la zone d’étude.
-    Le calcul du coût des dommages aux entreprises dépend de la surface du bâtiment, de la hauteur
-    d'eau, de la durée de submersion et du type d'activité. La perte d'activité n'est pas considérée
-    dans l'estimation du coût.</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Points de vigilance</td>
+    <td colspan="3" style="border:1px solid;">L’indicateur de proportion est le rapport entre le nombre d’habitants impactés par la        zone inondable sur la population totale communale (INSEE). Le taux permet de comparer les communes entre elles.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Table cible</td>
-    <td colspan="3" style="border:1px solid;">p_obj2_cout_dommages.s31atx_dommages_entreprises</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Table cible</td>
+    <td colspan="3" style="border:1px solid;">p_obj3_retour_normale.s31a_habitants_en_zi</td>
   </tr>
   <tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Variables mobilisées</td>
-    <td colspan="3" style="border:1px solid;">Zx : zone inondable, Zf : durée de submersion, Oc3 : activité</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Variables mobilisées</td>
+    <td colspan="3" style="border:1px solid;">Zx : hauteur d’eau > 0, Pop1 : habitants</td>
   </tr>
   <tr>
   <tr>
-    <td colspan="2" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
-    <td colspan="3" style="border:1px solid;">non</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
+    <td colspan="3" style="border:1px solid;">oui</td>
   </tr>
   <tr>
 </table>
@@ -858,16 +861,16 @@ md`
   </colgroup>
 
   <tr>
-    <td colspan="10" style="background-color:#c4e3ff; border:1px solid; font-weight: bold;">Données sources</td>
+    <td colspan="10" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Données sources</td>
   </tr>
   <tr>
-    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Désignation</th>
-    <th style="background-color:#c4e3ff; border:1px solid;">Millésime</th>
-    <th style="background-color:#c4e3ff; border:1px solid;">Nationale/locale</th>
-    <th style="background-color:#c4e3ff; border:1px solid;">Format</th>
-    <th style="background-color:#c4e3ff; border:1px solid;">Type</th>
-    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Producteur</th>
-    <th style="background-color:#c4e3ff; border:1px solid;" colspan="2">Nom fichier</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Désignation</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Millésime</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Nationale/locale</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Format</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Type</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Producteur</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Nom fichier</th>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Zone inondable</td>
@@ -879,13 +882,13 @@ md`
     <td colspan="2" style="border:1px solid;">Zx_zone_inondable.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Hauteurs d’eau par pas de 10 cm</td>
-    <td style="border:1px solid;">2019</td>
-    <td style="border:1px solid;">Locale</td>
+    <td colspan="2" style="border:1px solid;">Bâtiments (BDTOPO)</td>
+    <td style="border:1px solid;">2020</td>
+    <td style="border:1px solid;">Nationale</td>
     <td style="border:1px solid;">Shape</td>
     <td style="border:1px solid;">Polygone</td>
-    <td colspan="2" style="border:1px solid;">Cerema</td>
-    <td colspan="2" style="border:1px solid;">hauteur_pas_10cm.shp</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
+    <td colspan="2" style="border:1px solid;">batiment.shp</td>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Base geo-siren des entreprises</td>
@@ -897,13 +900,13 @@ md`
     <td colspan="2" style="border:1px solid;">geo_siret.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Fonction de dommages aux entreprises du guide AMC</td>
-    <td style="border:1px solid;">2016</td>
+    <td colspan="2" style="border:1px solid;">Population INSEE (carreau 200 m) </td>
+    <td style="border:1px solid;">2015</td>
     <td style="border:1px solid;">Nationale</td>
-    <td style="border:1px solid;">Csv</td>
-    <td style="border:1px solid;">Tableau</td>
-    <td colspan="2" style="border:1px solid;">CGDD</td>
-    <td colspan="2" style="border:1px solid;">amc_dommages_fluvial_entreprise</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">INSEE</td>
+    <td colspan="2" style="border:1px solid;">filosofi2015_carreaux_200m.shp</td>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Communes (BDTOPO)</td>

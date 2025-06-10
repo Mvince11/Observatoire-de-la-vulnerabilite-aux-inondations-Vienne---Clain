@@ -16,7 +16,7 @@ website:
   #        icon: house
           
         - href: mieux_comprendre.qmd
-          text: Les inondations ?
+          text: Les inondations
         #- sidebar:Objectifs
         
         - text: Objectif n°1
