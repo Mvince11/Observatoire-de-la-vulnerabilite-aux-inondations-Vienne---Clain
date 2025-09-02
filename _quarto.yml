@@ -24,6 +24,8 @@ website:
            - text: "Objectif n°1 : Augmenter la sécurité des populations"
            - href: batiments_plain_pied.qmd
              text: Bâtiments plain-pied
+           - href: etablissements_sensibles.qmd
+             text: Etablissements sensibles
              
         - text: Objectif n°2
           menu:
