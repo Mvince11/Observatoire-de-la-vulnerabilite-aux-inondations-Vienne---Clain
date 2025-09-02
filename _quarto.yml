@@ -1,6 +1,6 @@
 project:
   type: website
-  #title: "Observatoire de la vulnérabilité aux inondations Vienne - Clain"
+  title: "Observatoire de la vulnérabilité aux inondations Vienne - Clain"
 
 website:
   back-to-top-navigation: true
@@ -8,9 +8,9 @@ website:
   navbar:
      search: false
      logo: Images/logo_porteurs_projet_transparent.png
-     collapse-below: xl
+     collapse-below: xxl
      tools-collapse: false
-     left:
+     right:
         - href: index.qmd
           text: Accueil
   #        icon: house
@@ -21,19 +21,22 @@ website:
         
         - text: Objectif n°1
           menu:
+           - text: "Objectif n°1 : Augmenter la sécurité des populations"
            - href: batiments_plain_pied.qmd
              text: Bâtiments plain-pied
              
         - text: Objectif n°2
           menu:
+           - text: "Objectif n°2 : Stabiliser/réduire le coût des dommages"
            - href: dommages_entreprises.qmd
              text: Dommages aux entreprises
              
         - text: Objectif n°3
           menu:
+           - text: "Objectif n°3 : Raccourcir le délai de retour à la normale"
            - href: habitants_zones_inondables.qmd
              text: Nombre et proportion d'habitants en zone inondable 
-             
+            
         - text: Â propos
           menu:
           - text: EPTB-vienne.fr

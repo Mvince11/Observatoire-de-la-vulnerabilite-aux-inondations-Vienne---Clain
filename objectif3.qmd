@@ -3,6 +3,7 @@ title: "Objectif n°3 : Raccourcir le délai de retour à la normale"
 sidebar: objectifs
 toc: false
 ---
+
 <img src="Images/Objectif3.png" height="150px" width="148px" align="center" style="float:center; margin-right:1000px;"/>
 
 ## Raccourcir le délai de retour à la normale.
