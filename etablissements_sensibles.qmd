@@ -183,6 +183,8 @@ map = {
       layout: { visibility: 'none' }
     });
 
+
+
     
     //fetch('layers/indicateurs.geojson')
      //.then(response => response.json())
@@ -221,6 +223,43 @@ map = {
       layout: {visibility:'visible'} }
       
     ];
+    
+    // Créer le conteneur
+        const legend = document.createElement('div');
+        legend.id = 'legend';
+        legend.style.position = 'absolute';
+        legend.style.top = '82%';
+        legend.style.right = '10px';
+        legend.style.transform = 'translateY(-50%)';
+        legend.style.background = 'white';
+        legend.style.padding = '10px';
+        legend.style.fontSize = '12px';
+        legend.style.borderRadius = '4px';
+        legend.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+        legend.style.zIndex = '1'; // pour passer au-dessus de la carte
+        
+        // Contenu de la légende
+        legend.innerHTML = `
+          <strong>Nombre d'établissements <br> sensibles</strong><br>
+          <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0</div>
+          <div><span style="background:#ffffff;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> 1</div>
+          <div><span style="background:#c359aa;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> ≥ 2</div>
+        `;
+        
+        // L’ajouter à la carte (le container MapLibre)
+        map.getContainer().appendChild(legend);
+        
+        //afin de lier la légende à l'indicateur
+        function updateLegendVisibility() {
+        const visibility = map.getLayoutProperty('indicateurs14Layer', 'visibility');
+        if (visibility === 'none') {
+          legend.style.display = 'none';
+        } else {
+          legend.style.display = 'block';
+        }
+      }
+
+        map.on('idle', updateLegendVisibility);
      
     // Ajout des couches vectorielles
       layersData.forEach(layer => {
@@ -646,8 +685,6 @@ PlotTaux.plot({
   marginLeft: 80
 })
 ```
-
-
 
 # Informations relatives à l'indicateur {.flow}
 
