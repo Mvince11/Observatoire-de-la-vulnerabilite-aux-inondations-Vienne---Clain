@@ -510,6 +510,32 @@ div.sidebar-item-container{
   height: auto;
 }
 
+/* On cible les liens de la navbar */
+.navbar-nav .nav-item {
+  position: relative; /* nécessaire pour positionner le ::after */
+}
+
+/* État initial : pas de soulignement visible */
+.navbar-nav .nav-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f48019; /* couleur du soulignement */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+/* Au survol ou si actif : on étend la barre */
+.navbar-nav .nav-item:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
 
 .navbar-nav .dropdown-menu{
   max-width: max-content;

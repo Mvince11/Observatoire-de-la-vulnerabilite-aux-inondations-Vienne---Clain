@@ -845,4 +845,3 @@ Ap6 : enjeux utiles à la gestion de crise</td>
 
 `
 ```
-
