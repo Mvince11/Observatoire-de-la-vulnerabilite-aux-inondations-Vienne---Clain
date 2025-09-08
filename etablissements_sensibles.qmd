@@ -399,7 +399,7 @@ map = {
           <center>${nom}</center>
           </strong></div>
             <p style="margin:auto;"><strong>Population :</strong> ${population}</p>
-            <p style="margin:auto;"><strong>Nombre d'établissements sensibles en zone inondable :</strong> ${dommages}</p>
+            <p style="margin:auto;"><strong>Nombre d'établissements sensibles <br> en zone inondable :</strong> ${dommages}</p>
           </div>
         `;
       

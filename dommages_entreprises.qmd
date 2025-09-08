@@ -84,16 +84,23 @@ map = {
   const container = html`<div class="map-container" id="map" style="height: 665px; width: 100%;"></div>`;
   yield container;
 
-  const sourcePlanIGN = {
-    style: 'normal',
-    format: 'image/png',
-    layer: 'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2'
-  };
+  <!-- const sourcePlanIGN = { -->
+  <!--   style: 'normal', -->
+  <!--   format: 'image/png', -->
+  <!--   layer: 'GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2' -->
+  <!-- }; -->
 
   const sourceOrtho = {
     style: 'normal',
     format: 'image/jpeg',
     layer: 'HR.ORTHOIMAGERY.ORTHOPHOTOS'
+  };
+  
+  const sourceOSM = {
+    tiles: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    minzoom: 0,
+    maxzoom: 19
   };
 
   const map = new maplibregl.Map({
@@ -111,10 +118,10 @@ map = {
   const toggleStyle = (useOrtho) => {
     if (useOrtho) {
       map.setLayoutProperty('orthoIGN', 'visibility', 'visible');
-      map.setLayoutProperty('planIGN', 'visibility', 'none');
+      map.setLayoutProperty('OSM', 'visibility', 'none');
     } else {
       map.setLayoutProperty('orthoIGN', 'visibility', 'none');
-      map.setLayoutProperty('planIGN', 'visibility', 'visible');
+      map.setLayoutProperty('OSM', 'visibility', 'visible');
     }
   };
 
@@ -131,16 +138,16 @@ map = {
     }
   );
     // Ajout des fonds raster IGN
-    map.addSource('raster-planign', {
-      type: 'raster',
-      tiles: [
-        `https://data.geopf.fr/wmts?SERVICE=WMTS&style=${sourcePlanIGN.style}&VERSION=1.0.0&REQUEST=GetTile&format=${sourcePlanIGN.format}&layer=${sourcePlanIGN.layer}&tilematrixset=PM&TileMatrix={z}&TileCol={x}&TileRow={y}`
-      ],
-      tileSize: 256,
-      attribution: '© <a href="https://www.ign.fr/">IGN</a>',
-      minzoom: 0,
-      maxzoom: 22
-    });
+    <!-- map.addSource('raster-planign', { -->
+    <!--   type: 'raster', -->
+    <!--   tiles: [ -->
+    <!--     `https://data.geopf.fr/wmts?SERVICE=WMTS&style=${sourcePlanIGN.style}&VERSION=1.0.0&REQUEST=GetTile&format=${sourcePlanIGN.format}&layer=${sourcePlanIGN.layer}&tilematrixset=PM&TileMatrix={z}&TileCol={x}&TileRow={y}` -->
+    <!--   ], -->
+    <!--   tileSize: 256, -->
+    <!--   attribution: '© <a href="https://www.ign.fr/">IGN</a>', -->
+    <!--   minzoom: 0, -->
+    <!--   maxzoom: 22 -->
+    <!-- }); -->
 
     map.addSource('raster-ortho', {
       type: 'raster',
@@ -152,19 +159,38 @@ map = {
       minzoom: 0,
       maxzoom: 22
     });
-
-    map.addLayer({
-      id: 'planIGN',
-      type: 'raster',
-      source: 'raster-planign',
-      layout: { visibility: 'visible' }
+    
+    map.addSource('raster-osm', {
+  type: 'raster',
+  tiles: [
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+  ],
+  tileSize: 256,
+  attribution:
+    '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  minzoom: 0,
+  maxzoom: 19
     });
+
+    <!-- map.addLayer({ -->
+    <!--   id: 'planIGN', -->
+    <!--   type: 'raster', -->
+    <!--   source: 'raster-planign', -->
+    <!--   layout: { visibility: 'visible' } -->
+    <!-- }); -->
 
     map.addLayer({
       id: 'orthoIGN',
       type: 'raster',
       source: 'raster-ortho',
       layout: { visibility: 'none' }
+    });
+    
+    map.addLayer({
+      id: 'OSM',
+      type: 'raster',
+      source: 'raster-osm',
+      layout: { visibility: 'visible' } // tu peux le laisser caché au départ si tu veux le basculer ensuite
     });
     
     //fetch('layers/indicateurs.geojson')
