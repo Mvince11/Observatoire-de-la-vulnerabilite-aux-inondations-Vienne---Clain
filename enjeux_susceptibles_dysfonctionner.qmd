@@ -10,6 +10,7 @@ format:
 resources:
   - Images/icons/*.svg
   - layers/data_s114e.json
+  - layers/bati_vienne.geojson
     
 include-in-header:
   text: |
@@ -85,7 +86,7 @@ zone_inondable = FileAttachment("layers/zone_inondable.geojson").json();
 indicateurs = FileAttachment("layers/indicateurs.json").json();
 cours_d_eau = FileAttachment("layers/cours_d_eau.geojson").json();
 indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
-
+batiments = FileAttachment("layers/bati_vienne.geojson").json();
 
 ```
 
@@ -237,7 +238,9 @@ map = {
           layout: { visibility: 'visible' }
         },
       { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
-      layout: {visibility:'visible'} }
+      layout: {visibility:'visible'} },
+      { data: batiments, type: 'fill', id: 'batimentsLayer', color: 'green', width:2, opacity: 1,
+      layout: {visibility:'none'}}
       
     ];
     
@@ -465,7 +468,8 @@ map = {
       departementLayer: 'Département',
       epciLayer: 'Etablissement Public de Coopération Intercommunale',
       zoneinondableLayer: 'Zonage Inondable',
-      indicateurs114eLayer: "Nombre d'enjeux sensibles à la gestion de crise"
+      indicateurs114eLayer: "Nombre d'enjeux sensibles à la gestion de crise",
+      batimentsLayer: "Bâtiments"
     };
 
     function toggleLayerVisibility(id, visible) {
