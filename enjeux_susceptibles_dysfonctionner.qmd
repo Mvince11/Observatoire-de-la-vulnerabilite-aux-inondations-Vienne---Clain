@@ -10,7 +10,7 @@ format:
 resources:
   - Images/icons/*.svg
   - layers/data_s114e.json
-  - layers/bati_vienne.geojson
+  - layers/batiments_hauteur.geojson
     
 include-in-header:
   text: |
@@ -65,6 +65,9 @@ indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
 
 # Sauvegarder au format JSON dans le dossier _site
 write_json(indicateurs, "layers/data_s114e.json", auto_unbox = TRUE)
+
+# batiments <- readRDS("layers/batiments.rds")
+# st_write(batiments, "layers/batiments_vienne_clain.geojson", driver = "GeoJSON")
 ```
 
 # Cartographie
@@ -86,9 +89,24 @@ zone_inondable = FileAttachment("layers/zone_inondable.geojson").json();
 indicateurs = FileAttachment("layers/indicateurs.json").json();
 cours_d_eau = FileAttachment("layers/cours_d_eau.geojson").json();
 indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
-batiments = FileAttachment("layers/bati_vienne.geojson").json();
+batiments = FileAttachment("layers/batiments_hauteur.geojson").json();
 
 ```
+
+```{r}
+#| include: false
+# library(sf)
+# library(dplyr)
+# library(jsonlite)
+# 
+# batiments <- st_read("layers/bati_vienne.geojson")
+# 
+# batiments$hauteur <- as.numeric(batiments$nb_etages) * 3  # approx. 3m par étage
+# 
+# batiments_hauteurs <- st_write(batiments, "layers/batiments_hauteur.geojson", driver = "GeoJSON")
+  
+```
+
 
 ```{ojs}
 //| echo: false
@@ -239,10 +257,10 @@ map = {
         },
       { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
       layout: {visibility:'visible'} },
-      { data: batiments, type: 'fill', id: 'batimentsLayer', color: 'green', width:2, opacity: 1,
-      layout: {visibility:'none'}}
+      { data: batiments, type: 'fill-extrusion', id: 'batimentsLayer', width:2, opacity: 1, colorByType: 'ff_dteloctxt',
+        heightProperty: 'hauteur',layout: {visibility:'none'}}
       
-    ];
+      ];
     
     // Créer le conteneur
         const legend = document.createElement('div');
@@ -300,7 +318,7 @@ map = {
             const prop = ['get', layer.dynamicColor.property];
             layerConfig.paint['fill-color'] = [
               'case',
-              ['!', ['has', layer.dynamicColor.property]], '#d9d9d9',                       // Propriété absente
+              ['!', ['has', layer.dynamicColor.property]], '#d9d9d9',   // Propriété absente
               ['any', ['==', ['get', layer.dynamicColor.property], null], ['==', ['get', layer.dynamicColor.property], 0]], '#d9d9d9', // null ou 0
               ['<=', ['get', layer.dynamicColor.property], 1], '#f58756',
               ['>=', ['get', layer.dynamicColor.property], 2], '#c359aa',
@@ -316,6 +334,27 @@ map = {
         } else if (layer.type === 'line') {
           layerConfig.paint['line-color'] = layer.color || '#000000';
           layerConfig.paint['line-width'] = layer.width || 1;
+          
+        }  else if (layer.type === 'fill-extrusion') {
+          if (layer.colorByType === 'ff_dteloctxt') {
+            layerConfig.paint['fill-extrusion-color'] = [
+              'match',
+              ['get', 'ff_dteloctxt'],
+              'ACTIVITE', '#1f77b4',
+              'APPARTEMENT', '#2ca02c',
+              'AUCUN LOCAL', '#d9d9d9',
+              'DEPENDANCE', '#9467bd',
+              'MAISON', '#ff7f0e',
+              'MIXTE', '#e377c2',
+              '#000000' // fallback
+            ];
+          } else {
+            layerConfig.paint['fill-extrusion-color'] = layer.color || '#000000';
+          }
+        
+          layerConfig.paint['fill-extrusion-height'] = ['get', layer.heightProperty || 'hauteur'];
+          layerConfig.paint['fill-extrusion-base'] = 0;
+          layerConfig.paint['fill-extrusion-opacity'] = layer.opacity || 0.9;
         }
 
         map.addLayer(layerConfig);

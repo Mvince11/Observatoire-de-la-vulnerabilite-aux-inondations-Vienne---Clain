@@ -78,6 +78,8 @@ write_json(bounding_box, "data/bb.json", pretty = TRUE, auto_unbox = TRUE)
 
 indicateur <- st_read("layers/indicateurs.geojson")
 
+
+
 indicateur_s12a <- indicateur %>%
   filter(!is.na(s12a)) %>%
   mutate(
