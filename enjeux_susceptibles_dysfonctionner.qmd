@@ -14,6 +14,7 @@ resources:
     
 include-in-header:
   text: |
+    <script src="js/pmtiles.js"></script>
     <script src="js/maplibre.js"></script>
     <link href="js/maplibre.css" rel="stylesheet">
     <script src="js/jquery_3.5.min.js" type="text/javascript"></script>
@@ -297,6 +298,49 @@ map = {
       }
 
         map.on('idle', updateLegendVisibility);
+        
+        // Créer le conteneur de légende des bâtiments
+        const batimentLegend = document.createElement('div');
+        batimentLegend.id = 'batiment-legend';
+        batimentLegend.style.position = 'absolute';
+        batimentLegend.style.top = '81%';
+        batimentLegend.style.left = '10px';
+        batimentLegend.style.transform = 'translateY(-50%)';
+        batimentLegend.style.background = 'white';
+        batimentLegend.style.padding = '10px';
+        batimentLegend.style.fontSize = '12px';
+        batimentLegend.style.borderRadius = '4px';
+        batimentLegend.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+        batimentLegend.style.zIndex = '1';
+        
+        // Contenu de la légende
+        batimentLegend.innerHTML = `
+          <strong>Type de bâtiment</strong><br>
+          <div><span style="background:#1f77b4;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Activité</div>
+          <div><span style="background:#2ca02c;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Appartement</div>
+          <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Aucun local</div>
+          <div><span style="background:#9467bd;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Dépendance</div>
+          <div><span style="background:#ff7f0e;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Maison</div>
+          <div><span style="background:#e377c2;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Mixte</div>
+        `;
+        
+        // L’ajouter à la carte
+        map.getContainer().appendChild(batimentLegend);
+        batimentLegend.style.display = 'none'; // Permet de supprimer l'affichage de la légende au chargement de la page
+        
+        // Lier la visibilité à la couche bâtiment
+        function updateBatimentLegendVisibility() {
+          const visibility = map.getLayoutProperty('batimentsLayer', 'visibility');
+          //batimentLegend.style.display = (visibility === 'none') ? 'none' : 'block';
+          if (visibility === 'none') {
+          batimentLegend.style.display = 'none';
+        } else {
+          batimentLegend.style.display = 'block';
+        }
+        }
+        
+        map.on('idle', updateBatimentLegendVisibility);
+
      
     // Ajout des couches vectorielles
       layersData.forEach(layer => {
