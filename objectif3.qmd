@@ -1,6 +1,7 @@
 ---
 title: "Objectif n°3 : Raccourcir le délai de retour à la normale"
 sidebar: objectifs
+lang: fr
 toc: false
 ---
 

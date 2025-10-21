@@ -1,6 +1,7 @@
 ---
 title: "Objectif n°2 : Stabiliser/réduire le coût des dommages"
 sidebar: objectifs
+lang: fr
 toc: false
 ---
 

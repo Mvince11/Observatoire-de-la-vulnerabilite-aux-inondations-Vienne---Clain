@@ -69,7 +69,7 @@ zone_inondable = FileAttachment("layers/zone_inondable.geojson").json();
 indicateurs = FileAttachment("layers/indicateurs.json").json();
 cours_d_eau = FileAttachment("layers/cours_d_eau.geojson").json();
 indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
-
+batiments = FileAttachment("layers/batiments_hauteur.geojson").json();
 
 ```
 
@@ -226,10 +226,94 @@ map = {
           },
           layout: { visibility: 'visible' }
         },
+        { data: cours_d_eau, type: 'line', id: 'coursdeauLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
+      layout: {visibility:'visible'} },
       { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
-      layout: {visibility:'visible'} }
+      layout: {visibility:'visible'} },
+      { data: batiments, type: 'fill-extrusion', id: 'batimentsLayer', width:2, opacity: 1, colorByType: 'ff_dteloctxt', heightProperty: 'hauteur',layout: {visibility:'none'}}
       
     ];
+    
+    // Créer le conteneur
+        const legend = document.createElement('div');
+        legend.id = 'legend';
+        legend.style.position = 'absolute';
+        legend.style.top = '82%';
+        legend.style.right = '10px';
+        legend.style.transform = 'translateY(-50%)';
+        legend.style.background = 'white';
+        legend.style.padding = '10px';
+        legend.style.fontSize = '12px';
+        legend.style.borderRadius = '4px';
+        legend.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+        legend.style.zIndex = '1'; // pour passer au-dessus de la carte
+        
+        // Contenu de la légende
+        legend.innerHTML = `
+          <strong>Dommages aux <br> entreprises en M€</strong><br>
+          <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0</div>
+          <div><span style="background:#f9f0d9;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> < 0.150 </div>
+          <div><span style="background:#fdb77a;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0.150-0.500 </div>
+          <div><span style="background:#ec603F;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0.500-2 </div>
+          <div><span style="background:#b30000;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> > 2 </div>
+        `;
+        
+        // L’ajouter à la carte (le container MapLibre)
+        map.getContainer().appendChild(legend);
+        
+        //afin de lier la légende à l'indicateur
+        function updateLegendVisibility() {
+        const visibility = map.getLayoutProperty('indicateurs27aLayer', 'visibility');
+        if (visibility === 'none') {
+          legend.style.display = 'none';
+        } else {
+          legend.style.display = 'block';
+        }
+      }
+
+        map.on('idle', updateLegendVisibility);
+        
+        // Créer le conteneur de légende des bâtiments
+        const batimentLegend = document.createElement('div');
+        batimentLegend.id = 'batiment-legend';
+        batimentLegend.style.position = 'absolute';
+        batimentLegend.style.top = '81%';
+        batimentLegend.style.left = '10px';
+        batimentLegend.style.transform = 'translateY(-50%)';
+        batimentLegend.style.background = 'white';
+        batimentLegend.style.padding = '10px';
+        batimentLegend.style.fontSize = '12px';
+        batimentLegend.style.borderRadius = '4px';
+        batimentLegend.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+        batimentLegend.style.zIndex = '1';
+        
+        // Contenu de la légende
+        batimentLegend.innerHTML = `
+          <strong>Type de bâtiment</strong><br>
+          <div><span style="background:#1f77b4;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Activité</div>
+          <div><span style="background:#2ca02c;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Appartement</div>
+          <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Aucun local</div>
+          <div><span style="background:#9467bd;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Dépendance</div>
+          <div><span style="background:#ff7f0e;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Maison</div>
+          <div><span style="background:#e377c2;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> Mixte</div>
+        `;
+        
+        // L’ajouter à la carte
+        map.getContainer().appendChild(batimentLegend);
+        batimentLegend.style.display = 'none'; // Permet de supprimer l'affichage de la légende au chargement de la page
+        
+        // Lier la visibilité à la couche bâtiment
+        function updateBatimentLegendVisibility() {
+          const visibility = map.getLayoutProperty('batimentsLayer', 'visibility');
+          //batimentLegend.style.display = (visibility === 'none') ? 'none' : 'block';
+          if (visibility === 'none') {
+          batimentLegend.style.display = 'none';
+        } else {
+          batimentLegend.style.display = 'block';
+        }
+        }
+        
+        map.on('idle', updateBatimentLegendVisibility);
      
     // Ajout des couches vectorielles
       layersData.forEach(layer => {
@@ -269,6 +353,26 @@ map = {
         } else if (layer.type === 'line') {
           layerConfig.paint['line-color'] = layer.color || '#000000';
           layerConfig.paint['line-width'] = layer.width || 1;
+        }else if (layer.type === 'fill-extrusion') {
+          if (layer.colorByType === 'ff_dteloctxt') {
+            layerConfig.paint['fill-extrusion-color'] = [
+              'match',
+              ['get', 'ff_dteloctxt'],
+              'ACTIVITE', '#1f77b4',
+              'APPARTEMENT', '#2ca02c',
+              'AUCUN LOCAL', '#d9d9d9',
+              'DEPENDANCE', '#9467bd',
+              'MAISON', '#ff7f0e',
+              'MIXTE', '#e377c2',
+              '#000000' // fallback
+            ];
+          } else {
+            layerConfig.paint['fill-extrusion-color'] = layer.color || '#000000';
+          }
+        
+          layerConfig.paint['fill-extrusion-height'] = ['get', layer.heightProperty || 'hauteur'];
+          layerConfig.paint['fill-extrusion-base'] = 0;
+          layerConfig.paint['fill-extrusion-opacity'] = layer.opacity || 0.9;
         }
 
         map.addLayer(layerConfig);
@@ -369,8 +473,10 @@ map = {
       regionLayer: 'Région',
       departementLayer: 'Département',
       epciLayer: 'EPCI',
+      coursdeauLayer: "Cours d'eau",
       zoneinondableLayer: 'Zonage Inondable',
-      indicateurs27aLayer: 'Dommages financiers des entreprises'
+      indicateurs27aLayer: 'Dommages financiers des entreprises',
+      batimentsLayer: "Bâtiments"
     };
 
     function toggleLayerVisibility(id, visible) {
@@ -802,3 +908,14 @@ md`
 
 `
 ```
+# Bâtiments en 3D : Mode d'emploi {.flow}
+
+<i class="bi bi-box"></i> **Incliner et faire tourner la carte**\
+Maintenez enfoncé le bouton droit de la souris sur ce symbole <img src="Images/bouton_inclinaison.jpg" style="margin-bottom:auto; width:2%;"/> et déplacez le pour incliner le point de vue ou faire tourner la carte.
+
+<i class="bi bi-mouse2"></i> **Zoomer sur la carte**\
+Zoomer sur la carte (molette de la souris) pour visualiser les bâtiments.
+
+<i class="bi bi-info-circle"></i> **Une illustration pour bien comprendre la carte interactive**
+
+![Bâtiments 3D](Images/batiments_3d.jpg){fig-align="left" width="75%"}

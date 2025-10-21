@@ -239,6 +239,8 @@ map = {
           },
           layout: { visibility: 'visible' }
         },
+        { data: cours_d_eau, type: 'line', id: 'coursdeauLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
+      layout: {visibility:'visible'} },
       { data: zone_inondable, type: 'fill', id: 'zoneinondableLayer', color: '#b4c3ef' , width: 2, opacity: 1, 
       layout: {visibility:'visible'} },
       { data: batiments, type: 'fill-extrusion', id: 'batimentsLayer', width:2, opacity: 1, colorByType: 'ff_dteloctxt',
@@ -532,6 +534,7 @@ map = {
       regionLayer: 'Région',
       departementLayer: 'Département',
       epciLayer: 'Etablissement Public de Coopération Intercommunale',
+      coursdeauLayer: "Cours d'eau",
       zoneinondableLayer: 'Zonage Inondable',
       indicateurs14Layer: 'Entreprises sensibles en ZI (nb)',
       batimentsLayer: "Bâtiments"
@@ -938,3 +941,14 @@ Pop3 : Population sensible</td>
 
 `
 ```
+# Bâtiments en 3D : Mode d'emploi {.flow}
+
+<i class="bi bi-box"></i> **Incliner et faire tourner la carte**\
+Maintenez enfoncé le bouton droit de la souris sur ce symbole <img src="Images/bouton_inclinaison.jpg" style="margin-bottom:auto; width:2%;"/> et déplacez le pour incliner le point de vue ou faire tourner la carte.
+
+<i class="bi bi-mouse2"></i> **Zoomer sur la carte**\
+Zoomer sur la carte (molette de la souris) pour visualiser les bâtiments.
+
+<i class="bi bi-info-circle"></i> **Une illustration pour bien comprendre la carte interactive**
+
+![Bâtiments 3D](Images/batiments_3d.jpg){fig-align="left" width="75%"}
