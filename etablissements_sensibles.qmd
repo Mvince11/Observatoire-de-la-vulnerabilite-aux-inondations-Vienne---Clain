@@ -941,6 +941,7 @@ Pop3 : Population sensible</td>
 
 `
 ```
+
 # Bâtiments en 3D : Mode d'emploi {.flow}
 
 <i class="bi bi-box"></i> **Incliner et faire tourner la carte**\

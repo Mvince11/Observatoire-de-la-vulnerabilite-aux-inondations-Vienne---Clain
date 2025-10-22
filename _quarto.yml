@@ -28,6 +28,8 @@ website:
              text: Etablissements sensibles
            - href: enjeux_susceptibles_dysfonctionner.qmd
              text: Etablissements utiles à la gestion de crise
+           - href: campings.qmd
+             text: Campings
              
         - text: Objectif n°2
           menu:
