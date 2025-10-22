@@ -30,6 +30,8 @@ website:
              text: Etablissements utiles à la gestion de crise
            - href: campings.qmd
              text: Campings
+           - href: routes.qmd
+             text: Routes
              
         - text: Objectif n°2
           menu:
