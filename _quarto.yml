@@ -32,6 +32,8 @@ website:
              text: Campings
            - href: routes.qmd
              text: Routes
+           - href: pcs.qmd
+             text: Plan communal de sauvegarde (PCS)
              
         - text: Objectif n°2
           menu:
