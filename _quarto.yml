@@ -40,6 +40,8 @@ website:
         - text: Objectif n°2
           menu:
            - text: "Objectif n°2 : Stabiliser/réduire le coût des dommages"
+           - href: dommages_habitations.qmd
+             text: Dommages aux habitations
            - href: dommages_entreprises.qmd
              text: Dommages aux entreprises
              
