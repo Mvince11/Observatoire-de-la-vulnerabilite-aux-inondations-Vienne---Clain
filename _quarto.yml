@@ -34,6 +34,8 @@ website:
              text: Routes
            - href: pcs.qmd
              text: Plan communal de sauvegarde (PCS)
+           - href: dicrim.qmd
+             text: Document d'information communal sur les risques majeurs (DICRIM)
              
         - text: Objectif n°2
           menu:
