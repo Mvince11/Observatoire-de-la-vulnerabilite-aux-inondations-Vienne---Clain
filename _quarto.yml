@@ -44,6 +44,8 @@ website:
              text: Dommages aux habitations
            - href: dommages_entreprises.qmd
              text: Dommages aux entreprises
+           - href: dommages_cultures.qmd
+             text: Dommages aux cultures
              
         - text: Objectif n°3
           menu:
