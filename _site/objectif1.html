@@ -134,6 +134,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./pcs.html">
  <span class="dropdown-text">Plan communal de sauvegarde (PCS)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./dicrim.html">
+ <span class="dropdown-text">Document d’information communal sur les risques majeurs (DICRIM)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -143,8 +147,16 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-objectif-n°2">    
         <li class="dropdown-header">Objectif n°2 : Stabiliser/réduire le coût des dommages</li>
         <li>
+    <a class="dropdown-item" href="./dommages_habitations.html">
+ <span class="dropdown-text">Dommages aux habitations</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./dommages_entreprises.html">
  <span class="dropdown-text">Dommages aux entreprises</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dommages_cultures.html">
+ <span class="dropdown-text">Dommages aux cultures</span></a>
   </li>  
     </ul>
   </li>
@@ -315,7 +327,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/website\.quarto\.pub\/eptb_vienne");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
