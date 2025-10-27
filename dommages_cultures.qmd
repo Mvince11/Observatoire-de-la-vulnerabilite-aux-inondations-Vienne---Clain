@@ -58,6 +58,8 @@ library(dplyr)
 library(jsonlite)
 library(tidyr)
 
+#communes_images <- readxl::read_xlsx("layers/communes_images.xlsx", quiet = TRUE)
+
 # Charger le GeoJSON
 indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   st_drop_geometry() %>%

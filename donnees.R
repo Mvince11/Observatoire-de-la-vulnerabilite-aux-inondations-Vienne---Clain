@@ -2,6 +2,7 @@ library(jsonlite)
 library(sf)
 library(dplyr)
 library(shiny)
+library(readxl)
 
 
 bassin_vienne <- readRDS("data/bassin_vienne.rds")
@@ -95,3 +96,5 @@ pal_s12a <- colorFactor(
   palette = c("#d9d9d9", "#ffffff", "#ffaaaa", "#ff5555", "#ff0000"),
   domain = 1:5
 )
+communes_photos <- read_excel("layers/communes_images.xlsx")
+indicateurs <- indicateurs %>% left_join()
