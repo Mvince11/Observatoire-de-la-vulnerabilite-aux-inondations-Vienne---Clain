@@ -46,6 +46,10 @@ website:
              text: Dommages aux entreprises
            - href: dommages_cultures.qmd
              text: Dommages aux cultures
+           - href: monuments.qmd
+             text: Patrimoines et monuments historiques
+           - href: espaces_naturels.qmd
+             text: Espaces naturels
              
         - text: Objectif n°3
           menu:
