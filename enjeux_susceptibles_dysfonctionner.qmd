@@ -87,7 +87,7 @@ perimetre = FileAttachment("layers/perimetre.json").json();
 slgri = FileAttachment("layers/slgri.json").json();
 tri = FileAttachment("layers/tri.json").json();
 zone_inondable = FileAttachment("layers/zone_inondable.geojson").json();
-indicateurs = FileAttachment("layers/indicateurs.json").json();
+//indicateurs = FileAttachment("layers/indicateurs.json").json();
 cours_d_eau = FileAttachment("layers/cours_d_eau.geojson").json();
 indicateursGeojson = FileAttachment("layers/indicateurs.geojson").json();
 batiments = FileAttachment("layers/batiments_hauteur.geojson").json();
@@ -436,7 +436,7 @@ map = {
         
       map.on('click', 'indicateurs114eLayer', (e) => {
         const feature = e.features[0];
-      
+        const image= feature.properties.image;
         const nom = feature.properties.nom || 'Non disponible';
       
         const population = feature.properties.population
@@ -495,21 +495,29 @@ map = {
           
           // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
          document.getElementById('donnees').innerHTML = `
-         <strong style="font-size:1.1em"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
-         <strong style="font-size:1.1em"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong>      ${population}<br>
-         <strong style="font-size:1.1em"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
-         <div style="margin-left:2vw;">Dont : </div>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batindif}<strong> bâtiments indifférenciés</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batsportif}<strong> bâtiments sportifs</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batagricole}<strong> bâtiments agricoles</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batresidentiel}<strong> bâtiments résidentiels</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batannexe}<strong> bâtiments annexes</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batreligieux}<strong> bâtiments religieux</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batindustriel}<strong> bâtiments industriels</strong></h5></li>
-         <li style="margin-left:4vw;"><h5 style="font-size:1em;"> ${batcommercial}<strong> bâtiments commerciaux</strong></h5></li>
-         
-         <div>Conséquences de l'aléa :</div>
-         <strong style="font-size:1.1em"><i class="bi bi-building"></i> Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  :</strong> ${dommages}<br>
+         <div style="text-align:center; font-family:sans-serif; font-size:16px;">
+            <img src="${image}" style="width:300px; margin-bottom:10px;"><br>
+            
+            <strong style="font-size:1.1em;"><i class="bi bi-geo-alt-fill"></i> Commune :</strong> ${nom}<br>
+            <strong style="font-size:1.1em;"><i class="bi bi-people-fill"></i> Nombre d'habitants :</strong> ${population}<br>
+            <strong style="font-size:1.1em;"><i class="bi bi-house-fill"></i> Nombre de bâtiments :</strong> ${batiments}<br>
+            
+            <div style="margin-top:10px;"><strong>Dont :</strong></div>
+            <ul style="list-style:none; padding:0;">
+              <li><h5 style="font-size:1em;">${batindif} <strong>bâtiments indifférenciés</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batsportif} <strong>bâtiments sportifs</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batagricole} <strong>bâtiments agricoles</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batresidentiel} <strong>bâtiments résidentiels</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batannexe} <strong>bâtiments annexes</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batreligieux} <strong>bâtiments religieux</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batindustriel} <strong>bâtiments industriels</strong></h5></li>
+              <li><h5 style="font-size:1em;">${batcommercial} <strong>bâtiments commerciaux</strong></h5></li>
+            </ul>
+        
+            <div style="margin-top:10px;">
+              <strong style="font-size:1.1em;"><i class="bi bi-building"></i> Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner :</strong> ${dommages}
+            </div>
+          </div>
          `;
       });
 
@@ -734,8 +742,8 @@ data_s114e = FileAttachment("layers/data_s114e.json").json()
 
 viewof slider_s114e = InputsTaux.range([0, 1], {
   value: 1,
-  step: 1,
-  label: "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner"
+  step: 1//,
+  //label: "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner"
 })
 
 sorted_s114e = data_s114e
@@ -769,7 +777,7 @@ PlotTaux.plot({
   ],
   y: {
     grid: true,
-    label: "Nombre",
+    label: "Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner",
     domain: [0, Math.max(...sorted_s114e.map(d => d.s114e))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
@@ -934,6 +942,7 @@ Ap6 : enjeux utiles à la gestion de crise</td>
 
 `
 ```
+
 # Bâtiments en 3D : Mode d'emploi {.flow}
 
 <i class="bi bi-box"></i> **Incliner et faire tourner la carte**\
