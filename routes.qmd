@@ -487,9 +487,9 @@ map = {
           // Mettre à jour le conteneur HTML avec les informations spécifiques du marqueur 
          document.getElementById('donnees').innerHTML = `
           <div style="text-align:center; font-family:sans-serif; font-size:16px;">
-            <div style="background-color:#c8f4df; border-radius: 25px;border-bottom-left-radius: 0;border-bottom-right-radius: 0;">
-            <img src="${image}" style="width:300px; margin-bottom:10px;padding: 5px; background-color: darkgoldenrod;
-                                margin-top: 13px;">
+            <div>
+            <img src="${image}" style="width:300px; margin-bottom:10px;padding: 2px; background-color: darkgoldenrod;
+                                margin-top: 13px;box-shadow: rgba(149, 31, 81, 0.77) 0px 4px 8px 0px;">
             </div>
             <br>
             
