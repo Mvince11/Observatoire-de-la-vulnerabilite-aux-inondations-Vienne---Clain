@@ -50,6 +50,10 @@ website:
              text: Patrimoines et monuments historiques
            - href: espaces_naturels.qmd
              text: Espaces naturels
+           - href: installations_polluantes.qmd
+             text: Installations polluantes
+           - href: eau_potable.qmd
+             text: Station d'alimentation en eau potable
              
         - text: Objectif n°3
           menu:
