@@ -9,7 +9,7 @@ format:
     
 resources:
   - Images/icons/*.svg
-  - layers/data_s25d.json
+  - layers/data_s210c.json
   - layers/batiments_hauteur.geojson
     
 include-in-header:
@@ -37,13 +37,13 @@ bbox_sru = FileAttachment("layers/bb.json").json()
 
 ```{=html}
 <div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
-Nombre de stations d’alimentation en eau potable (AEP) en zone inondable 
+Linéaire de voies ferrées impactées par la zone inondable 
  </div>
 
-<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">La présence de captages d’eau potable peut potentiellement poser un problème si des pollutions sont entraînées par l’inondation, ou s’ils sont colmatés par des atterrissements.</div>
+<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">L’indicateur cherche à identifier les voies ferrées situées en zone inondable et qui seraient susceptibles d’être endommagées.</div>
 
 
-<a href=https://fiches.eptb-vienne.fr/ind_25d.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
+<a href=https://fiches.eptb-vienne.fr/ind_210c.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
 
 
 <div style="width: auto; padding:5px; border: 1px solid #A0A0A0; border-radius:15px; text-align: center !important; background: #F2F2F2; font-size:1.1em;margin-top:10%;">
@@ -61,11 +61,11 @@ library(tidyr)
 # Charger le GeoJSON
 indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   st_drop_geometry() %>%
-  select(nom, s25d) %>%
-   mutate(s25d = replace_na(s25d, 0))
+  select(nom, s210c) %>%
+   mutate(s210c = replace_na(s210c, 0))
 
 # Sauvegarder au format JSON dans le dossier _site
-write_json(indicateurs, "layers/data_s25d.json", auto_unbox = TRUE)
+write_json(indicateurs, "layers/data_s210c.json", auto_unbox = TRUE)
 
 # indicateursGeojson16 <- st_read("layers/indicateurs.geojson", quiet=TRUE)%>%
 #   mutate(s16b = replace_na(s16b, 0))
@@ -223,11 +223,11 @@ map = {
       { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3', layout: {visibility:'none'} },
       {  data: indicateursGeojson, // GeoJSON contenant une propriété 's31atx'
           type: 'fill',
-          id: 'indicateurs25dLayer',
+          id: 'indicateurs210cLayer',
           opacity: 0.9,
           width: 1,
           dynamicColor: { 
-            property: 's25d',
+            property: 's210c',
             // La logique exacte de la légende à appliquer :
             // - 0 ou null => #d9d9d9
             // - < 150     => #f9f0d9
@@ -236,8 +236,9 @@ map = {
             // - >= 2000000 => #b30000
             mapping: {
               '0': '#d9d9d9',
-              '1': '#ffd700',
-              '2': '#ff7600'
+              '80': '#ffffff"',
+              '300': '#ff8080',
+              '301': '#ff0000'
             },
             default: '#d9d9d9' // utilisé si null, undefined ou < 150
           },
@@ -268,17 +269,18 @@ map = {
         
         // Contenu de la légende
         legend.innerHTML = `
-          <strong>Nombre de stations <br> d’alimentation en eau <br> potable (AEP) en <br> zone inondable</strong><br>
+          <strong>Linéaire de voies <br> ferrées impactées <br> par la zone inondable</strong><br>
           <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0</div>
-          <div><span style="background:#ffd700;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> 1-2 </div>
-          <div><span style="background:#ff7600;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 2-3 </div>`;
+          <div><span style="background:#ffffff;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> < 80 </div>
+          <div><span style="background:#ff8080;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 80-300 </div>
+          <div><span style="background:#ff0000;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> > 300 </div>`;
         
         // L’ajouter à la carte (le container MapLibre)
         map.getContainer().appendChild(legend);
         
         //afin de lier la légende à l'indicateur
         function updateLegendVisibility() {
-        const visibility = map.getLayoutProperty('indicateurs25dLayer', 'visibility');
+        const visibility = map.getLayoutProperty('indicateurs210cLayer', 'visibility');
         if (visibility === 'none') {
           legend.style.display = 'none';
         } else {
@@ -352,8 +354,9 @@ map = {
               'case',
               ['!', ['has', layer.dynamicColor.property]], '#d9d9d9',                       // Propriété absente
               ['any', ['==', ['get', layer.dynamicColor.property], null], ['==', ['get', layer.dynamicColor.property], 0]], '#d9d9d9', // null ou 0
-              ['<', ['get', layer.dynamicColor.property], 2], '#ffd700',
-              ['>=', ['get', layer.dynamicColor.property], 2], '#ff7600',
+              ['<', ['get', layer.dynamicColor.property], 80], '#ffffff',
+              ['<', ['get', layer.dynamicColor.property], 300], '#ff8080',
+              ['>', ['get', layer.dynamicColor.property], 300], '#ff0000',
               '#d9d9d9' // fallback
             ];
           } else {
@@ -391,9 +394,9 @@ map = {
         map.addLayer(layerConfig);
         
          map.addLayer({
-                  id: 'indicateurs25dLabels',
+                  id: 'indicateurs210cLabels',
                   type: 'symbol',
-                  source: 'indicateurs25dLayer', // le même id que ta source GeoJSON
+                  source: 'indicateurs210cLayer', // le même id que ta source GeoJSON
                   layout: {
                     'text-field': ['get', 'nom'],
                     'text-size': 11,
@@ -409,9 +412,9 @@ map = {
                 });
                 
         map.addLayer({
-                 id: 'indicateurs25d-hover',
+                 id: 'indicateurs210c-hover',
                  type: 'line',
-                 source: 'indicateurs25dLayer', // même source
+                 source: 'indicateurs210cLayer', // même source
                  paint: {
                    'line-color': '#000',
                    'line-width': 2
@@ -420,7 +423,7 @@ map = {
                   });
         
         
-      map.on('click', 'indicateurs25dLayer', (e) => {
+      map.on('click', 'indicateurs210cLayer', (e) => {
         const feature = e.features[0];
         const image= feature.properties.image;
         const nom = feature.properties.nom || 'Non disponible';
@@ -429,8 +432,8 @@ map = {
           ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
           : 'Non disponible';
       
-        const s25dValue = parseFloat(feature.properties.s25d);
-        const dommages = (Number(s25dValue) || 0).toLocaleString('fr-FR');
+        const s210cValue = parseFloat(feature.properties.s210c);
+        const dommages = (Number(s210cValue) || 0).toLocaleString('fr-FR');
         const batimentsValue = feature.properties.nb_batiments;
         const batiments = !isNaN(parseFloat(batimentsValue))
           ? parseInt(batimentsValue).toLocaleString('fr-FR')
@@ -467,7 +470,7 @@ map = {
           <center>${nom}</center>
           </strong></div>
             <p style="margin:auto;"><strong>Population :</strong> ${population}</p>
-            <p style="margin:auto;"><strong>Nombre de stations d’alimentation <br> en eau potable (AEP) en zone inondable 
+            <p style="margin:auto;"><strong>Linéaire de voies ferrées impactées <br> par la zone inondable 
  :</strong> ${dommages}</p>
           </div>
         `;
@@ -503,7 +506,7 @@ map = {
             </ul>
         
             <div style="margin-top:10px;">
-              <strong style="font-size:1.1em;"><i class="fas fa-tint"></i> Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  :</strong> ${dommages}
+              <strong style="font-size:1.1em;"><i class="fas fa-train"></i> Linéaire de voies ferrées impactées par la zone inondable :</strong> ${dommages}
             </div>
           </div>
         `;
@@ -511,18 +514,18 @@ map = {
 
 
 
-      map.on('mousemove', 'indicateurs25dLayer', (e) => {
+      map.on('mousemove', 'indicateurs210cLayer', (e) => {
         if (e.features.length > 0) {
           const nomCommune = e.features[0].properties.nom;
       
-          map.setFilter('indicateurs25d-hover', ['==', 'nom', nomCommune]);
+          map.setFilter('indicateurs210c-hover', ['==', 'nom', nomCommune]);
       
           map.getCanvas().style.cursor = 'pointer';
         }
       });
 
-        map.on('mouseleave', 'indicateurs25dLayer', () => {
-          map.setFilter('indicateurs25d-hover', ['==', 'nom', '']);
+        map.on('mouseleave', 'indicateurs210cLayer', () => {
+          map.setFilter('indicateurs210c-hover', ['==', 'nom', '']);
           map.getCanvas().style.cursor = '';
         });
       });
@@ -548,7 +551,7 @@ map = {
       epciLayer: 'Etablissement Public de Coopération Intercommunale',
       coursdeauLayer: "Cours d'eau",
       zoneinondableLayer: 'Zonage Inondable',
-      indicateurs25dLayer: "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable",
+      indicateurs210cLayer: "Linéaire de voies ferrées impactées par la zone inondable",
       batimentsLayer: "Bâtiments"
     };
 
@@ -655,17 +658,17 @@ library(dplyr)
 library(reactable)
 library(tidyr)
 
-indicateur_s25d <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
-  select(insee_com, nom, population, s25d) %>%
+indicateur_s210c <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  select(insee_com, nom, population, s210c) %>%
   mutate(
-    s25d = replace_na(s25d, 0)
+    s210c = replace_na(s210c, 0)
   ) %>%
   st_drop_geometry() %>%
   rename(
     Commune = nom,
     `Code INSEE` = insee_com,
     Population = population,
-    "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable" = s25d
+    "Linéaire de voies ferrées impactées par la zone inondable" = s210c
   ) %>%
   mutate(
     Population = format(Population, big.mark = " ", scientific = FALSE),
@@ -673,7 +676,7 @@ indicateur_s25d <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   )
 
 # Affichage avec reactable
-reactable(indicateur_s25d,
+reactable(indicateur_s210c,
           filterable = TRUE,
           striped = TRUE,
           sortable = TRUE,
@@ -705,10 +708,10 @@ import { Plot as PlotTaux } from "@observablehq/plot";
 import { Inputs as InputsTaux } from "@observablehq/inputs";
 
 // Charger les données
-data = FileAttachment("layers/data_s25d.json").json()
+data = FileAttachment("layers/data_s210c.json").json()
 
 // Label du slider
-html`<label for="slider-s25d" style="display: block;
+html`<label for="slider-s210c" style="display: block;
   margin-top: 1em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -719,43 +722,44 @@ html`<label for="slider-s25d" style="display: block;
   text-align: center;
   margin-right: 20%;
   margin-left: 20%;">
-  Nombre de stations d’alimentation en eau potable (AEP) en zone inondable
+  Linéaire de voies ferrées impactées par la zone inondable
 </label>`
 
 // Slider
 
 
-data_s25d = FileAttachment("layers/data_s25d.json").json()
+data_s210c = FileAttachment("layers/data_s210c.json").json()
 
-viewof slider_s25d = InputsTaux.range([0, 3], {
-  value: 2,
-  step: 1//
+viewof slider_s210c = InputsTaux.range([0, 2270], {
+  value: 908,
+  step: 454//
   //label: "Linéaire d'itinéraires routiers interceptés en km"
 })
 
-sorted_s25d = data_s25d
-  .map(d => ({ ...d, s25d: +d.s25d || 0 }))
-  .filter(d => d.s25d <= slider_s25d)
-  .sort((a, b) => a.s25d - b.s25d)
+sorted_s210c = data_s210c
+  .map(d => ({ ...d, s210c: +d.s210c || 0 }))
+  .filter(d => d.s210c <= slider_s210c)
+  .sort((a, b) => a.s210c - b.s210c)
 
 PlotTaux.plot({
   marks: [
-    PlotTaux.barY(sorted_s25d, {
+    PlotTaux.barY(sorted_s210c, {
       x: d => d.nom,
-      y: d => d.s25d,
+      y: d => d.s210c,
         fill: d => {
-        const val = d.s25d;
+        const val = d.s210c;
         if (val === 0) return "#d9d9d9";
-        if (val < 2) return "#ffd700";
-        if (val >= 2) return "#ff7600";
+        if (val < 3) return "#fff5eb";
+        if (val <=11) return "#fd9243";
+        if (val >11) return "#7f2704";
         return "#67000d"; // >4
         
       }
     }),
-    PlotTaux.text(sorted_s25d, {
+    PlotTaux.text(sorted_s210c, {
       x: d => d.nom,
-      y: d => d.s25d,
-      text: d => d.s25d.toLocaleString("fr-FR"),
+      y: d => d.s210c,
+      text: d => d.s210c.toLocaleString("fr-FR"),
       dy: -8,
       fontSize: 9,
       fill: "black",
@@ -764,8 +768,8 @@ PlotTaux.plot({
   ],
   y: {
     grid: true,
-    label: "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable",
-    domain: [0, Math.max(...sorted_s25d.map(d => d.s25d))],
+    label: "Linéaire de voies ferrées impactées par la zone inondable",
+    domain: [0, Math.max(...sorted_s210c.map(d => d.s210c))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
@@ -804,13 +808,13 @@ md`
   </colgroup>
   <tr>
     <th style="background-color:#BEDBE8; border:1px solid;" colspan="2">Numéro d'indicateur</th>
-    <th style="border:1px solid;">Ind2/5d</th>
+    <th style="border:1px solid;">Ind2/10c</th>
     <th style="background-color:#BEDBE8; border:1px solid;">Date de mise à jour</th>
     <th style="border:1px solid;">31/05/2025</th>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Intitulé</td>
-    <td colspan="3" style="border:1px solid;">Nombre de stations d’alimentation en eau potable (AEP) en zone inondable</td>
+    <td colspan="3" style="border:1px solid;">Linéaire de voies ferrées impactées par la zone inondable</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
@@ -818,11 +822,12 @@ md`
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">Axe 2/2 Les dommages au patrimoine</td>
+    <td colspan="3" style="border:1px solid;">Axe 2/4 Les dommages aux infrastructures et aux réseaux</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">S2/5 Dommages à l’environnement : charriage de pollutions et déchets</td>
+    <td colspan="3" style="border:1px solid;">S2/10 Érosion, destructions, dépôts sur les infrastructures, espaces, ouvrages et réseaux (érosion,
+déchets…)</td>
   </tr>
 </table>
 
@@ -838,7 +843,11 @@ md`
   </colgroup>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Modalités du calcul</td>
-    <td colspan="3" style="border:1px solid;">La couche des stations AEP est croisée avec la zone inondable (hauteur > 0) et le résultat est agrégé à la commune.</td>
+    <td colspan="3" style="border:1px solid;">Le linéaire de voies ferrées impactées est calculé à partir de la couche des voies ferrées de la BD
+TOPO de l’IGN. On intersecte cette couche avec la zone inondable pour sélectionner les tronçons
+impactés. On utilise les informations d’altitude des tronçons de voies ferrées. Cette méthode est
+plus précise que le croisement en 2D des voies ferrées avec la zone inondable.
+Le résultat de l’indicateur est obtenu en agrégeant le linéaire ferré impacté par commune.</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Échelle de représentation</td>
@@ -850,12 +859,12 @@ md`
   </tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Table cible</td>
-    <td colspan="3" style="border:1px solid;">p_obj2_cout_dommages.s25d_capt_aep_zi</td>
+    <td colspan="3" style="border:1px solid;">p_obj2_cout_dommages.s210c_voies_ferrees_zi</td>
   </tr>
   <tr>
   <tr>
     <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Variables mobilisées</td>
-    <td colspan="3" style="border:1px solid;">Zx : zone inondable, <br>Res1 : captages AEP</td>
+    <td colspan="3" style="border:1px solid;">Zx : hauteur d’eau > 0, <br>Res2 : voies de transport (réseau ferré)</td>
   </tr>
   <tr>
   <tr>
@@ -903,13 +912,13 @@ md`
     <td colspan="2" style="border:1px solid;">Zx_zone_inondable.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Captages AEP</td>
+    <td colspan="2" style="border:1px solid;">Tronçons de voies ferrées BDTOPO</td>
     <td style="border:1px solid;">2020</td>
-    <td style="border:1px solid;">Locale</td>
+    <td style="border:1px solid;">Nationale</td>
     <td style="border:1px solid;">Shape</td>
-    <td style="border:1px solid;">Point</td>
-    <td colspan="2" style="border:1px solid;">ARS NA</td>
-    <td colspan="2" style="border:1px solid;">captage_aep.shp</td>
+    <td style="border:1px solid;">Ligne</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
+    <td colspan="2" style="border:1px solid;">troncon_de_voie_ferree.shp</td>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Communes (BDTOPO)</td>

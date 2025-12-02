@@ -1,66 +1,80 @@
 [
   {
-    "objectID": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
-    "href": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
-    "title": "Objectif n°3 : Raccourcir le délai de retour à la normale",
-    "section": "Raccourcir le délai de retour à la normale.",
-    "text": "Raccourcir le délai de retour à la normale.\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable"
+    "objectID": "objectif2.html",
+    "href": "objectif2.html",
+    "title": "Objectif n°2 : Stabiliser/réduire le coût des dommages",
+    "section": "",
+    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Retour au sommet"
   },
   {
-    "objectID": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
-    "href": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
-    "title": "Objectif n°1 : Augmenter la sécurité des populations",
-    "section": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.",
-    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable."
+    "objectID": "js/readme.html",
+    "href": "js/readme.html",
+    "title": "Pour mémoire",
+    "section": "",
+    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;\n\n\n\nversion 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js\n\n\n\nversion 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js\n\n\n\ninclude-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
   },
   {
-    "objectID": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
-    "href": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
-    "title": "Objectif n°1 : Augmenter la sécurité des populations",
-    "section": "Liste des indicateurs de l’objectif 1",
-    "text": "Liste des indicateurs de l’objectif 1\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans"
+    "objectID": "js/readme.html#maplibre",
+    "href": "js/readme.html#maplibre",
+    "title": "Pour mémoire",
+    "section": "",
+    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;"
   },
   {
-    "objectID": "mieux_comprendre.html",
-    "href": "mieux_comprendre.html",
+    "objectID": "js/readme.html#pmtiles",
+    "href": "js/readme.html#pmtiles",
+    "title": "Pour mémoire",
+    "section": "",
+    "text": "version 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js"
+  },
+  {
+    "objectID": "js/readme.html#turf",
+    "href": "js/readme.html#turf",
+    "title": "Pour mémoire",
+    "section": "",
+    "text": "version 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js"
+  },
+  {
+    "objectID": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
+    "href": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
+    "title": "Pour mémoire",
+    "section": "",
+    "text": "include-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
+    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
   },
   {
-    "objectID": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
-    "href": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
+    "objectID": "index.html#pourquoi-un-observatoire",
+    "href": "index.html#pourquoi-un-observatoire",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
+    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
   },
   {
-    "objectID": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
-    "href": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
+    "objectID": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
+    "href": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Qu’est-ce que le risque inondation ?",
-    "text": "Qu’est-ce que le risque inondation ?\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages)."
+    "section": "Des indicateurs pour connaître la vulnérabilité",
+    "text": "Des indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l'efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n\n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l'indicateur et la carte de vulnérabilité."
   },
   {
-    "objectID": "mieux_comprendre.html#doù-viennent-les-inondations",
-    "href": "mieux_comprendre.html#doù-viennent-les-inondations",
+    "objectID": "index.html#les-auteurs-de-lobservatoire",
+    "href": "index.html#les-auteurs-de-lobservatoire",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "D’où viennent les inondations ?",
-    "text": "D’où viennent les inondations ?\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau."
+    "section": "Les auteurs de l’observatoire",
+    "text": "Les auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n\n\n Nous contacter (contact\\@eptb-vienne.fr)"
   },
   {
-    "objectID": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
-    "href": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Quelle stratégie pour réduire le risque ? Quelles actions ?",
-    "text": "Quelle stratégie pour réduire le risque ? Quelles actions ?\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html"
-  },
-  {
-    "objectID": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
-    "href": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
-    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "L’observatoire, un outil dynamique",
-    "text": "L’observatoire, un outil dynamique\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne."
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Images/apropos_mentions_legales.html",
@@ -112,80 +126,66 @@
     "text": "Conception\n\n Ce site a été conçu et développé par le Cerema."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "mieux_comprendre.html",
+    "href": "mieux_comprendre.html",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
+    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
   },
   {
-    "objectID": "index.html#pourquoi-un-observatoire",
-    "href": "index.html#pourquoi-un-observatoire",
+    "objectID": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
+    "href": "mieux_comprendre.html#pour-mieux-comprendre-les-inondations",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
     "section": "",
-    "text": "L’inondation est le premier risque naturel en France, il menace des vies, des habitations, des emplois. Bien qu’épargnés ces dernières années, les bassins de la Vienne et du Clain ont connu des inondations par le passé et les évènements récents sur des territoires voisins incitent à une prise de conscience de la population. La gestion du risque inondation dépend de la vulnérabilité du territoire qui se traduit ici comme la propension pour des personnes, des biens et des activités à être affectés par ce phénomène. Appréhender les différentes vulnérabilités est une composante essentielle du défi «Mieux savoir pour mieux agir» identifié au niveau national. Partager cette connaissance avec le plus grand nombre est le principal objectif de cet observatoire."
+    "text": "Le bassin versant* de la Vienne s’étend sur 21 160 km². Marqué par plusieurs crues historiques, comme celles de 1913, 1982 et 1994, ce vaste territoire est sensible aux inondations. Si l’ensemble du bassin est concerné par ce risque, la partie aval reste la plus impactée en raison de sa topographie et des enjeux présents."
   },
   {
-    "objectID": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
-    "href": "index.html#des-indicateurs-pour-connaître-la-vulnérabilité",
+    "objectID": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
+    "href": "mieux_comprendre.html#quest-ce-que-le-risque-inondation",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Des indicateurs pour connaître la vulnérabilité",
-    "text": "Des indicateurs pour connaître la vulnérabilité\n\n\n L’observatoire permet la visualisation de plusieurs indicateurs, calculés à partir d’une méthode nationale. Ils s’appuient tous sur une crue dite centennale c’est-à-dire qui a «une chance» sur 100 de se produire tous les ans. Ces indicateurs permettent de décrire la vulnérabilité mais ils peuvent également être utilisés pour évaluer l'efficacité des actions menées sur le terrain qui visent à réduire le risque. Ils sont répartis selon 3 objectifs :  • Objectif 1 : Augmenter la sécurité des populations exposées,  • Objectif 2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages,  • Objectif 3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés.  \n\n\n\n  Les indicateurs ont été actuellement calculés sur le territoire de Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault. Dans le futur, ils ont vocation à être étendus au périmètre de la stratégie locale de gestion du risque inondation Vienne – Clain. Cet observatoire vous permet de consulter pour chaque indicateur de vulnérabilité un onglet dédié comprenant une carte dynamique, des graphiques et des résultats bruts et une fiche téléchargeable et imprimable avec les éléments de construction de l'indicateur et la carte de vulnérabilité."
+    "section": "Qu’est-ce que le risque inondation ?",
+    "text": "Qu’est-ce que le risque inondation ?\n\n Le risque inondation est le croisement d’un aléa (phénomène potentiellement dangereux) et d’enjeux (tout ce qui peut subir des dommages)."
   },
   {
-    "objectID": "index.html#les-auteurs-de-lobservatoire",
-    "href": "index.html#les-auteurs-de-lobservatoire",
+    "objectID": "mieux_comprendre.html#doù-viennent-les-inondations",
+    "href": "mieux_comprendre.html#doù-viennent-les-inondations",
     "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
-    "section": "Les auteurs de l’observatoire",
-    "text": "Les auteurs de l’observatoire\n\n\n L’observatoire est le fruit d’une collaboration entre l’Etablissement Public Territorial du Bassin (EPTB) de la Vienne et le CEREMA. Plusieurs collectivités et services de l’Etat ont contribué également à son élaboration (Grand Poitiers, Grand Châtellerault, CC. Vienne et Gartempe, Département de la Vienne, DDT de la Vienne, DREAL Nouvelle Aquitaine). Le financement de ce projet s’insère dans un Programme d’Action de Prévention des Inondations (PAPI) financé par l’Etat (Fonds Barnier) et l’Europe (Plan Loire). \n\n\n\n Nous contacter (contact\\@eptb-vienne.fr)"
+    "section": "D’où viennent les inondations ?",
+    "text": "D’où viennent les inondations ?\n\n Une inondation peut avoir plusieurs causes : débordement de cours d’eau, ruissellement, remontées de nappes… L’observatoire illustre la vulnérabilité du territoire uniquement pour le risque lié aux débordements de cours d’eau."
   },
   {
-    "objectID": "js/readme.html",
-    "href": "js/readme.html",
-    "title": "Pour mémoire",
-    "section": "",
-    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;\n\n\n\nversion 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js\n\n\n\nversion 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js\n\n\n\ninclude-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
+    "objectID": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
+    "href": "mieux_comprendre.html#quelle-stratégie-pour-réduire-le-risque-quelles-actions",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "section": "Quelle stratégie pour réduire le risque ? Quelles actions ?",
+    "text": "Quelle stratégie pour réduire le risque ? Quelles actions ?\n\n  En France, il existe 124 Territoires à Risque Important (TRI) pour les inondations. Ils représentent des zones où les enjeux potentiellement exposés sont les plus forts et dont les conséquences ont une portée nationale. Le bassin de la Vienne est concerné par le TRI de Châtellerault – Poitiers, il est composé de 17 communes**. Dans ces territoires, une Stratégie Locale de Gestion du Risque Inondation (SLGRI) doit être élaborée en concertation avec les acteurs locaux (collectivités territoriales, préfectures, services de secours, gestionnaires de réseaux, usagers, …). La stratégie peut s’étendre à une échelle plus vaste pour garantir notamment une logique de bassin versant. C’est le choix qui a été retenu puisque la stratégie Vienne – Clain s’étend sur près de 250 communes, 5 400 km² depuis la confluence Vienne – Issoire (16) jusqu’à la confluence Vienne – Creuse (37) en y intégrant le bassin du Clain. La stratégie Vienne – Clain décrit les objectifs et les mesures à prendre pour réduire le risque inondation, elle constitue la « feuille de route » à suivre pour les prochaines années. A l’horizon 2023, la stratégie sera déclinée de manière opérationnelle en plusieurs actions dont les champs d’intervention seront les suivants :   - Amélioration de la connaissance et de la conscience du risque,   - Surveillance, prévision des crues et des inondations,   - Alerte et gestion de crise,   - Prise en compte du risque d’inondation dans l’urbanisme,   - Réduction de la vulnérabilité des personnes et des biens,   - Gestion des écoulements,   - Gestion des ouvrages de protection hydrauliques.  Pour en savoir plus sur les actions menées : http://www.eptb-vienne.fr/-Inondations-.html"
   },
   {
-    "objectID": "js/readme.html#maplibre",
-    "href": "js/readme.html#maplibre",
-    "title": "Pour mémoire",
-    "section": "",
-    "text": "version 4.5.1 téléchargée le 8 août 2024 https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.js https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css\n&lt;script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'&gt;&lt;/script&gt;\n&lt;link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /&gt;"
+    "objectID": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
+    "href": "mieux_comprendre.html#lobservatoire-un-outil-dynamique",
+    "title": "Observatoire de la vulnérabilité aux inondations Vienne - Clain",
+    "section": "L’observatoire, un outil dynamique",
+    "text": "L’observatoire, un outil dynamique\n\n L’observatoire de la vulnérabilité aux inondations participe à l’amélioration de la connaissance et de la conscience du risque. Actuellement limité à Grand Poitiers et quelques communes qui jalonnent la Vienne dont Châtellerault, cet outil est amené à s’enrichir dans les années à venir notamment pour s’étendre au périmètre Vienne – Clain. * Espace qui collecte l’eau s’écoulant à travers les différents milieux aquatiques (cours d’eau, lacs, étangs, milieux humides, estuaires ou lagunes), depuis les sources jusqu’à son exutoire (Source : d’après l’Office International de l’Eau – OIEAU). ** Availles-en-Châtellerault, Beaumont Saint-Cyr, Bonneuil-Matours, Buxerolles, Cenon-sur-Vienne, Chasseneuil-du-Poitou, Châtellerault, Dissay, Jaunay-Marigny, Ligugé, Migné-Auxances, Naintré, Poitiers, Saint-Benoît, Saint-Georges-lès-Baillargeaux, Smarves, Vouneuil-sur-Vienne."
   },
   {
-    "objectID": "js/readme.html#pmtiles",
-    "href": "js/readme.html#pmtiles",
-    "title": "Pour mémoire",
-    "section": "",
-    "text": "version 3.0.7 téléchargée le 8 août 2024 https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js"
+    "objectID": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
+    "href": "objectif1.html#les-inondations-peuvent-faire-courir-un-risque-grave-voire-mortel-aux-populations.",
+    "title": "Objectif n°1 : Augmenter la sécurité des populations",
+    "section": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.",
+    "text": "Les inondations peuvent faire courir un risque grave, voire mortel, aux populations.\n\n La priorité est de limiter au maximum le risque de pertes de vies humaines en développant la prévision, l’alerte, la mise en sécurité et la formation aux comportements qui sauvent. La prévention la plus efficace pour limiter les dommages liés aux inondations reste, bien évidemment, d’éviter l’urbanisation en zone inondable.  Les démarches de prévention des risques d’inondation ont ainsi vocation à augmenter la sécurité des enjeux déjà implantés en zone inondable."
   },
   {
-    "objectID": "js/readme.html#turf",
-    "href": "js/readme.html#turf",
-    "title": "Pour mémoire",
-    "section": "",
-    "text": "version 7.0.0 téléchargée le 8 août 2024\nhttps://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js"
+    "objectID": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
+    "href": "objectif1.html#liste-des-indicateurs-de-lobjectif-1",
+    "title": "Objectif n°1 : Augmenter la sécurité des populations",
+    "section": "Liste des indicateurs de l’objectif 1",
+    "text": "Liste des indicateurs de l’objectif 1\n\n - Bâtiments de plain-pied : Nombre de personnes occupant des bâtiments (logements et activités) de plain-pied fortement inondables (plus de 1,5 m d’eau)  - Établissements sensibles : Nombre d’établissements sensibles (crèches, écoles, hôpitaux, maisons de retraite, établissements pénitentiaires) en zone inondable  - Établissements utiles à la gestion de crise : Nombre d’enjeux utiles à la gestion de crise susceptibles de dysfonctionner  - Campings  : Nombre de personnes en campings (et autres enjeux similaires gérés) potentiellement impactées par une zone d’aléa dangereuse pour une personne  - Routes : Linéaire d’itinéraires routiers interceptés par des zones d’aléa dangereuses pour une personne  - Plan communal de sauvegarde (PCS) : Nombre de personnes habitant une commune inondable dont le plan communal de sauvegarde (PCS) n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans  - Document d’information communal sur les risques majeurs (DICRIM) : Nombre de personnes habitant une commune inondable dont le DICRIM n’a pas été réalisé (non réalisé ou en cours de réalisation) ou a plus de 5 ans"
   },
   {
-    "objectID": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
-    "href": "js/readme.html#pour-mémoire-les-cdn-qui-fonctionnaient",
-    "title": "Pour mémoire",
-    "section": "",
-    "text": "include-in-header: text: | \n\n&lt;script src=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.js\"&gt;&lt;/script&gt;\n&lt;link href=\"https://cdn.jsdelivr.net/npm/maplibre-gl@4.2.0/dist/maplibre-gl.min.css\" rel=\"stylesheet\"&gt;\n&lt;script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js\"&gt;&lt;/script&gt;"
-  },
-  {
-    "objectID": "objectif2.html",
-    "href": "objectif2.html",
-    "title": "Objectif n°2 : Stabiliser/réduire le coût des dommages",
-    "section": "",
-    "text": "Stabiliser/réduire le coût des dommages.\n\n\n Face à une constante augmentation du coût des inondations pour la société, la politique de sauvegarde des populations et des biens vise à développer des orientations sur la maîtrise des coûts. \n\n\nListe des indicateurs de l’objectif 2\n\n\n - Dommages aux habitations : Dommages aux bâtiments d’habitation en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux entreprises : Dommages aux entreprises en fonction de la hauteur d’eau et de la durée de submersion  - Dommages aux cultures : Dommages aux cultures en fonction de la hauteur d’eau et de la durée de submersion  - Patrimoine et monuments historiques  : Nombre de musées, bâtiments patrimoniaux et monuments historiques susceptibles d’être endommagés  - Espaces naturels : Surface d’espaces naturels protégés vulnérables  - Installations polluantes : Nombre d’installations susceptibles de déverser des produits polluants  - Stations d’alimentation en eau potable : Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  - Réseaux : Nombre de postes électriques (répartition et distribution) en zone inondable  - Voies ferrées : Linéaire de voies ferrées impactées par la zone inondable  - Réseau de bus : Linéaire de réseaux de bus urbain et de bus de transport départemental impactés par la zone inondable \n\n\n\n\n\n Retour au sommet"
+    "objectID": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
+    "href": "objectif3.html#raccourcir-le-délai-de-retour-à-la-normale.",
+    "title": "Objectif n°3 : Raccourcir le délai de retour à la normale",
+    "section": "Raccourcir le délai de retour à la normale.",
+    "text": "Raccourcir le délai de retour à la normale.\n\n Dès lors que les inondations sont inévitables, la capacité des territoires à s’organiser pour gérer les crises et rebondir après un événement concourt à réduire les impacts potentiels des inondations sur la santé humaine, l’activité économique, le patrimoine et l’environnement. \n\n\nListe des indicateurs de l’objectif 3\n\n\n - Habitants : Nombre et proportion d’habitants en zone inondable  - Surface des habitations : Surface des emprises des bâtiments d’habitation pouvant être inondés  - Logements : Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois  - Employés  : Nombre d’employés en zone inondable  - Surface agricole : Proportion de la surface agricole communale impactée par la zone inondable  - Routes inondées : Proportion de réseau routier de desserte locale potentiellement inondable"
   }
 ]

@@ -9,7 +9,7 @@ format:
     
 resources:
   - Images/icons/*.svg
-  - layers/data_s25d.json
+  - layers/data_s32c.json
   - layers/batiments_hauteur.geojson
     
 include-in-header:
@@ -26,7 +26,7 @@ include-in-header:
 ##  {.sidebar}
 
 ```{=html}
-<div id="nav-menu-objectif-n°2"></div>
+<div id="nav-menu-objectif-n°3"></div>
 ```
 
 ```{ojs}
@@ -37,13 +37,13 @@ bbox_sru = FileAttachment("layers/bb.json").json()
 
 ```{=html}
 <div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
-Nombre de stations d’alimentation en eau potable (AEP) en zone inondable 
+Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois 
  </div>
 
-<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">La présence de captages d’eau potable peut potentiellement poser un problème si des pollutions sont entraînées par l’inondation, ou s’ils sont colmatés par des atterrissements.</div>
+<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">L’évaluation du nombre de logements dont la durée de retour à la normale est supérieure à 6 mois permet de rendre compte de l’aptitude d’un territoire à se remettre rapidement d’une inondation. On considère qu’il s’agit des logements inondés par plus de 1m d’eau pendant plus de 48h.</div>
 
 
-<a href=https://fiches.eptb-vienne.fr/ind_25d.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
+<a href=https://fiches.eptb-vienne.fr/ind_32c.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
 
 
 <div style="width: auto; padding:5px; border: 1px solid #A0A0A0; border-radius:15px; text-align: center !important; background: #F2F2F2; font-size:1.1em;margin-top:10%;">
@@ -61,11 +61,11 @@ library(tidyr)
 # Charger le GeoJSON
 indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   st_drop_geometry() %>%
-  select(nom, s25d) %>%
-   mutate(s25d = replace_na(s25d, 0))
+  select(nom, s32c) %>%
+   mutate(s32c = replace_na(s32c, 0))
 
 # Sauvegarder au format JSON dans le dossier _site
-write_json(indicateurs, "layers/data_s25d.json", auto_unbox = TRUE)
+write_json(indicateurs, "layers/data_s32c.json", auto_unbox = TRUE)
 
 # indicateursGeojson16 <- st_read("layers/indicateurs.geojson", quiet=TRUE)%>%
 #   mutate(s16b = replace_na(s16b, 0))
@@ -223,11 +223,11 @@ map = {
       { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3', layout: {visibility:'none'} },
       {  data: indicateursGeojson, // GeoJSON contenant une propriété 's31atx'
           type: 'fill',
-          id: 'indicateurs25dLayer',
+          id: 'indicateurs32cLayer',
           opacity: 0.9,
           width: 1,
           dynamicColor: { 
-            property: 's25d',
+            property: 's32c',
             // La logique exacte de la légende à appliquer :
             // - 0 ou null => #d9d9d9
             // - < 150     => #f9f0d9
@@ -236,8 +236,10 @@ map = {
             // - >= 2000000 => #b30000
             mapping: {
               '0': '#d9d9d9',
-              '1': '#ffd700',
-              '2': '#ff7600'
+              '10': '#fff5eb',
+              '70': '#fdbd83',
+              '160': '#ee6510',
+              '161': '#7f2704'
             },
             default: '#d9d9d9' // utilisé si null, undefined ou < 150
           },
@@ -268,17 +270,19 @@ map = {
         
         // Contenu de la légende
         legend.innerHTML = `
-          <strong>Nombre de stations <br> d’alimentation en eau <br> potable (AEP) en <br> zone inondable</strong><br>
+          <strong>Nombre de logements dont <br> la durée de retour à la normale <br> est supérieure à 6 mois</strong><br>
           <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0</div>
-          <div><span style="background:#ffd700;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> 1-2 </div>
-          <div><span style="background:#ff7600;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 2-3 </div>`;
+          <div><span style="background:#fff5eb;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> < 10 </div>
+          <div><span style="background:#fdbd83;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 10-70 </div>
+          <div><span style="background:#ee6510;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 70-160 </div>
+          <div><span style="background:#7f2704;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> > 160 </div>`;
         
         // L’ajouter à la carte (le container MapLibre)
         map.getContainer().appendChild(legend);
         
         //afin de lier la légende à l'indicateur
         function updateLegendVisibility() {
-        const visibility = map.getLayoutProperty('indicateurs25dLayer', 'visibility');
+        const visibility = map.getLayoutProperty('indicateurs32cLayer', 'visibility');
         if (visibility === 'none') {
           legend.style.display = 'none';
         } else {
@@ -352,8 +356,10 @@ map = {
               'case',
               ['!', ['has', layer.dynamicColor.property]], '#d9d9d9',                       // Propriété absente
               ['any', ['==', ['get', layer.dynamicColor.property], null], ['==', ['get', layer.dynamicColor.property], 0]], '#d9d9d9', // null ou 0
-              ['<', ['get', layer.dynamicColor.property], 2], '#ffd700',
-              ['>=', ['get', layer.dynamicColor.property], 2], '#ff7600',
+              ['<', ['get', layer.dynamicColor.property], 10], '#fff5eb',
+              ['<', ['get', layer.dynamicColor.property], 70], '#fdbd83',
+              ['<', ['get', layer.dynamicColor.property], 160], '#ee6510',
+              ['>', ['get', layer.dynamicColor.property], 160], '#7f2704',
               '#d9d9d9' // fallback
             ];
           } else {
@@ -391,9 +397,9 @@ map = {
         map.addLayer(layerConfig);
         
          map.addLayer({
-                  id: 'indicateurs25dLabels',
+                  id: 'indicateurs32cLabels',
                   type: 'symbol',
-                  source: 'indicateurs25dLayer', // le même id que ta source GeoJSON
+                  source: 'indicateurs32cLayer', // le même id que ta source GeoJSON
                   layout: {
                     'text-field': ['get', 'nom'],
                     'text-size': 11,
@@ -409,9 +415,9 @@ map = {
                 });
                 
         map.addLayer({
-                 id: 'indicateurs25d-hover',
+                 id: 'indicateurs32c-hover',
                  type: 'line',
-                 source: 'indicateurs25dLayer', // même source
+                 source: 'indicateurs32cLayer', // même source
                  paint: {
                    'line-color': '#000',
                    'line-width': 2
@@ -420,7 +426,7 @@ map = {
                   });
         
         
-      map.on('click', 'indicateurs25dLayer', (e) => {
+      map.on('click', 'indicateurs32cLayer', (e) => {
         const feature = e.features[0];
         const image= feature.properties.image;
         const nom = feature.properties.nom || 'Non disponible';
@@ -429,8 +435,8 @@ map = {
           ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
           : 'Non disponible';
       
-        const s25dValue = parseFloat(feature.properties.s25d);
-        const dommages = (Number(s25dValue) || 0).toLocaleString('fr-FR');
+        const s32cValue = parseFloat(feature.properties.s32c);
+        const dommages = (Number(s32cValue) || 0).toLocaleString('fr-FR');
         const batimentsValue = feature.properties.nb_batiments;
         const batiments = !isNaN(parseFloat(batimentsValue))
           ? parseInt(batimentsValue).toLocaleString('fr-FR')
@@ -467,7 +473,7 @@ map = {
           <center>${nom}</center>
           </strong></div>
             <p style="margin:auto;"><strong>Population :</strong> ${population}</p>
-            <p style="margin:auto;"><strong>Nombre de stations d’alimentation <br> en eau potable (AEP) en zone inondable 
+            <p style="margin:auto;"><strong>Nombre de logements dont la durée <br> de retour à la normale est supérieure à 6 mois 
  :</strong> ${dommages}</p>
           </div>
         `;
@@ -503,7 +509,7 @@ map = {
             </ul>
         
             <div style="margin-top:10px;">
-              <strong style="font-size:1.1em;"><i class="fas fa-tint"></i> Nombre de stations d’alimentation en eau potable (AEP) en zone inondable  :</strong> ${dommages}
+              <strong style="font-size:1.1em;"><i class="fas fa-city"></i> Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois :</strong> ${dommages}
             </div>
           </div>
         `;
@@ -511,18 +517,18 @@ map = {
 
 
 
-      map.on('mousemove', 'indicateurs25dLayer', (e) => {
+      map.on('mousemove', 'indicateurs32cLayer', (e) => {
         if (e.features.length > 0) {
           const nomCommune = e.features[0].properties.nom;
       
-          map.setFilter('indicateurs25d-hover', ['==', 'nom', nomCommune]);
+          map.setFilter('indicateurs32c-hover', ['==', 'nom', nomCommune]);
       
           map.getCanvas().style.cursor = 'pointer';
         }
       });
 
-        map.on('mouseleave', 'indicateurs25dLayer', () => {
-          map.setFilter('indicateurs25d-hover', ['==', 'nom', '']);
+        map.on('mouseleave', 'indicateurs32cLayer', () => {
+          map.setFilter('indicateurs32c-hover', ['==', 'nom', '']);
           map.getCanvas().style.cursor = '';
         });
       });
@@ -548,7 +554,7 @@ map = {
       epciLayer: 'Etablissement Public de Coopération Intercommunale',
       coursdeauLayer: "Cours d'eau",
       zoneinondableLayer: 'Zonage Inondable',
-      indicateurs25dLayer: "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable",
+      indicateurs32cLayer: "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois",
       batimentsLayer: "Bâtiments"
     };
 
@@ -655,17 +661,17 @@ library(dplyr)
 library(reactable)
 library(tidyr)
 
-indicateur_s25d <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
-  select(insee_com, nom, population, s25d) %>%
+indicateur_s32c <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  select(insee_com, nom, population, s32c) %>%
   mutate(
-    s25d = replace_na(s25d, 0)
+    s32c = replace_na(s32c, 0)
   ) %>%
   st_drop_geometry() %>%
   rename(
     Commune = nom,
     `Code INSEE` = insee_com,
     Population = population,
-    "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable" = s25d
+    "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois" = s32c
   ) %>%
   mutate(
     Population = format(Population, big.mark = " ", scientific = FALSE),
@@ -673,7 +679,7 @@ indicateur_s25d <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   )
 
 # Affichage avec reactable
-reactable(indicateur_s25d,
+reactable(indicateur_s32c,
           filterable = TRUE,
           striped = TRUE,
           sortable = TRUE,
@@ -705,10 +711,10 @@ import { Plot as PlotTaux } from "@observablehq/plot";
 import { Inputs as InputsTaux } from "@observablehq/inputs";
 
 // Charger les données
-data = FileAttachment("layers/data_s25d.json").json()
+data = FileAttachment("layers/data_s32c.json").json()
 
 // Label du slider
-html`<label for="slider-s25d" style="display: block;
+html`<label for="slider-s32c" style="display: block;
   margin-top: 1em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -719,43 +725,45 @@ html`<label for="slider-s25d" style="display: block;
   text-align: center;
   margin-right: 20%;
   margin-left: 20%;">
-  Nombre de stations d’alimentation en eau potable (AEP) en zone inondable
+  Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois
 </label>`
 
 // Slider
 
 
-data_s25d = FileAttachment("layers/data_s25d.json").json()
+data_s32c = FileAttachment("layers/data_s32c.json").json()
 
-viewof slider_s25d = InputsTaux.range([0, 3], {
-  value: 2,
-  step: 1//
+viewof slider_s32c = InputsTaux.range([0, 400], {
+  value: 200,
+  step: 50//
   //label: "Linéaire d'itinéraires routiers interceptés en km"
 })
 
-sorted_s25d = data_s25d
-  .map(d => ({ ...d, s25d: +d.s25d || 0 }))
-  .filter(d => d.s25d <= slider_s25d)
-  .sort((a, b) => a.s25d - b.s25d)
+sorted_s32c = data_s32c
+  .map(d => ({ ...d, s32c: +d.s32c || 0 }))
+  .filter(d => d.s32c <= slider_s32c)
+  .sort((a, b) => a.s32c - b.s32c)
 
 PlotTaux.plot({
   marks: [
-    PlotTaux.barY(sorted_s25d, {
+    PlotTaux.barY(sorted_s32c, {
       x: d => d.nom,
-      y: d => d.s25d,
+      y: d => d.s32c,
         fill: d => {
-        const val = d.s25d;
+        const val = d.s32c;
         if (val === 0) return "#d9d9d9";
-        if (val < 2) return "#ffd700";
-        if (val >= 2) return "#ff7600";
+        if (val < 10) return "#fff5eb";
+        if (val < 70) return "#fdbd83";
+        if (val < 160) return "#ee6510";
+        if (val >= 160) return "#7f2704";
         return "#67000d"; // >4
         
       }
     }),
-    PlotTaux.text(sorted_s25d, {
+    PlotTaux.text(sorted_s32c, {
       x: d => d.nom,
-      y: d => d.s25d,
-      text: d => d.s25d.toLocaleString("fr-FR"),
+      y: d => d.s32c,
+      text: d => d.s32c.toLocaleString("fr-FR"),
       dy: -8,
       fontSize: 9,
       fill: "black",
@@ -764,8 +772,8 @@ PlotTaux.plot({
   ],
   y: {
     grid: true,
-    label: "Nombre de stations d’alimentation en eau potable (AEP) en zone inondable",
-    domain: [0, Math.max(...sorted_s25d.map(d => d.s25d))],
+    label: "Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois",
+    domain: [0, Math.max(...sorted_s32c.map(d => d.s32c))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
@@ -803,26 +811,26 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <th style="background-color:#BEDBE8; border:1px solid;" colspan="2">Numéro d'indicateur</th>
-    <th style="border:1px solid;">Ind2/5d</th>
-    <th style="background-color:#BEDBE8; border:1px solid;">Date de mise à jour</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Numéro d'indicateur</th>
+    <th style="border:1px solid;">Ind3/2c</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Date de mise à jour</th>
     <th style="border:1px solid;">31/05/2025</th>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Intitulé</td>
-    <td colspan="3" style="border:1px solid;">Nombre de stations d’alimentation en eau potable (AEP) en zone inondable</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Intitulé</td>
+    <td colspan="3" style="border:1px solid;">Nombre de logements dont la durée de retour à la normale est supérieure à 6 mois</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
-    <td colspan="3" style="border:1px solid;">Objectif n°2 : Stabiliser à court terme et réduire à moyen terme le coût des dommages liés à l’inondation</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
+    <td colspan="3" style="border:1px solid;">Objectif n°3 : Raccourcir fortement le délai de retour à la normale des territoires sinistrés</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">Axe 2/2 Les dommages au patrimoine</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Axe de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">Axe 3/1 L’impact au territoire et ses capacités à rétablir les fonctions d’habitat, d’activité, etc.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
-    <td colspan="3" style="border:1px solid;">S2/5 Dommages à l’environnement : charriage de pollutions et déchets</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Source de vulnérabilité</td>
+    <td colspan="3" style="border:1px solid;">S3/2 Configuration de l’habitat face à une inondation</td>
   </tr>
 </table>
 
@@ -837,30 +845,35 @@ md`
     <col style="width:20%;">
   </colgroup>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Modalités du calcul</td>
-    <td colspan="3" style="border:1px solid;">La couche des stations AEP est croisée avec la zone inondable (hauteur > 0) et le résultat est agrégé à la commune.</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Modalités du calcul</td>
+    <td colspan="3" style="border:1px solid;">On estime que la durée de retour à la normale est supérieure à 6 mois pour les bâtiments inondés
+par plus d’1 mètre d’eau et pendant plus de 48 h. La durée de submersion, pour le scénario
+considéré (crue centennale), est estimée à 5 à 10 jours (d’après les mémoires pour la crue
+centennale de 1982).
+Donc, pour cet indicateur, on sélectionne les bâtiments qui intersectent la couche d’inondation
+supérieure à 1 mètre, puis on agrège le total par commune dans le périmètre d’étude.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Échelle de représentation</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Échelle de représentation</td>
     <td colspan="3" style="border:1px solid;">Communale</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Points de vigilance</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Points de vigilance</td>
     <td colspan="3" style="border:1px solid;">Pas de point de vigilance.</td>
   </tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Table cible</td>
-    <td colspan="3" style="border:1px solid;">p_obj2_cout_dommages.s25d_capt_aep_zi</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Table cible</td>
+    <td colspan="3" style="border:1px solid;">p_obj3_retour_normale.s32c_bati_hab_zi_6mois</td>
   </tr>
   <tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Variables mobilisées</td>
-    <td colspan="3" style="border:1px solid;">Zx : zone inondable, <br>Res1 : captages AEP</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Variables mobilisées</td>
+    <td colspan="3" style="border:1px solid;">Zx : hauteur d’eau > 0, <br>Oc2 : logements</td>
   </tr>
   <tr>
   <tr>
-    <td colspan="2" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
-    <td colspan="3" style="border:1px solid;">Oui</td>
+    <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Indicateur commun SLGRI Vienne/Clain</td>
+    <td colspan="3" style="border:1px solid;">Non</td>
   </tr>
   <tr>
 </table>
@@ -882,34 +895,34 @@ md`
   </colgroup>
 
   <tr>
-    <td colspan="10" style="background-color:#BEDBE8; border:1px solid; font-weight: bold;">Données sources</td>
+    <td colspan="10" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Données sources</td>
   </tr>
   <tr>
-    <th style="background-color:#BEDBE8; border:1px solid;" colspan="2">Désignation</th>
-    <th style="background-color:#BEDBE8; border:1px solid;">Millésime</th>
-    <th style="background-color:#BEDBE8; border:1px solid;">Nationale/locale</th>
-    <th style="background-color:#BEDBE8; border:1px solid;">Format</th>
-    <th style="background-color:#BEDBE8; border:1px solid;">Type</th>
-    <th style="background-color:#BEDBE8; border:1px solid;" colspan="2">Producteur</th>
-    <th style="background-color:#BEDBE8; border:1px solid;" colspan="2">Nom fichier</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Désignation</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Millésime</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Nationale/locale</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Format</th>
+    <th style="background-color:#d1ffc4; border:1px solid;">Type</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Producteur</th>
+    <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Nom fichier</th>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Zone inondable</td>
+    <td colspan="2" style="border:1px solid;">Hauteur d’eau > 1m</td>
     <td style="border:1px solid;">2019</td>
     <td style="border:1px solid;">Locale</td>
     <td style="border:1px solid;">Shape</td>
     <td style="border:1px solid;">Polygone</td>
     <td colspan="2" style="border:1px solid;">Cerema</td>
-    <td colspan="2" style="border:1px solid;">Zx_zone_inondable.shp</td>
+    <td colspan="2" style="border:1px solid;">Zc_sup_1m.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Captages AEP</td>
+    <td colspan="2" style="border:1px solid;">Bâtiment BDTOPO</td>
     <td style="border:1px solid;">2020</td>
-    <td style="border:1px solid;">Locale</td>
+    <td style="border:1px solid;">Nationale</td>
     <td style="border:1px solid;">Shape</td>
-    <td style="border:1px solid;">Point</td>
-    <td colspan="2" style="border:1px solid;">ARS NA</td>
-    <td colspan="2" style="border:1px solid;">captage_aep.shp</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
+    <td colspan="2" style="border:1px solid;">batiment.shp</td>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Communes (BDTOPO)</td>
@@ -937,3 +950,7 @@ Zoomer sur la carte (molette de la souris) pour visualiser les bâtiments.
 <i class="bi bi-info-circle"></i> **Une illustration pour bien comprendre la carte interactive**
 
 ![Bâtiments 3D](Images/batiments_3d.jpg){fig-align="left" width="75%"}
+
+
+
+

@@ -54,12 +54,24 @@ website:
              text: Installations polluantes
            - href: eau_potable.qmd
              text: Station d'alimentation en eau potable
+           - href: reseaux.qmd
+             text: Réseaux
+           - href: voies_ferrees.qmd
+             text: Voies ferrées
+           - href: reseaux_bus.qmd
+             text: Réseau de bus
              
         - text: Objectif n°3
           menu:
            - text: "Objectif n°3 : Raccourcir le délai de retour à la normale"
            - href: habitants_zones_inondables.qmd
-             text: Nombre et proportion d'habitants en zone inondable 
+             text: Nombre et proportion d'habitants en zone inondable
+           - href: surfaces_habitations.qmd
+             text: Surface des habitations
+           - href: retour_normale_logements.qmd
+             text: Logements
+           - href: employes.qmd
+             text: Employés
             
         - text: Â propos
           menu:
