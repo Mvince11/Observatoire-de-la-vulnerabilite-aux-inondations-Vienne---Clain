@@ -72,6 +72,10 @@ website:
              text: Logements
            - href: employes.qmd
              text: Employés
+           - href: surface_agricole.qmd
+             text: Surface agricole
+           - href: reseau_routier.qmd
+             text: Routes inondées
             
         - text: Â propos
           menu:

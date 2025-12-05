@@ -9,7 +9,7 @@ format:
     
 resources:
   - Images/icons/*.svg
-  - layers/data_s31b.json
+  - layers/data_s31f_tx_inond.json
   - layers/batiments_hauteur.geojson
     
 include-in-header:
@@ -37,13 +37,13 @@ bbox_sru = FileAttachment("layers/bb.json").json()
 
 ```{=html}
 <div style="color:#dc7633; text-align:inherit !important; font-size:1.3em; font-weight:bold; font-family: calibri;margin-bottom:10%;">
-Nombre d’employés en zone inondable 
+Proportion de la surface agricole communale impactée par la zone inondable 
  </div>
 
-<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">Une première approche de la capacité d’un territoire à «revenir à la normale», c’est-à-dire à un état stable où les fonctions précédentes (habitat, activité, services publics, transports …) sont restaurées sans être nécessairement identiques, consiste à évaluer les employés touchés directement par l’événement, et leur proportion au sein du «territoire de vie».</div>
+<div style="text-align:inherit !important; font-size:1.1em; font-family: calibri;margin-bottom:10%;">L’identification des surfaces agricoles exposées est un premier indicateur de la vulnérabilité de l’agriculture sur le territoire. Il ne permet cependant pas d’évaluer le montant des pertes à attendre, objet d’un autre indicateur (voir objectif 2).</div>
 
 
-<a href=https://fiches.eptb-vienne.fr/ind_31b.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
+<a href=https://fiches.eptb-vienne.fr/ind_31f.pdf target=_blank><i class="fa fa-exclamation-circle"></i> Télécharger la fiche indicateur et la carte</a> 
 
 
 <div style="width: auto; padding:5px; border: 1px solid #A0A0A0; border-radius:15px; text-align: center !important; background: #F2F2F2; font-size:1.1em;margin-top:10%;">
@@ -61,11 +61,11 @@ library(tidyr)
 # Charger le GeoJSON
 indicateurs <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   st_drop_geometry() %>%
-  select(nom, s31b) %>%
-   mutate(s31b = replace_na(s31b, 0))
+  select(nom, s31f_tx_inond) %>%
+   mutate(s31f_tx_inond = replace_na(s31f_tx_inond, 0))
 
 # Sauvegarder au format JSON dans le dossier _site
-write_json(indicateurs, "layers/data_s31b.json", auto_unbox = TRUE)
+write_json(indicateurs, "layers/data_s31f_tx_inond.json", auto_unbox = TRUE)
 
 # indicateursGeojson16 <- st_read("layers/indicateurs.geojson", quiet=TRUE)%>%
 #   mutate(s16b = replace_na(s16b, 0))
@@ -223,11 +223,11 @@ map = {
       { data: epci, type: 'line', id: 'epciLayer', color: '#567ae3', layout: {visibility:'none'} },
       {  data: indicateursGeojson, // GeoJSON contenant une propriété 's31atx'
           type: 'fill',
-          id: 'indicateurs31bLayer',
+          id: 'indicateurs31f_tx_inondLayer',
           opacity: 0.9,
           width: 1,
           dynamicColor: { 
-            property: 's31b',
+            property: 's31f_tx_inond',
             // La logique exacte de la légende à appliquer :
             // - 0 ou null => #d9d9d9
             // - < 150     => #f9f0d9
@@ -236,10 +236,9 @@ map = {
             // - >= 2000000 => #b30000
             mapping: {
               '0': '#d9d9d9',
-              '50': '#fff5eb',
-              '300': '#fdbd83',
-              '1000': '#ee6510',
-              '1001': '#7f2704'
+              '4': '#f7fcf5',
+              '9': '#7bc87c',
+              '10': '#00441b'
             },
             default: '#d9d9d9' // utilisé si null, undefined ou < 150
           },
@@ -270,19 +269,18 @@ map = {
         
         // Contenu de la légende
         legend.innerHTML = `
-          <strong>Nombre d'employés en <br> zone inondable</strong><br>
+          <strong>Proportion de la surface agricole <br> communale impactée <br> par la zone inondable</strong><br>
           <div><span style="background:#d9d9d9;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 0</div>
-          <div><span style="background:#fff5eb;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> < 50 </div>
-          <div><span style="background:#fdbd83;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 50-300 </div>
-          <div><span style="background:#ee6510;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 300-1000 </div>
-          <div><span style="background:#7f2704;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> > 1000 </div>`;
+          <div><span style="background:#f7fcf5;width:12px;height:12px;display:inline-block;margin-right:5px;border:1px solid #ccc;"></span> < 4 </div>
+          <div><span style="background:#7bc87c;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> 4-9 </div>
+          <div><span style="background:#00441b;width:12px;height:12px;display:inline-block;margin-right:5px;"></span> > 9 </div>`;
         
         // L’ajouter à la carte (le container MapLibre)
         map.getContainer().appendChild(legend);
         
         //afin de lier la légende à l'indicateur
         function updateLegendVisibility() {
-        const visibility = map.getLayoutProperty('indicateurs31bLayer', 'visibility');
+        const visibility = map.getLayoutProperty('indicateurs31f_tx_inondLayer', 'visibility');
         if (visibility === 'none') {
           legend.style.display = 'none';
         } else {
@@ -356,10 +354,9 @@ map = {
               'case',
               ['!', ['has', layer.dynamicColor.property]], '#d9d9d9',                       // Propriété absente
               ['any', ['==', ['get', layer.dynamicColor.property], null], ['==', ['get', layer.dynamicColor.property], 0]], '#d9d9d9', // null ou 0
-              ['<', ['get', layer.dynamicColor.property], 50], '#fff5eb',
-              ['<', ['get', layer.dynamicColor.property], 300], '#fdbd83',
-              ['<', ['get', layer.dynamicColor.property], 1000], '#ee6510',
-              ['>', ['get', layer.dynamicColor.property], 1000], '#7f2704',
+              ['<', ['get', layer.dynamicColor.property], 4], '#f7fcf5',
+              ['<', ['get', layer.dynamicColor.property], 9], '#7bc87c',
+              ['>', ['get', layer.dynamicColor.property], 9], '#00441b',
               '#d9d9d9' // fallback
             ];
           } else {
@@ -397,9 +394,9 @@ map = {
         map.addLayer(layerConfig);
         
          map.addLayer({
-                  id: 'indicateurs31bLabels',
+                  id: 'indicateurs31f_tx_inondLabels',
                   type: 'symbol',
-                  source: 'indicateurs31bLayer', // le même id que ta source GeoJSON
+                  source: 'indicateurs31f_tx_inondLayer', // le même id que ta source GeoJSON
                   layout: {
                     'text-field': ['get', 'nom'],
                     'text-size': 11,
@@ -415,9 +412,9 @@ map = {
                 });
                 
         map.addLayer({
-                 id: 'indicateurs31b-hover',
+                 id: 'indicateurs31f_tx_inond-hover',
                  type: 'line',
-                 source: 'indicateurs31bLayer', // même source
+                 source: 'indicateurs31f_tx_inondLayer', // même source
                  paint: {
                    'line-color': '#000',
                    'line-width': 2
@@ -426,7 +423,7 @@ map = {
                   });
         
         
-      map.on('click', 'indicateurs31bLayer', (e) => {
+      map.on('click', 'indicateurs31f_tx_inondLayer', (e) => {
         const feature = e.features[0];
         const image= feature.properties.image;
         const nom = feature.properties.nom || 'Non disponible';
@@ -435,8 +432,8 @@ map = {
           ? feature.properties.population.toLocaleString('fr-FR') + ' habitants'
           : 'Non disponible';
       
-        const s31bValue = parseFloat(feature.properties.s31b);
-        const dommages = (Number(s31bValue) || 0).toLocaleString('fr-FR');
+        const s31f_tx_inondValue = parseFloat(feature.properties.s31f_tx_inond);
+        const dommages = (Number(s31f_tx_inondValue) || 0).toLocaleString('fr-FR');
         const batimentsValue = feature.properties.nb_batiments;
         const batiments = !isNaN(parseFloat(batimentsValue))
           ? parseInt(batimentsValue).toLocaleString('fr-FR')
@@ -473,7 +470,7 @@ map = {
           <center>${nom}</center>
           </strong></div>
             <p style="margin:auto;"><strong>Population :</strong> ${population}</p>
-            <p style="margin:auto;"><strong>Nombre d'employés en zone inondable :</strong> ${dommages}</p>
+            <p style="margin:auto;"><strong>Proportion de la surface agricole <br> communale impactée <br> par la zone inondable :</strong> ${dommages} %</p>
           </div>
         `;
       
@@ -508,7 +505,7 @@ map = {
             </ul>
         
             <div style="margin-top:10px;">
-              <strong style="font-size:1.1em;"><i class="fas fa-user-tie"></i> Nombre d'employés en zone inondable :</strong> ${dommages}
+              <strong style="font-size:1.1em;"><i class="fas fa-seedling"></i> Proportion de la surface agricole communale impactée par la zone inondable :</strong> ${dommages} %
             </div>
           </div>
         `;
@@ -516,18 +513,18 @@ map = {
 
 
 
-      map.on('mousemove', 'indicateurs31bLayer', (e) => {
+      map.on('mousemove', 'indicateurs31f_tx_inondLayer', (e) => {
         if (e.features.length > 0) {
           const nomCommune = e.features[0].properties.nom;
       
-          map.setFilter('indicateurs31b-hover', ['==', 'nom', nomCommune]);
+          map.setFilter('indicateurs31f_tx_inond-hover', ['==', 'nom', nomCommune]);
       
           map.getCanvas().style.cursor = 'pointer';
         }
       });
 
-        map.on('mouseleave', 'indicateurs31bLayer', () => {
-          map.setFilter('indicateurs31b-hover', ['==', 'nom', '']);
+        map.on('mouseleave', 'indicateurs31f_tx_inondLayer', () => {
+          map.setFilter('indicateurs31f_tx_inond-hover', ['==', 'nom', '']);
           map.getCanvas().style.cursor = '';
         });
       });
@@ -553,7 +550,7 @@ map = {
       epciLayer: 'Etablissement Public de Coopération Intercommunale',
       coursdeauLayer: "Cours d'eau",
       zoneinondableLayer: 'Zonage Inondable',
-      indicateurs31bLayer: "Nombre d'employés en zone inondable",
+      indicateurs31f_tx_inondLayer: "Proportion de la surface agricole communale impactée par la zone inondable",
       batimentsLayer: "Bâtiments"
     };
 
@@ -660,17 +657,17 @@ library(dplyr)
 library(reactable)
 library(tidyr)
 
-indicateur_s31b <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
-  select(insee_com, nom, population, s31b) %>%
+indicateur_s31f_tx_inond <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
+  select(insee_com, nom, population, s31f_tx_inond) %>%
   mutate(
-    s31b = replace_na(s31b, 0)
+    s31f_tx_inond = replace_na(s31f_tx_inond, 0)
   ) %>%
   st_drop_geometry() %>%
   rename(
     Commune = nom,
     `Code INSEE` = insee_com,
     Population = population,
-    "Nombre d'employés en zone inondable" = s31b
+    "Proportion de la surface agricole communale impactée par la zone inondable" = s31f_tx_inond
   ) %>%
   mutate(
     Population = format(Population, big.mark = " ", scientific = FALSE),
@@ -678,7 +675,7 @@ indicateur_s31b <- st_read("layers/indicateurs.geojson", quiet = TRUE) %>%
   )
 
 # Affichage avec reactable
-reactable(indicateur_s31b,
+reactable(indicateur_s31f_tx_inond,
           filterable = TRUE,
           striped = TRUE,
           sortable = TRUE,
@@ -710,10 +707,10 @@ import { Plot as PlotTaux } from "@observablehq/plot";
 import { Inputs as InputsTaux } from "@observablehq/inputs";
 
 // Charger les données
-data = FileAttachment("layers/data_s31b.json").json()
+data = FileAttachment("layers/data_s31f_tx_inond.json").json()
 
 // Label du slider
-html`<label for="slider-s31b" style="display: block;
+html`<label for="slider-s31f_tx_inond" style="display: block;
   margin-top: 1em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -724,45 +721,44 @@ html`<label for="slider-s31b" style="display: block;
   text-align: center;
   margin-right: 20%;
   margin-left: 20%;">
-  Nombre d'employés en zone inondable
+  Proportion de la surface agricole communale impactée par la zone inondable
 </label>`
 
 // Slider
 
 
-data_s31b = FileAttachment("layers/data_s31b.json").json()
+data_s31f_tx_inond = FileAttachment("layers/data_s31f_tx_inond.json").json()
 
-viewof slider_s31b = InputsTaux.range([0, 1800], {
-  value: 900,
-  step: 200//
+viewof slider_s31f_tx_inond = InputsTaux.range([0, 18], {
+  value: 9,
+  step: 3//
   //label: "Linéaire d'itinéraires routiers interceptés en km"
 })
 
-sorted_s31b = data_s31b
-  .map(d => ({ ...d, s31b: +d.s31b || 0 }))
-  .filter(d => d.s31b <= slider_s31b)
-  .sort((a, b) => a.s31b - b.s31b)
+sorted_s31f_tx_inond = data_s31f_tx_inond
+  .map(d => ({ ...d, s31f_tx_inond: +d.s31f_tx_inond || 0 }))
+  .filter(d => d.s31f_tx_inond <= slider_s31f_tx_inond)
+  .sort((a, b) => a.s31f_tx_inond - b.s31f_tx_inond)
 
 PlotTaux.plot({
   marks: [
-    PlotTaux.barY(sorted_s31b, {
+    PlotTaux.barY(sorted_s31f_tx_inond, {
       x: d => d.nom,
-      y: d => d.s31b,
+      y: d => d.s31f_tx_inond,
         fill: d => {
-        const val = d.s31b;
+        const val = d.s31f_tx_inond;
         if (val === 0) return "#d9d9d9";
-        if (val < 50) return "#fff5eb";
-        if (val < 300) return "#fdbd83";
-        if (val < 1000) return "#ee6510";
-        if (val >= 1000) return "#7f2704";
+        if (val < 4) return "#f7fcf5";
+        if (val < 9) return "#7bc87c";
+        if (val >= 9) return "#00441b";
         return "#67000d"; // >4
         
       }
     }),
-    PlotTaux.text(sorted_s31b, {
+    PlotTaux.text(sorted_s31f_tx_inond, {
       x: d => d.nom,
-      y: d => d.s31b,
-      text: d => d.s31b.toLocaleString("fr-FR"),
+      y: d => d.s31f_tx_inond,
+      text: d => d.s31f_tx_inond.toLocaleString("fr-FR"),
       dy: -8,
       fontSize: 9,
       fill: "black",
@@ -771,8 +767,8 @@ PlotTaux.plot({
   ],
   y: {
     grid: true,
-    label: "Nombre d'employés en zone inondable",
-    domain: [0, Math.max(...sorted_s31b.map(d => d.s31b))],
+    label: "Proportion de la surface agricole communale impactée par la zone inondable",
+    domain: [0, Math.max(...sorted_s31f_tx_inond.map(d => d.s31f_tx_inond))],
     tickFormat: d => d.toLocaleString("fr-FR", { maximumFractionDigits: 0 })
   },
   x: {
@@ -811,13 +807,13 @@ md`
   </colgroup>
   <tr>
     <th style="background-color:#d1ffc4; border:1px solid;" colspan="2">Numéro d'indicateur</th>
-    <th style="border:1px solid;">Ind3/1b</th>
+    <th style="border:1px solid;">Ind3/1f</th>
     <th style="background-color:#d1ffc4; border:1px solid;">Date de mise à jour</th>
     <th style="border:1px solid;">31/05/2025</th>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Intitulé</td>
-    <td colspan="3" style="border:1px solid;">Nombre d'employés en zone inondable</td>
+    <td colspan="3" style="border:1px solid;">Proportion de la surface agricole communale impactée par la zone inondable</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Objectif de la SNGRI</td>
@@ -845,8 +841,11 @@ md`
   </colgroup>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Modalités du calcul</td>
-    <td colspan="3" style="border:1px solid;">On calcule le nombre total d’employés en zone inondable (Zx).
-La valeur prise en compte est l’effectif maximal de l’entreprise, donnée issue de la base SIREN.</td>
+    <td colspan="3" style="border:1px solid;">Calcul des surfaces agricoles impactées en cas de crue :
+        On calcule les surfaces des parcelles agricoles issues de la base de données de déclaration PAC
+        (RPG ou Registre Parcellaire Graphique) intersectant la zone inondable.
+        Le résultat de l’indicateur est le rapport entre les surfaces des parcelles impactées sur les surfaces
+        totales des cultures par commune dans le périmètre d’étude.</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Échelle de représentation</td>
@@ -854,24 +853,16 @@ La valeur prise en compte est l’effectif maximal de l’entreprise, donnée is
   </tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Points de vigilance</td>
-    <td colspan="3" style="border:1px solid;">Le nombre d’employés peut être surévalué car c’est la valeur haute de la variable « tranche de
-        l’effectif de l’établissement » qui a été choisie. Par ailleurs, un certain nombre d’établissements
-        n’a pas été comptabilisé du fait de la trop grande imprécision du géocodage, qui peut être au
-        numéro, à la rue ou à la commune (centre ou mairie). Seuls les établissements géocodés au
-        numéro sont pris en compte. Cela représente 81% des points sur notre territoire d’étude pour le
-        millésime 2021.
-        L’entreprise FENWICK sur la commune de CENON est mal géocodée. Son point numérisé se
-        trouve hors de la zone inondable, alors que le bâtiment y est. Une correction manuelle a été
-        réalisée sur cette entreprise qui compte environ 800 employés.</td>
+    <td colspan="3" style="border:1px solid;">Pas de point de vigilance.</td>
   </tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Table cible</td>
-    <td colspan="3" style="border:1px solid;">p_obj3_retour_normale.s31b_employes_en_zi</td>
+    <td colspan="3" style="border:1px solid;">p_obj3_retour_normale.s31f_parc_agri_en_zi</td>
   </tr>
   <tr>
   <tr>
     <td colspan="2" style="background-color:#d1ffc4; border:1px solid; font-weight: bold;">Variables mobilisées</td>
-    <td colspan="3" style="border:1px solid;">Zx : zone inondable, <br>Pop2 : employés</td>
+    <td colspan="3" style="border:1px solid;">Zx : zone_inondable (hauteur d’eau > 0), <br>Oc7 : cultures</td>
   </tr>
   <tr>
   <tr>
@@ -919,13 +910,13 @@ La valeur prise en compte est l’effectif maximal de l’entreprise, donnée is
     <td colspan="2" style="border:1px solid;">Zx_zone_inondable.shp</td>
   </tr>
   <tr>
-    <td colspan="2" style="border:1px solid;">Effectif des entreprises</td>
-    <td style="border:1px solid;">2021</td>
+    <td colspan="2" style="border:1px solid;">Parcelles agricoles du Registre Parcellaire Graphique (RPG)</td>
+    <td style="border:1px solid;">2019</td>
     <td style="border:1px solid;">Nationale</td>
-    <td style="border:1px solid;">CSV</td>
-    <td style="border:1px solid;">Point</td>
-    <td colspan="2" style="border:1px solid;">INSEE</td>
-    <td colspan="2" style="border:1px solid;">geo_siret.shp</td>
+    <td style="border:1px solid;">Shape</td>
+    <td style="border:1px solid;">Polygone</td>
+    <td colspan="2" style="border:1px solid;">IGN</td>
+    <td colspan="2" style="border:1px solid;">parcelles_graphiques.shp</td>
   </tr>
   <tr>
     <td colspan="2" style="border:1px solid;">Communes (BDTOPO)</td>
@@ -953,3 +944,4 @@ Zoomer sur la carte (molette de la souris) pour visualiser les bâtiments.
 <i class="bi bi-info-circle"></i> **Une illustration pour bien comprendre la carte interactive**
 
 ![Bâtiments 3D](Images/batiments_3d.jpg){fig-align="left" width="75%"}
+
